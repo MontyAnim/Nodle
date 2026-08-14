@@ -7,9 +7,11 @@ import { getHardModeConstraints, filterNodesByHardMode } from '@/lib/hardmode';
 interface SearchBarProps {
   nodes: NodeData[];
   target: NodeData | null;
+  onAttempt?: (nodeId: string) => void; // callback externo (Modo Práctica)
+  disabled?: boolean;
 }
 
-export function SearchBar({ nodes, target }: SearchBarProps) {
+export function SearchBar({ nodes, target, onAttempt, disabled = false }: SearchBarProps) {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   
@@ -62,7 +64,12 @@ export function SearchBar({ nodes, target }: SearchBarProps) {
   }, []);
 
   const handleSelect = (node: NodeData) => {
-    addAttempt(node.id);
+    if (disabled) return;
+    if (onAttempt) {
+      onAttempt(node.id);
+    } else {
+      addAttempt(node.id);
+    }
     setQuery('');
     setIsOpen(false);
   };
@@ -78,7 +85,8 @@ export function SearchBar({ nodes, target }: SearchBarProps) {
         }}
         onFocus={() => setIsOpen(true)}
         placeholder="Busca un nodo (ej. Multiply)..."
-        className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder:text-zinc-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+        disabled={disabled}
+        className={`w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder:text-zinc-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
       />
 
       {isOpen && results.length > 0 && (
@@ -90,8 +98,13 @@ export function SearchBar({ nodes, target }: SearchBarProps) {
               className="px-4 py-3 cursor-pointer hover:bg-zinc-800 flex items-center justify-between border-b border-zinc-800/50 last:border-0 transition-colors"
             >
               <span className="font-medium text-zinc-100">{node.name}</span>
-              <span className="text-xs text-zinc-500 bg-zinc-950 px-2 py-1 rounded-full border border-zinc-800">
+              <span className="flex items-center gap-1.5 flex-shrink-0 ml-2">
+                <span className="text-xs text-zinc-400 bg-zinc-950 px-2 py-0.5 rounded-full border border-zinc-800">
                 {node.software}
+                </span>
+                <span className="text-xs text-zinc-500 bg-zinc-900 px-2 py-0.5 rounded-full border border-zinc-700/50">
+                  {node.context}
+                </span>
               </span>
             </li>
           ))}

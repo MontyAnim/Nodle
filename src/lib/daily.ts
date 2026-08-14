@@ -50,3 +50,50 @@ export function getDailyTargetNode(
 
   return validNodes[index];
 }
+
+
+/**
+ * Softwares disponibles como filtros en el Modo Practica.
+ */
+export const AVAILABLE_SOFTWARE = [
+  'Blender',
+  'Unreal Engine',
+  'Unity',
+  'Houdini',
+  'Substance Designer',
+] as const;
+
+export type AvailableSoftware = typeof AVAILABLE_SOFTWARE[number];
+
+/**
+ * Filtros disponibles para el Modo Practica.
+ */
+export interface PracticeFilter {
+  software: AvailableSoftware | null;
+  tier: 1 | 2 | 3 | null;
+}
+
+/**
+ * Retorna un nodo aleatorio para el Modo Practica.
+ * No es determinista — usa Math.random() en cada llamada.
+ * No modifica estadisticas historicas ni envia datos al Leaderboard.
+ */
+export function getRandomNode(
+  nodes: NodeData[],
+  filter: PracticeFilter
+): NodeData | null {
+  let pool = [...nodes];
+
+  if (filter.software !== null) {
+    pool = pool.filter((n) => n.software === filter.software);
+  }
+
+  if (filter.tier !== null) {
+    pool = pool.filter((n) => n.frequency_tier === filter.tier);
+  }
+
+  if (pool.length === 0) return null;
+
+  const index = Math.floor(Math.random() * pool.length);
+  return pool[index];
+}

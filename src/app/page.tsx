@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
+import Link from "next/link";
 import { Box } from "lucide-react";
 import { useGameStore } from "../store/useGameStore";
 import { getNodes } from "@/lib/nodes";
@@ -112,6 +113,15 @@ export default function Home() {
         <p className="text-lg text-zinc-400 text-center max-w-xl">
           El juego de deducción lógica basado en nodos para artistas técnicos y desarrolladores de videojuegos.
         </p>
+
+        {/* Navigation to Practice Mode */}
+        <Link
+          href="/practice"
+          className="flex items-center gap-2 px-4 py-2 bg-violet-600/10 hover:bg-violet-600/20 border border-violet-500/30 hover:border-violet-500/60 text-violet-300 rounded-full text-sm font-medium transition-all"
+        >
+          <span className="w-2 h-2 rounded-full bg-violet-400" />
+          Modo Práctica — Practica sin límite
+        </Link>
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <div className="flex items-center gap-3 bg-zinc-900 px-4 py-2 rounded-full border border-zinc-800">
