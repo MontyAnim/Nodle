@@ -1,8 +1,15 @@
 "use client";
 
+import { useEffect } from "react";
 import { Box } from "lucide-react";
+import { useGameStore } from "../store/useGameStore";
 
 export default function Home() {
+  // Forzar la persistencia en localStorage en el primer render
+  useEffect(() => {
+    useGameStore.setState(useGameStore.getState());
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6 sm:p-24 bg-background text-foreground">
       <div className="z-10 max-w-5xl w-full items-center justify-center font-sans text-sm flex flex-col gap-8">
