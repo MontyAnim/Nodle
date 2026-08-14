@@ -1,47 +1,58 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Box } from "lucide-react";
 import { useGameStore } from "../store/useGameStore";
 import { getNodes } from "@/lib/nodes";
 import { getUTCDayIndex, getDailyTargetNode } from "@/lib/daily";
 import { NodeData } from "@/types/node";
 import { SearchBar } from "@/components/SearchBar";
+import { GameBoard } from "@/components/GameBoard";
+import { generateShareImage } from "@/lib/canvas";
 
 export default function Home() {
   const resetDailyGame = useGameStore((state) => state.resetDailyGame);
   const lastPlayedTimestamp = useGameStore((state) => state.lastPlayedTimestamp);
+  const attempts = useGameStore((state) => state.attempts);
   const hardMode = useGameStore((state) => state.hardMode);
   const toggleHardMode = useGameStore((state) => state.toggleHardMode);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
+  const [debugCanvasUrl, setDebugCanvasUrl] = useState<string>('');
 
   useEffect(() => {
-    // Forzar persistencia inicial
     useGameStore.setState(useGameStore.getState());
-
     const currentDay = getUTCDayIndex();
-
-    // Check if we need to reset the game
     if (lastPlayedTimestamp !== currentDay) {
       resetDailyGame(currentDay);
     }
-
-    // Probar carga perezosa y PRNG
     getNodes().then((nodes) => {
       setAllNodes(nodes);
-      
       const target = getDailyTargetNode(nodes, currentDay);
       setDailyNode(target);
       setIsReady(true);
     });
   }, [lastPlayedTimestamp, resetDailyGame]);
 
+  // Convertir los IDs del store a objetos NodeData
+  const attemptNodes = useMemo(() => {
+    return attempts
+      .map(id => allNodes.find(n => n.id === id))
+      .filter((n): n is NodeData => n !== undefined);
+  }, [attempts, allNodes]);
+
+  const handleTestCanvas = () => {
+    if (dailyNode) {
+      const dataUrl = generateShareImage(attemptNodes, dailyNode);
+      setDebugCanvasUrl(dataUrl);
+    }
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center p-6 sm:p-24 bg-background text-foreground">
-      <div className="z-10 max-w-5xl w-full items-center font-sans text-sm flex flex-col gap-8">
+    <main className="flex min-h-screen flex-col items-center p-6 sm:p-24 bg-background text-foreground pb-32">
+      <div className="z-10 max-w-5xl w-full items-center font-sans text-sm flex flex-col gap-6">
         <div className="flex items-center gap-4">
           <Box className="w-12 h-12 text-zinc-50" />
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-center">
@@ -63,15 +74,29 @@ export default function Home() {
         </div>
         
         {isReady && (
-          <div className="w-full max-w-xl mt-4">
+          <div className="w-full max-w-xl mt-2 z-20">
             <SearchBar nodes={allNodes} target={dailyNode} />
           </div>
         )}
 
-        {/* Placeholder for the game board */}
-        <div className="w-full max-w-2xl p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl shadow-xl flex flex-col items-center justify-center min-h-64 mt-4">
-          <p className="text-center text-zinc-500 italic">Tablero de deducción próximamente...</p>
-        </div>
+        {isReady && dailyNode && (
+          <GameBoard attempts={attemptNodes} target={dailyNode} />
+        )}
+
+        {/* Debug UI para NDL-13 */}
+        {isReady && (
+          <div className="mt-12 p-4 border border-zinc-800 rounded-lg flex flex-col items-center gap-4">
+            <button 
+              onClick={handleTestCanvas}
+              className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded font-bold transition-colors"
+            >
+              Generar Imagen Compartible (Debug Canvas)
+            </button>
+            {debugCanvasUrl && (
+              <img id="qa-debug-canvas" src={debugCanvasUrl} alt="Export Result" className="border-4 border-zinc-900 rounded-lg shadow-2xl max-w-xs" />
+            )}
+          </div>
+        )}
       </div>
     </main>
   );
