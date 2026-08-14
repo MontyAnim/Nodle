@@ -34,29 +34,24 @@ public class ShaderGraphScraper
     {
         Debug.Log("--- Starting Unity Shader Graph Node Extraction ---");
 
-        Assembly sgAssembly = AppDomain.CurrentDomain.GetAssemblies()
-            .FirstOrDefault(a => a.GetName().Name.Contains("ShaderGraph") && a.GetName().Name.Contains("Editor"));
-
-        if (sgAssembly == null)
-        {
-            // Fallback: Just search all assemblies for the base class
-            var allTypes = AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => {
+        // Unity 6.x and newer split nodes across multiple assemblies (e.g., Unity.ShaderGraph, UnityEditor.ShaderGraph).
+        // We will scan all loaded assemblies for types in the ShaderGraph namespace.
+        var nodeTypes = AppDomain.CurrentDomain.GetAssemblies()
+            .SelectMany(a => {
                 try { return a.GetTypes(); } catch { return new Type[0]; }
-            });
-            var baseType = allTypes.FirstOrDefault(t => t.Name == "AbstractMaterialNode");
-            if (baseType == null)
-            {
-                Debug.LogError("AbstractMaterialNode not found in any loaded assembly. Are you sure Shader Graph is installed?");
-                return;
-            }
-            sgAssembly = baseType.Assembly;
-        }
-
-        var nodeTypes = sgAssembly.GetTypes()
-            .Where(t => t.IsClass && !t.IsAbstract && t.Name.EndsWith("Node") && !t.Name.Contains("View"))
+            })
+            .Where(t => t.IsClass && !t.IsAbstract &&
+                        t.Namespace != null && t.Namespace.Contains("ShaderGraph") &&
+                        t.Name.EndsWith("Node") && !t.Name.Contains("View"))
             .ToList();
 
-        Debug.Log($"Found {nodeTypes.Count} Shader Graph Node types.");
+        if (nodeTypes.Count == 0)
+        {
+            Debug.LogError("No Shader Graph nodes found in any loaded assembly. Are you sure Shader Graph is installed and loaded?");
+            return;
+        }
+
+        Debug.Log($"Found {nodeTypes.Count} Shader Graph Node types (e.g., {nodeTypes[0].Name} from {nodeTypes[0].Assembly.GetName().Name}).");
 
         List<NodeData> extractedNodes = new List<NodeData>();
 
