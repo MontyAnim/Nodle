@@ -73,7 +73,7 @@ export const useGameStore = create<GameState>()(
         }),
     }),
     {
-      name: 'nodedle-storage', // Nombre de la clave en localStorage
+      name: 'nodle-storage', // Nombre de la clave en localStorage
     }
   )
 );

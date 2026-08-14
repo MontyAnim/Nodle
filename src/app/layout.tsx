@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nodedle - Juego de Deducción Lógica",
+  title: "Nodle - Juego de Deducción Lógica",
   description: "Deduce el nodo correcto basado en atributos multidimensionales para artistas técnicos.",
 };
 

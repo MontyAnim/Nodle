@@ -1,6 +1,6 @@
-# Nodedle - Product Backlog
+# Nodle - Product Backlog
 
-Este documento define el backlog del producto Nodedle. Cada tarea está priorizada y estimada (utilizando la convención de tallas de camiseta: S, M, L, XL), e incluye la rama de GitFlow correspondiente para su desarrollo.
+Este documento define el backlog del producto Nodle. Cada tarea está priorizada y estimada (utilizando la convención de tallas de camiseta: S, M, L, XL), e incluye la rama de GitFlow correspondiente para su desarrollo.
 
 | ID | Épica | Historia de Usuario / Tarea | Descripción | Prioridad | Estim. | Estado | Rama GitFlow |
 |:---|:---|:---|:---|:---|:---|:---|:---|
@@ -16,7 +16,7 @@ Este documento define el backlog del producto Nodedle. Cada tarea está prioriza
 | **NDL-10** | Lógica Core | Motor de Validación de Nodos | Validar: Software (🟩/🟥), Contexto (🟩/🟥/🟨), Categoría (🟩/🟥), Entradas (🟩/⬆️/⬇️), Salidas (🟩/⬆️/⬇️), Tier (🟩). | Alta | L | To Do | `feature/validation-engine` |
 | **NDL-11** | Lógica Core | Búsqueda Difusa y Menú Desplegable | Buscador Fuse.js con umbral 0.3 y peso 70% a `name`, 30% a `aliases`. Menú desplegable estricto para evitar intentos nulos. | Media | M | To Do | `feature/fuzzy-search` |
 | **NDL-12** | Lógica Core | Modo Difícil (Hard Mode) | Restringir el árbol de decisión forzando uso de pistas en atributos categóricos (Software/Contexto) y límites numéricos (Entradas/Salidas). | Media | M | To Do | `feature/hard-mode` |
-| **NDL-13** | Renderizado | Generador Imágenes HTML5 Canvas (Offscreen) | Render en segundo plano (Canvas/OffscreenCanvas). Dibujo de rectángulos (🟩🟨🟥), logotipo Nodedle, y logotipos de software si se aciertan, más flechas direccionales vectorizadas. | Media | L | To Do | `feature/canvas-sharing` |
+| **NDL-13** | Renderizado | Generador Imágenes HTML5 Canvas (Offscreen) | Render en segundo plano (Canvas/OffscreenCanvas). Dibujo de rectángulos (🟩🟨🟥), logotipo Nodle, y logotipos de software si se aciertan, más flechas direccionales vectorizadas. | Media | L | To Do | `feature/canvas-sharing` |
 | **NDL-14** | Renderizado | Integración Portapapeles (Clipboard API) | Conversión a Base64 y exportación del Canvas (`canvas.toBlob`) a la API `navigator.clipboard.write()` como PNG. | Media | S | To Do | `feature/clipboard-export` |
 | **NDL-15** | UX / UI | Animaciones UI (Framer Motion) | 3D Flip para revelación de "tarjetas", transiciones ultra-rápidas y sin motion blur emulando UI de software profesional. | Media | M | To Do | `feature/animations` |
 | **NDL-16** | Accesibilidad | Modo Daltónico (Colorblind Mode) | Paleta alterna de alto contraste (Naranja #E35622, Azul #0070B8) y redundancia de semántica textual/geométrica. | Alta | S | To Do | `feature/accessibility` |

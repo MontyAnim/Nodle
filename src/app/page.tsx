@@ -9,7 +9,7 @@ export default function Home() {
         <div className="flex items-center gap-4">
           <Box className="w-12 h-12 text-zinc-50" />
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-center">
-            Nodedle
+            Nodle
           </h1>
         </div>
         <p className="text-lg text-zinc-400 text-center max-w-xl">
