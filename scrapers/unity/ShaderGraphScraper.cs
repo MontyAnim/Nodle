@@ -53,7 +53,7 @@ public class ShaderGraphScraper
         }
 
         var nodeTypes = sgAssembly.GetTypes()
-            .Where(t => t.IsClass && !t.IsAbstract && InheritsFrom(t, "AbstractMaterialNode"))
+            .Where(t => t.IsClass && !t.IsAbstract && t.Name.EndsWith("Node") && !t.Name.Contains("View"))
             .ToList();
 
         Debug.Log($"Found {nodeTypes.Count} Shader Graph Node types.");
