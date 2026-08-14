@@ -8,7 +8,8 @@ import { getUTCDayIndex, getDailyTargetNode } from "@/lib/daily";
 import { NodeData } from "@/types/node";
 import { SearchBar } from "@/components/SearchBar";
 import { GameBoard } from "@/components/GameBoard";
-import { generateShareImage } from "@/lib/canvas";
+import { generateShareImage, copyShareImageToClipboard } from "@/lib/canvas";
+import { Share2, Check } from "lucide-react";
 
 export default function Home() {
   const resetDailyGame = useGameStore((state) => state.resetDailyGame);
@@ -20,7 +21,7 @@ export default function Home() {
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
-  const [debugCanvasUrl, setDebugCanvasUrl] = useState<string>('');
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     useGameStore.setState(useGameStore.getState());
@@ -36,17 +37,21 @@ export default function Home() {
     });
   }, [lastPlayedTimestamp, resetDailyGame]);
 
-  // Convertir los IDs del store a objetos NodeData
   const attemptNodes = useMemo(() => {
     return attempts
       .map(id => allNodes.find(n => n.id === id))
       .filter((n): n is NodeData => n !== undefined);
   }, [attempts, allNodes]);
 
-  const handleTestCanvas = () => {
+  const handleShare = async () => {
     if (dailyNode) {
-      const dataUrl = generateShareImage(attemptNodes, dailyNode);
-      setDebugCanvasUrl(dataUrl);
+      const success = await copyShareImageToClipboard(attemptNodes, dailyNode);
+      if (success) {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } else {
+        alert("Tu navegador no soporta copiar imágenes al portapapeles directamente. ¡Usa el teléfono o un navegador moderno!");
+      }
     }
   };
 
@@ -83,18 +88,15 @@ export default function Home() {
           <GameBoard attempts={attemptNodes} target={dailyNode} />
         )}
 
-        {/* Debug UI para NDL-13 */}
-        {isReady && (
-          <div className="mt-12 p-4 border border-zinc-800 rounded-lg flex flex-col items-center gap-4">
+        {isReady && attempts.length > 0 && (
+          <div className="mt-8">
             <button 
-              onClick={handleTestCanvas}
-              className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded font-bold transition-colors"
+              onClick={handleShare}
+              className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold transition-colors shadow-lg"
             >
-              Generar Imagen Compartible (Debug Canvas)
+              {copied ? <Check className="w-5 h-5" /> : <Share2 className="w-5 h-5" />}
+              {copied ? '¡Copiado al Portapapeles!' : 'Compartir Resultado'}
             </button>
-            {debugCanvasUrl && (
-              <img id="qa-debug-canvas" src={debugCanvasUrl} alt="Export Result" className="border-4 border-zinc-900 rounded-lg shadow-2xl max-w-xs" />
-            )}
           </div>
         )}
       </div>

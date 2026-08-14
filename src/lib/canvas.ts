@@ -19,12 +19,12 @@ function getStateColor(state: ValidationState): string {
 }
 
 /**
- * Genera una imagen PNG del tablero actual como Data URL (Base64) usando Canvas 2D.
+ * Dibuja el tablero en un canvas y lo retorna.
  */
-export function generateShareImage(attempts: NodeData[], target: NodeData): string {
+function drawCanvas(attempts: NodeData[], target: NodeData): HTMLCanvasElement | null {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
-  if (!ctx) return '';
+  if (!ctx) return null;
 
   const cols = 6;
   const rows = 6;
@@ -102,5 +102,33 @@ export function generateShareImage(attempts: NodeData[], target: NodeData): stri
     }
   }
 
-  return canvas.toDataURL('image/png');
+  return canvas;
+}
+
+/**
+ * Genera una imagen PNG del tablero actual como Data URL (Base64) usando Canvas 2D.
+ */
+export function generateShareImage(attempts: NodeData[], target: NodeData): string {
+  const canvas = drawCanvas(attempts, target);
+  return canvas ? canvas.toDataURL('image/png') : '';
+}
+
+/**
+ * Genera y copia la imagen PNG al portapapeles del sistema operativo usando la Clipboard API.
+ */
+export async function copyShareImageToClipboard(attempts: NodeData[], target: NodeData): Promise<boolean> {
+  try {
+    const canvas = drawCanvas(attempts, target);
+    if (!canvas) return false;
+
+    const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'));
+    if (!blob) return false;
+
+    const item = new ClipboardItem({ 'image/png': blob });
+    await navigator.clipboard.write([item]);
+    return true;
+  } catch (error) {
+    console.error('Error al copiar al portapapeles:', error);
+    return false;
+  }
 }
