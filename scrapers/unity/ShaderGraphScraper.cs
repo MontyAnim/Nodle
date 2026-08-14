@@ -35,12 +35,21 @@ public class ShaderGraphScraper
         Debug.Log("--- Starting Unity Shader Graph Node Extraction ---");
 
         Assembly sgAssembly = AppDomain.CurrentDomain.GetAssemblies()
-            .FirstOrDefault(a => a.GetName().Name == "UnityEditor.ShaderGraph");
+            .FirstOrDefault(a => a.GetName().Name.Contains("ShaderGraph") && a.GetName().Name.Contains("Editor"));
 
         if (sgAssembly == null)
         {
-            Debug.LogError("UnityEditor.ShaderGraph assembly not found. Make sure the Shader Graph package is installed in your project.");
-            return;
+            // Fallback: Just search all assemblies for the base class
+            var allTypes = AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => {
+                try { return a.GetTypes(); } catch { return new Type[0]; }
+            });
+            var baseType = allTypes.FirstOrDefault(t => t.Name == "AbstractMaterialNode");
+            if (baseType == null)
+            {
+                Debug.LogError("AbstractMaterialNode not found in any loaded assembly. Are you sure Shader Graph is installed?");
+                return;
+            }
+            sgAssembly = baseType.Assembly;
         }
 
         var nodeTypes = sgAssembly.GetTypes()
