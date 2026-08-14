@@ -1,8 +1,11 @@
+"use client";
+
 import React from 'react';
 import { NodeData } from '@/types/node';
 import { validateGuess } from '@/lib/validation';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 import { ValidationState } from '@/types/validation';
+import { motion } from 'framer-motion';
 
 interface GameBoardProps {
   attempts: NodeData[];
@@ -24,16 +27,26 @@ function getBgColor(state: ValidationState): string {
   }
 }
 
-function renderCell(value: string | number, state: ValidationState, label: string) {
+function renderCell(value: string | number, state: ValidationState, label: string, index: number) {
   return (
-    <div className={`relative flex flex-col items-center justify-center w-full h-16 sm:h-20 rounded-md border-2 transition-all ${getBgColor(state)}`}>
+    <motion.div 
+      initial={{ rotateX: 90, opacity: 0 }}
+      animate={{ rotateX: 0, opacity: 1 }}
+      transition={{ 
+        delay: index * 0.15, 
+        duration: 0.5, 
+        type: "spring", 
+        bounce: 0.4 
+      }}
+      className={`relative flex flex-col items-center justify-center w-full h-16 sm:h-20 rounded-md border-2 ${getBgColor(state)}`}
+    >
       <span className="text-[10px] sm:text-xs opacity-70 mb-1">{label}</span>
       <span className="font-bold text-xs sm:text-sm text-center leading-tight px-1">
         {value}
       </span>
       {state === 'higher' && <ArrowUp className="absolute top-1 right-1 w-3 h-3 opacity-50" />}
       {state === 'lower' && <ArrowDown className="absolute top-1 right-1 w-3 h-3 opacity-50" />}
-    </div>
+    </motion.div>
   );
 }
 
@@ -41,12 +54,12 @@ export function GameBoard({ attempts, target }: GameBoardProps) {
   const rows = Array.from({ length: MAX_ATTEMPTS });
 
   return (
-    <div className="w-full max-w-4xl flex flex-col gap-3 mt-8">
+    <div className="w-full max-w-4xl flex flex-col gap-3 mt-8 perspective-[1000px]">
       {rows.map((_, i) => {
         const attempt = attempts[i];
         
         if (!attempt) {
-          // Fila Vacía
+          // Fila Vacía (sin animación)
           return (
             <div key={i} className="grid grid-cols-6 gap-2 opacity-30">
               {Array.from({ length: 6 }).map((_, j) => (
@@ -59,15 +72,15 @@ export function GameBoard({ attempts, target }: GameBoardProps) {
         const validation = validateGuess(attempt, target);
 
         return (
-          <div key={i} className="flex flex-col gap-1 mb-2 animate-in slide-in-from-bottom-2 fade-in duration-300">
+          <div key={i} className="flex flex-col gap-1 mb-2">
             <h3 className="text-sm font-semibold text-zinc-300 ml-1">{attempt.name}</h3>
-            <div className="grid grid-cols-6 gap-2">
-              {renderCell(attempt.software, validation.software, 'Software')}
-              {renderCell(attempt.context, validation.context, 'Contexto')}
-              {renderCell(attempt.category, validation.category, 'Categoría')}
-              {renderCell(attempt.inputs, validation.inputs, 'Entradas')}
-              {renderCell(attempt.outputs, validation.outputs, 'Salidas')}
-              {renderCell(`Tier ${attempt.frequency_tier}`, validation.tier, 'Tier')}
+            <div className="grid grid-cols-6 gap-2" style={{ perspective: "1000px" }}>
+              {renderCell(attempt.software, validation.software, 'Software', 0)}
+              {renderCell(attempt.context, validation.context, 'Contexto', 1)}
+              {renderCell(attempt.category, validation.category, 'Categoría', 2)}
+              {renderCell(attempt.inputs, validation.inputs, 'Entradas', 3)}
+              {renderCell(attempt.outputs, validation.outputs, 'Salidas', 4)}
+              {renderCell(`Tier ${attempt.frequency_tier}`, validation.tier, 'Tier', 5)}
             </div>
           </div>
         );

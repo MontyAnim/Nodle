@@ -83,9 +83,9 @@ export function SearchBar({ nodes, target }: SearchBarProps) {
 
       {isOpen && results.length > 0 && (
         <ul className="absolute z-50 w-full mt-2 bg-zinc-900 border border-zinc-700 rounded-lg shadow-xl overflow-hidden max-h-60 overflow-y-auto">
-          {results.map((node) => (
+          {results.map((node, index) => (
             <li
-              key={node.id}
+              key={`${node.id}-${index}`}
               onClick={() => handleSelect(node)}
               className="px-4 py-3 cursor-pointer hover:bg-zinc-800 flex items-center justify-between border-b border-zinc-800/50 last:border-0 transition-colors"
             >
