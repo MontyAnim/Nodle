@@ -7,21 +7,38 @@ const COLORS = {
   bg: '#09090b', // zinc-950
   correct: '#10b981', // emerald-500
   partial: '#eab308', // yellow-500
+  correctCb: '#E35622', // Colorblind Correct
+  partialCb: '#0070B8', // Colorblind Partial
   incorrect: '#27272a', // zinc-800
   text: '#ffffff',
   textMuted: '#a1a1aa'
 };
 
-function getStateColor(state: ValidationState): string {
-  if (state === 'correct') return COLORS.correct;
-  if (state === 'partial') return COLORS.partial;
+function getStateColor(state: ValidationState, isColorblind: boolean): string {
+  if (state === 'correct') return isColorblind ? COLORS.correctCb : COLORS.correct;
+  if (state === 'partial') return isColorblind ? COLORS.partialCb : COLORS.partial;
   return COLORS.incorrect;
+}
+
+function drawArrow(ctx: CanvasRenderingContext2D, cx: number, cy: number, direction: 'higher' | 'lower') {
+  const size = 6;
+  ctx.beginPath();
+  if (direction === 'higher') {
+    ctx.moveTo(cx, cy - size);
+    ctx.lineTo(cx - size, cy + size);
+    ctx.lineTo(cx + size, cy + size);
+  } else {
+    ctx.moveTo(cx, cy + size);
+    ctx.lineTo(cx - size, cy - size);
+    ctx.lineTo(cx + size, cy - size);
+  }
+  ctx.fill();
 }
 
 /**
  * Dibuja el tablero en un canvas y lo retorna.
  */
-function drawCanvas(attempts: NodeData[], target: NodeData): HTMLCanvasElement | null {
+function drawCanvas(attempts: NodeData[], target: NodeData, isColorblind: boolean): HTMLCanvasElement | null {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
   if (!ctx) return null;
@@ -73,20 +90,17 @@ function drawCanvas(attempts: NodeData[], target: NodeData): HTMLCanvasElement |
         else if (c === 4) state = validation.outputs;
         else if (c === 5) state = validation.tier;
 
-        ctx.fillStyle = getStateColor(state);
+        ctx.fillStyle = getStateColor(state, isColorblind);
         
         // Dibujar borde curvo
         ctx.beginPath();
         ctx.roundRect(x, y, cellSize, cellSize, 6);
         ctx.fill();
 
-        // Arrows (Unicode para mayor compatibilidad de Canvas)
+        // Arrows
         if (state === 'higher' || state === 'lower') {
           ctx.fillStyle = '#ffffff';
-          ctx.font = 'bold 24px sans-serif';
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'middle';
-          ctx.fillText(state === 'higher' ? '↑' : '↓', x + cellSize / 2, y + cellSize / 2 + 2);
+          drawArrow(ctx, x + cellSize / 2, y + cellSize / 2, state);
         }
       } else {
         // Empty slot
@@ -108,17 +122,17 @@ function drawCanvas(attempts: NodeData[], target: NodeData): HTMLCanvasElement |
 /**
  * Genera una imagen PNG del tablero actual como Data URL (Base64) usando Canvas 2D.
  */
-export function generateShareImage(attempts: NodeData[], target: NodeData): string {
-  const canvas = drawCanvas(attempts, target);
+export function generateShareImage(attempts: NodeData[], target: NodeData, isColorblind: boolean = false): string {
+  const canvas = drawCanvas(attempts, target, isColorblind);
   return canvas ? canvas.toDataURL('image/png') : '';
 }
 
 /**
  * Genera y copia la imagen PNG al portapapeles del sistema operativo usando la Clipboard API.
  */
-export async function copyShareImageToClipboard(attempts: NodeData[], target: NodeData): Promise<boolean> {
+export async function copyShareImageToClipboard(attempts: NodeData[], target: NodeData, isColorblind: boolean = false): Promise<boolean> {
   try {
-    const canvas = drawCanvas(attempts, target);
+    const canvas = drawCanvas(attempts, target, isColorblind);
     if (!canvas) return false;
 
     const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'));

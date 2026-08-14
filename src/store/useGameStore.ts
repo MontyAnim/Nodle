@@ -2,11 +2,19 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 interface GameState {
+  // Identidad
+  userId: string;
+  
   // Estado actual del día
   attempts: string[];
+  dailyStartTime: number | null;
   gameStatus: 'playing' | 'won' | 'lost';
   lastPlayedTimestamp: number | null;
   hardMode: boolean;
+  colorblindMode: boolean;
+  
+  // Debug
+  debugDayOverride: number | null;
   
   // Estadísticas históricas
   currentStreak: number;
@@ -18,23 +26,33 @@ interface GameState {
   setGameStatus: (status: 'won' | 'lost') => void;
   resetDailyGame: (currentTimestamp: number) => void;
   toggleHardMode: () => void;
+  toggleColorblindMode: () => void;
+  setDebugDayOverride: (day: number | null) => void;
 }
 
 export const useGameStore = create<GameState>()(
   persist(
     (set) => ({
+      userId: typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2, 15),
       attempts: [],
+      dailyStartTime: null,
       gameStatus: 'playing',
       lastPlayedTimestamp: null,
       currentStreak: 0,
       maxStreak: 0,
       winDistribution: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
       hardMode: false,
+      colorblindMode: false,
+      debugDayOverride: null,
 
       addAttempt: (nodeId: string) =>
-        set((state) => ({
-          attempts: [...state.attempts, nodeId],
-        })),
+        set((state) => {
+          const isFirstAttempt = state.attempts.length === 0;
+          return {
+            attempts: [...state.attempts, nodeId],
+            dailyStartTime: isFirstAttempt ? Date.now() : state.dailyStartTime,
+          };
+        }),
 
       setGameStatus: (status: 'won' | 'lost') =>
         set((state) => {
@@ -72,11 +90,18 @@ export const useGameStore = create<GameState>()(
             attempts: [],
             gameStatus: 'playing',
             lastPlayedTimestamp: dayIndex, // Now storing the dayIndex instead of ms
+            dailyStartTime: null,
           };
         }),
       
       toggleHardMode: () =>
         set((state) => ({ hardMode: !state.hardMode })),
+
+      toggleColorblindMode: () =>
+        set((state) => ({ colorblindMode: !state.colorblindMode })),
+
+      setDebugDayOverride: (day) =>
+        set(() => ({ debugDayOverride: day })),
     }),
     {
       name: 'nodle-storage', // Nombre de la clave en localStorage

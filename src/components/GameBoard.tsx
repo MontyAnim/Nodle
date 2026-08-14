@@ -10,14 +10,21 @@ import { motion } from 'framer-motion';
 interface GameBoardProps {
   attempts: NodeData[];
   target: NodeData;
+  colorblindMode?: boolean;
 }
 
 const MAX_ATTEMPTS = 6;
 
-function getBgColor(state: ValidationState): string {
+function getBgColor(state: ValidationState, isColorblind: boolean): string {
   switch (state) {
-    case 'correct': return 'bg-emerald-500 border-emerald-600 text-emerald-950 shadow-[0_0_15px_rgba(16,185,129,0.3)]';
-    case 'partial': return 'bg-yellow-500 border-yellow-600 text-yellow-950';
+    case 'correct': 
+      return isColorblind 
+        ? 'bg-[#E35622] border-[#C54316] text-white shadow-[0_0_15px_rgba(227,86,34,0.3)]'
+        : 'bg-emerald-500 border-emerald-600 text-emerald-950 shadow-[0_0_15px_rgba(16,185,129,0.3)]';
+    case 'partial': 
+      return isColorblind
+        ? 'bg-[#0070B8] border-[#005A96] text-white'
+        : 'bg-yellow-500 border-yellow-600 text-yellow-950';
     case 'incorrect':
     case 'higher':
     case 'lower':
@@ -27,7 +34,7 @@ function getBgColor(state: ValidationState): string {
   }
 }
 
-function renderCell(value: string | number, state: ValidationState, label: string, index: number) {
+function renderCell(value: string | number, state: ValidationState, label: string, index: number, isColorblind: boolean) {
   return (
     <motion.div 
       initial={{ rotateX: 90, opacity: 0 }}
@@ -38,7 +45,7 @@ function renderCell(value: string | number, state: ValidationState, label: strin
         type: "spring", 
         bounce: 0.4 
       }}
-      className={`relative flex flex-col items-center justify-center w-full h-16 sm:h-20 rounded-md border-2 ${getBgColor(state)}`}
+      className={`relative flex flex-col items-center justify-center w-full h-16 sm:h-20 rounded-md border-2 ${getBgColor(state, isColorblind)}`}
     >
       <span className="text-[10px] sm:text-xs opacity-70 mb-1">{label}</span>
       <span className="font-bold text-xs sm:text-sm text-center leading-tight px-1">
@@ -50,7 +57,7 @@ function renderCell(value: string | number, state: ValidationState, label: strin
   );
 }
 
-export function GameBoard({ attempts, target }: GameBoardProps) {
+export function GameBoard({ attempts, target, colorblindMode = false }: GameBoardProps) {
   const rows = Array.from({ length: MAX_ATTEMPTS });
 
   return (
@@ -75,12 +82,12 @@ export function GameBoard({ attempts, target }: GameBoardProps) {
           <div key={i} className="flex flex-col gap-1 mb-2">
             <h3 className="text-sm font-semibold text-zinc-300 ml-1">{attempt.name}</h3>
             <div className="grid grid-cols-6 gap-2" style={{ perspective: "1000px" }}>
-              {renderCell(attempt.software, validation.software, 'Software', 0)}
-              {renderCell(attempt.context, validation.context, 'Contexto', 1)}
-              {renderCell(attempt.category, validation.category, 'Categoría', 2)}
-              {renderCell(attempt.inputs, validation.inputs, 'Entradas', 3)}
-              {renderCell(attempt.outputs, validation.outputs, 'Salidas', 4)}
-              {renderCell(`Tier ${attempt.frequency_tier}`, validation.tier, 'Tier', 5)}
+              {renderCell(attempt.software, validation.software, 'Software', 0, colorblindMode)}
+              {renderCell(attempt.context, validation.context, 'Contexto', 1, colorblindMode)}
+              {renderCell(attempt.category, validation.category, 'Categoría', 2, colorblindMode)}
+              {renderCell(attempt.inputs, validation.inputs, 'Entradas', 3, colorblindMode)}
+              {renderCell(attempt.outputs, validation.outputs, 'Salidas', 4, colorblindMode)}
+              {renderCell(`Tier ${attempt.frequency_tier}`, validation.tier, 'Tier', 5, colorblindMode)}
             </div>
           </div>
         );
