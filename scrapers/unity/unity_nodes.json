@@ -1,0 +1,2830 @@
+[
+        {
+            "id": "AbsoluteNode",
+            "name": "Absolute",
+            "aliases": [
+                "absolute"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "AddNode",
+            "name": "Add",
+            "aliases": [
+                "add"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Math",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3E6B8C",
+            "frequency_tier": 1
+        },
+        {
+            "id": "AllNode",
+            "name": "All",
+            "aliases": [
+                "all"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "AmbientNode",
+            "name": "Ambient",
+            "aliases": [
+                "ambient"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "AndNode",
+            "name": "And",
+            "aliases": [
+                "and"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "AnyNode",
+            "name": "Any",
+            "aliases": [
+                "any"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "AppendVectorNode",
+            "name": "AppendVector",
+            "aliases": [
+                "appendvector"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ArccosineNode",
+            "name": "Arccosine",
+            "aliases": [
+                "arccosine"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ArcsineNode",
+            "name": "Arcsine",
+            "aliases": [
+                "arcsine"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ArctangentNode",
+            "name": "Arctangent",
+            "aliases": [
+                "arctangent"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Arctangent2Node",
+            "name": "Arctangent2",
+            "aliases": [
+                "arctangent2"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "BakedGINode",
+            "name": "BakedGI",
+            "aliases": [
+                "bakedgi"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "BitangentVectorNode",
+            "name": "BitangentVector",
+            "aliases": [
+                "bitangentvector"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "BlackbodyNode",
+            "name": "Blackbody",
+            "aliases": [
+                "blackbody"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "BlendNode",
+            "name": "Blend",
+            "aliases": [
+                "blend"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 2
+        },
+        {
+            "id": "BlockNode",
+            "name": "Block",
+            "aliases": [
+                "block"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "BooleanNode",
+            "name": "Boolean",
+            "aliases": [
+                "boolean"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "BranchNode",
+            "name": "Branch",
+            "aliases": [
+                "branch"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "BranchOnInputConnectionNode",
+            "name": "BranchOnInputConnection",
+            "aliases": [
+                "branchoninputconnection"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 2
+        },
+        {
+            "id": "CalculateLevelOfDetailTexture2DNode",
+            "name": "CalculateLevelOfDetailTexture2D",
+            "aliases": [
+                "calculatelevelofdetailtexture2d"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "CameraNode",
+            "name": "Camera",
+            "aliases": [
+                "camera"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "CeilingNode",
+            "name": "Ceiling",
+            "aliases": [
+                "ceiling"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ChannelMaskNode",
+            "name": "ChannelMask",
+            "aliases": [
+                "channelmask"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ChannelMixerNode",
+            "name": "ChannelMixer",
+            "aliases": [
+                "channelmixer"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "CheckerboardNode",
+            "name": "Checkerboard",
+            "aliases": [
+                "checkerboard"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ClampNode",
+            "name": "Clamp",
+            "aliases": [
+                "clamp"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Math",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3E6B8C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ColorNode",
+            "name": "Color",
+            "aliases": [
+                "color"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 1
+        },
+        {
+            "id": "ColorMaskNode",
+            "name": "ColorMask",
+            "aliases": [
+                "colormask"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 1
+        },
+        {
+            "id": "ColorspaceConversionNode",
+            "name": "ColorspaceConversion",
+            "aliases": [
+                "colorspaceconversion"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 1
+        },
+        {
+            "id": "CombineNode",
+            "name": "Combine",
+            "aliases": [
+                "combine"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 1
+        },
+        {
+            "id": "ComparisonNode",
+            "name": "Comparison",
+            "aliases": [
+                "comparison"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ComputeDeformNode",
+            "name": "ComputeDeform",
+            "aliases": [
+                "computedeform"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ConstantNode",
+            "name": "Constant",
+            "aliases": [
+                "constant"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ContrastNode",
+            "name": "Contrast",
+            "aliases": [
+                "contrast"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "CosineNode",
+            "name": "Cosine",
+            "aliases": [
+                "cosine"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "CrossProductNode",
+            "name": "CrossProduct",
+            "aliases": [
+                "crossproduct"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "CubemapAssetNode",
+            "name": "CubemapAsset",
+            "aliases": [
+                "cubemapasset"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "CustomInterpolatorNode",
+            "name": "CustomInterpolator",
+            "aliases": [
+                "custominterpolator"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DDXNode",
+            "name": "DDX",
+            "aliases": [
+                "ddx"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DDXYNode",
+            "name": "DDXY",
+            "aliases": [
+                "ddxy"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DDYNode",
+            "name": "DDY",
+            "aliases": [
+                "ddy"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DefaultBitmapTextNode",
+            "name": "DefaultBitmapText",
+            "aliases": [
+                "defaultbitmaptext"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DefaultGradientNode",
+            "name": "DefaultGradient",
+            "aliases": [
+                "defaultgradient"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DefaultSDFTextNode",
+            "name": "DefaultSDFText",
+            "aliases": [
+                "defaultsdftext"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DefaultSolidNode",
+            "name": "DefaultSolid",
+            "aliases": [
+                "defaultsolid"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DefaultTextureNode",
+            "name": "DefaultTexture",
+            "aliases": [
+                "defaulttexture"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DegreesToRadiansNode",
+            "name": "DegreesToRadians",
+            "aliases": [
+                "degreestoradians"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DielectricSpecularNode",
+            "name": "DielectricSpecular",
+            "aliases": [
+                "dielectricspecular"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DistanceNode",
+            "name": "Distance",
+            "aliases": [
+                "distance"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DitherNode",
+            "name": "Dither",
+            "aliases": [
+                "dither"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DivideNode",
+            "name": "Divide",
+            "aliases": [
+                "divide"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Math",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3E6B8C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DotProductNode",
+            "name": "DotProduct",
+            "aliases": [
+                "dotproduct"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "DropdownNode",
+            "name": "Dropdown",
+            "aliases": [
+                "dropdown"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ElementTextureUVNode",
+            "name": "ElementTextureUV",
+            "aliases": [
+                "elementtextureuv"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "UV",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#8E465A",
+            "frequency_tier": 1
+        },
+        {
+            "id": "EllipseNode",
+            "name": "Ellipse",
+            "aliases": [
+                "ellipse"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ExponentialNode",
+            "name": "Exponential",
+            "aliases": [
+                "exponential"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "EyeIndexNode",
+            "name": "EyeIndex",
+            "aliases": [
+                "eyeindex"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "FadeTransitionNode",
+            "name": "FadeTransition",
+            "aliases": [
+                "fadetransition"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "FlipNode",
+            "name": "Flip",
+            "aliases": [
+                "flip"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "FlipbookNode",
+            "name": "Flipbook",
+            "aliases": [
+                "flipbook"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "FloorNode",
+            "name": "Floor",
+            "aliases": [
+                "floor"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "FogNode",
+            "name": "Fog",
+            "aliases": [
+                "fog"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "FractionNode",
+            "name": "Fraction",
+            "aliases": [
+                "fraction"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "FresnelNode",
+            "name": "Fresnel",
+            "aliases": [
+                "fresnel"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 1
+        },
+        {
+            "id": "GatherTexture2DNode",
+            "name": "GatherTexture2D",
+            "aliases": [
+                "gathertexture2d"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "GradientNode",
+            "name": "Gradient",
+            "aliases": [
+                "gradient"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "GradientNoiseNode",
+            "name": "GradientNoise",
+            "aliases": [
+                "gradientnoise"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "HueNode",
+            "name": "Hue",
+            "aliases": [
+                "hue"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "HyperbolicCosineNode",
+            "name": "HyperbolicCosine",
+            "aliases": [
+                "hyperboliccosine"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "HyperbolicSineNode",
+            "name": "HyperbolicSine",
+            "aliases": [
+                "hyperbolicsine"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "HyperbolicTangentNode",
+            "name": "HyperbolicTangent",
+            "aliases": [
+                "hyperbolictangent"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "InstanceIDNode",
+            "name": "InstanceID",
+            "aliases": [
+                "instanceid"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "IntegerNode",
+            "name": "Integer",
+            "aliases": [
+                "integer"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "InverseLerpNode",
+            "name": "InverseLerp",
+            "aliases": [
+                "inverselerp"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 1
+        },
+        {
+            "id": "InvertColorsNode",
+            "name": "InvertColors",
+            "aliases": [
+                "invertcolors"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 1
+        },
+        {
+            "id": "IsForcedGammaNode",
+            "name": "IsForcedGamma",
+            "aliases": [
+                "isforcedgamma"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "IsFrontFaceNode",
+            "name": "IsFrontFace",
+            "aliases": [
+                "isfrontface"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "IsInfiniteNode",
+            "name": "IsInfinite",
+            "aliases": [
+                "isinfinite"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "IsNanNode",
+            "name": "IsNan",
+            "aliases": [
+                "isnan"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "KeywordNode",
+            "name": "Keyword",
+            "aliases": [
+                "keyword"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "LegacyUnknownTypeNode",
+            "name": "LegacyUnknownType",
+            "aliases": [
+                "legacyunknowntype"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "LengthNode",
+            "name": "Length",
+            "aliases": [
+                "length"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "LerpNode",
+            "name": "Lerp",
+            "aliases": [
+                "lerp"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 1
+        },
+        {
+            "id": "LinearBlendSkinningNode",
+            "name": "LinearBlendSkinning",
+            "aliases": [
+                "linearblendskinning"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 2
+        },
+        {
+            "id": "LogNode",
+            "name": "Log",
+            "aliases": [
+                "log"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "MainLightDirectionNode",
+            "name": "MainLightDirection",
+            "aliases": [
+                "mainlightdirection"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Matrix2Node",
+            "name": "Matrix2",
+            "aliases": [
+                "matrix2"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Matrix3Node",
+            "name": "Matrix3",
+            "aliases": [
+                "matrix3"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Matrix4Node",
+            "name": "Matrix4",
+            "aliases": [
+                "matrix4"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "MatrixConstructionNode",
+            "name": "MatrixConstruction",
+            "aliases": [
+                "matrixconstruction"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "MatrixDeterminantNode",
+            "name": "MatrixDeterminant",
+            "aliases": [
+                "matrixdeterminant"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "MatrixSplitNode",
+            "name": "MatrixSplit",
+            "aliases": [
+                "matrixsplit"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 1
+        },
+        {
+            "id": "MatrixTransposeNode",
+            "name": "MatrixTranspose",
+            "aliases": [
+                "matrixtranspose"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "MaximumNode",
+            "name": "Maximum",
+            "aliases": [
+                "maximum"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "MetalReflectanceNode",
+            "name": "MetalReflectance",
+            "aliases": [
+                "metalreflectance"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Minimal2d3dTextureAssetNode",
+            "name": "Minimal2d3dTextureAsset",
+            "aliases": [
+                "minimal2d3dtextureasset"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Minimal2dArrayTextureAssetNode",
+            "name": "Minimal2dArrayTextureAsset",
+            "aliases": [
+                "minimal2darraytextureasset"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "MinimalCubemapAssetNode",
+            "name": "MinimalCubemapAsset",
+            "aliases": [
+                "minimalcubemapasset"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "MinimumNode",
+            "name": "Minimum",
+            "aliases": [
+                "minimum"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ModuloNode",
+            "name": "Modulo",
+            "aliases": [
+                "modulo"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "MultiplyNode",
+            "name": "Multiply",
+            "aliases": [
+                "multiply"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Math",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3E6B8C",
+            "frequency_tier": 1
+        },
+        {
+            "id": "NandNode",
+            "name": "Nand",
+            "aliases": [
+                "nand"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "NegateNode",
+            "name": "Negate",
+            "aliases": [
+                "negate"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "NoiseNode",
+            "name": "Noise",
+            "aliases": [
+                "noise"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "NoiseSineWaveNode",
+            "name": "NoiseSineWave",
+            "aliases": [
+                "noisesinewave"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "NormalBlendNode",
+            "name": "NormalBlend",
+            "aliases": [
+                "normalblend"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 1
+        },
+        {
+            "id": "NormalFromHeightNode",
+            "name": "NormalFromHeight",
+            "aliases": [
+                "normalfromheight"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 1
+        },
+        {
+            "id": "NormalFromTextureNode",
+            "name": "NormalFromTexture",
+            "aliases": [
+                "normalfromtexture"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 1
+        },
+        {
+            "id": "NormalizeNode",
+            "name": "Normalize",
+            "aliases": [
+                "normalize"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 1
+        },
+        {
+            "id": "NormalReconstructZNode",
+            "name": "NormalReconstructZ",
+            "aliases": [
+                "normalreconstructz"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 1
+        },
+        {
+            "id": "NormalStrengthNode",
+            "name": "NormalStrength",
+            "aliases": [
+                "normalstrength"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 1
+        },
+        {
+            "id": "NormalUnpackNode",
+            "name": "NormalUnpack",
+            "aliases": [
+                "normalunpack"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 1
+        },
+        {
+            "id": "NormalVectorNode",
+            "name": "NormalVector",
+            "aliases": [
+                "normalvector"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 1
+        },
+        {
+            "id": "NotNode",
+            "name": "Not",
+            "aliases": [
+                "not"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ObjectNode",
+            "name": "Object",
+            "aliases": [
+                "object"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "OneMinusNode",
+            "name": "OneMinus",
+            "aliases": [
+                "oneminus"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "OrNode",
+            "name": "Or",
+            "aliases": [
+                "or"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ParallaxMappingNode",
+            "name": "ParallaxMapping",
+            "aliases": [
+                "parallaxmapping"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "UV",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#8E465A",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ParallaxOcclusionMappingNode",
+            "name": "ParallaxOcclusionMapping",
+            "aliases": [
+                "parallaxocclusionmapping"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "UV",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#8E465A",
+            "frequency_tier": 2
+        },
+        {
+            "id": "PolarCoordinatesNode",
+            "name": "PolarCoordinates",
+            "aliases": [
+                "polarcoordinates"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "UV",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#8E465A",
+            "frequency_tier": 2
+        },
+        {
+            "id": "PolygonNode",
+            "name": "Polygon",
+            "aliases": [
+                "polygon"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "PositionNode",
+            "name": "Position",
+            "aliases": [
+                "position"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 1
+        },
+        {
+            "id": "PosterizeNode",
+            "name": "Posterize",
+            "aliases": [
+                "posterize"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "PowerNode",
+            "name": "Power",
+            "aliases": [
+                "power"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Math",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3E6B8C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "PreviewNode",
+            "name": "Preview",
+            "aliases": [
+                "preview"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ProjectionNode",
+            "name": "Projection",
+            "aliases": [
+                "projection"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "PropertyNode",
+            "name": "Property",
+            "aliases": [
+                "property"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RadialShearNode",
+            "name": "RadialShear",
+            "aliases": [
+                "radialshear"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RadiansToDegreesNode",
+            "name": "RadiansToDegrees",
+            "aliases": [
+                "radianstodegrees"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RandomRangeNode",
+            "name": "RandomRange",
+            "aliases": [
+                "randomrange"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ReciprocalNode",
+            "name": "Reciprocal",
+            "aliases": [
+                "reciprocal"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ReciprocalSquareRootNode",
+            "name": "ReciprocalSquareRoot",
+            "aliases": [
+                "reciprocalsquareroot"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RectangleNode",
+            "name": "Rectangle",
+            "aliases": [
+                "rectangle"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RedirectNode",
+            "name": "Redirect",
+            "aliases": [
+                "redirect"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ReflectionNode",
+            "name": "Reflection",
+            "aliases": [
+                "reflection"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ReflectionProbeNode",
+            "name": "ReflectionProbe",
+            "aliases": [
+                "reflectionprobe"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RefractNode",
+            "name": "Refract",
+            "aliases": [
+                "refract"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RejectionNode",
+            "name": "Rejection",
+            "aliases": [
+                "rejection"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RemapNode",
+            "name": "Remap",
+            "aliases": [
+                "remap"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Math",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3E6B8C",
+            "frequency_tier": 1
+        },
+        {
+            "id": "RenderTypeNode",
+            "name": "RenderType",
+            "aliases": [
+                "rendertype"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RenderTypeBranchNode",
+            "name": "RenderTypeBranch",
+            "aliases": [
+                "rendertypebranch"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ReplaceColorNode",
+            "name": "ReplaceColor",
+            "aliases": [
+                "replacecolor"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 1
+        },
+        {
+            "id": "RotateNode",
+            "name": "Rotate",
+            "aliases": [
+                "rotate"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RotateAboutAxisNode",
+            "name": "RotateAboutAxis",
+            "aliases": [
+                "rotateaboutaxis"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RoundNode",
+            "name": "Round",
+            "aliases": [
+                "round"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RoundedPolygonNode",
+            "name": "RoundedPolygon",
+            "aliases": [
+                "roundedpolygon"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "RoundedRectangleNode",
+            "name": "RoundedRectangle",
+            "aliases": [
+                "roundedrectangle"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SampleCubemapNode",
+            "name": "SampleCubemap",
+            "aliases": [
+                "samplecubemap"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SampleElementTextureNode",
+            "name": "SampleElementTexture",
+            "aliases": [
+                "sampleelementtexture"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SampleRawCubemapNode",
+            "name": "SampleRawCubemap",
+            "aliases": [
+                "samplerawcubemap"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SamplerStateNode",
+            "name": "SamplerState",
+            "aliases": [
+                "samplerstate"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SampleTexture2DNode",
+            "name": "SampleTexture2D",
+            "aliases": [
+                "sampletexture2d"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SampleTexture2DArrayNode",
+            "name": "SampleTexture2DArray",
+            "aliases": [
+                "sampletexture2darray"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SampleTexture2DLODNode",
+            "name": "SampleTexture2DLOD",
+            "aliases": [
+                "sampletexture2dlod"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SampleTexture3DNode",
+            "name": "SampleTexture3D",
+            "aliases": [
+                "sampletexture3d"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SampleVirtualTextureNode",
+            "name": "SampleVirtualTexture",
+            "aliases": [
+                "samplevirtualtexture"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SaturateNode",
+            "name": "Saturate",
+            "aliases": [
+                "saturate"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SaturationNode",
+            "name": "Saturation",
+            "aliases": [
+                "saturation"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SawtoothWaveNode",
+            "name": "SawtoothWave",
+            "aliases": [
+                "sawtoothwave"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SceneColorNode",
+            "name": "SceneColor",
+            "aliases": [
+                "scenecolor"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 1
+        },
+        {
+            "id": "SceneDepthNode",
+            "name": "SceneDepth",
+            "aliases": [
+                "scenedepth"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SceneDepthDifferenceNode",
+            "name": "SceneDepthDifference",
+            "aliases": [
+                "scenedepthdifference"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ScreenNode",
+            "name": "Screen",
+            "aliases": [
+                "screen"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "ScreenPositionNode",
+            "name": "ScreenPosition",
+            "aliases": [
+                "screenposition"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 1
+        },
+        {
+            "id": "SignNode",
+            "name": "Sign",
+            "aliases": [
+                "sign"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SineNode",
+            "name": "Sine",
+            "aliases": [
+                "sine"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SliderNode",
+            "name": "Slider",
+            "aliases": [
+                "slider"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SmoothstepNode",
+            "name": "Smoothstep",
+            "aliases": [
+                "smoothstep"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Math",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3E6B8C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SphereMaskNode",
+            "name": "SphereMask",
+            "aliases": [
+                "spheremask"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SpherizeNode",
+            "name": "Spherize",
+            "aliases": [
+                "spherize"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SplitNode",
+            "name": "Split",
+            "aliases": [
+                "split"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 1
+        },
+        {
+            "id": "SplitTextureTransformNode",
+            "name": "SplitTextureTransform",
+            "aliases": [
+                "splittexturetransform"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 1
+        },
+        {
+            "id": "SpriteSkinningNode",
+            "name": "SpriteSkinning",
+            "aliases": [
+                "spriteskinning"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SquareRootNode",
+            "name": "SquareRoot",
+            "aliases": [
+                "squareroot"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SquareWaveNode",
+            "name": "SquareWave",
+            "aliases": [
+                "squarewave"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "StepNode",
+            "name": "Step",
+            "aliases": [
+                "step"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Math",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3E6B8C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SubtractNode",
+            "name": "Subtract",
+            "aliases": [
+                "subtract"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Math",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3E6B8C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "SwizzleNode",
+            "name": "Swizzle",
+            "aliases": [
+                "swizzle"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TangentNode",
+            "name": "Tangent",
+            "aliases": [
+                "tangent"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TangentVectorNode",
+            "name": "TangentVector",
+            "aliases": [
+                "tangentvector"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TerrainPropertiesNode",
+            "name": "TerrainProperties",
+            "aliases": [
+                "terrainproperties"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Texture2DArrayAssetNode",
+            "name": "Texture2DArrayAsset",
+            "aliases": [
+                "texture2darrayasset"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Texture2DAssetNode",
+            "name": "Texture2DAsset",
+            "aliases": [
+                "texture2dasset"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Texture2DPropertiesNode",
+            "name": "Texture2DProperties",
+            "aliases": [
+                "texture2dproperties"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Texture3DAssetNode",
+            "name": "Texture3DAsset",
+            "aliases": [
+                "texture3dasset"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TilingAndOffsetNode",
+            "name": "TilingAndOffset",
+            "aliases": [
+                "tilingandoffset"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "UV",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#8E465A",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TimeNode",
+            "name": "Time",
+            "aliases": [
+                "time"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Input",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#3D8252",
+            "frequency_tier": 1
+        },
+        {
+            "id": "TransformNode",
+            "name": "Transform",
+            "aliases": [
+                "transform"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TransformationMatrixNode",
+            "name": "TransformationMatrix",
+            "aliases": [
+                "transformationmatrix"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TriangleWaveNode",
+            "name": "TriangleWave",
+            "aliases": [
+                "trianglewave"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TriplanarNode",
+            "name": "Triplanar",
+            "aliases": [
+                "triplanar"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Texture",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#C86432",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TruncateNode",
+            "name": "Truncate",
+            "aliases": [
+                "truncate"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "TwirlNode",
+            "name": "Twirl",
+            "aliases": [
+                "twirl"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "UVNode",
+            "name": "UV",
+            "aliases": [
+                "uv"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "UV",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#8E465A",
+            "frequency_tier": 1
+        },
+        {
+            "id": "Vector1Node",
+            "name": "Vector1",
+            "aliases": [
+                "vector1"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Vector2Node",
+            "name": "Vector2",
+            "aliases": [
+                "vector2"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Vector3Node",
+            "name": "Vector3",
+            "aliases": [
+                "vector3"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "Vector4Node",
+            "name": "Vector4",
+            "aliases": [
+                "vector4"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Vector",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#64468C",
+            "frequency_tier": 2
+        },
+        {
+            "id": "VertexColorNode",
+            "name": "VertexColor",
+            "aliases": [
+                "vertexcolor"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Color",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#A49A32",
+            "frequency_tier": 1
+        },
+        {
+            "id": "VertexIDNode",
+            "name": "VertexID",
+            "aliases": [
+                "vertexid"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "VoronoiNode",
+            "name": "Voronoi",
+            "aliases": [
+                "voronoi"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        },
+        {
+            "id": "WhiteBalanceNode",
+            "name": "WhiteBalance",
+            "aliases": [
+                "whitebalance"
+            ],
+            "software": "Unity",
+            "context": "Shader Graph",
+            "category": "Utility",
+            "inputs": 2,
+            "outputs": 1,
+            "color_hex": "#484848",
+            "frequency_tier": 2
+        }
+    ]
