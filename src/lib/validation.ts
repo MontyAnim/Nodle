@@ -4,7 +4,7 @@ import { ValidationState, GuessValidation } from '@/types/validation';
 /**
  * Mapping of node contexts to functional domains to allow partial matches.
  */
-const CONTEXT_DOMAINS: Record<string, string> = {
+export const CONTEXT_DOMAINS: Record<string, string> = {
   // Shading / Rendering
   'Shader': 'shading',           // Blender
   'Shader Graph': 'shading',     // Unity

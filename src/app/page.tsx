@@ -11,6 +11,8 @@ import { SearchBar } from "@/components/SearchBar";
 export default function Home() {
   const resetDailyGame = useGameStore((state) => state.resetDailyGame);
   const lastPlayedTimestamp = useGameStore((state) => state.lastPlayedTimestamp);
+  const hardMode = useGameStore((state) => state.hardMode);
+  const toggleHardMode = useGameStore((state) => state.toggleHardMode);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
@@ -49,10 +51,20 @@ export default function Home() {
         <p className="text-lg text-zinc-400 text-center max-w-xl">
           El juego de deducción lógica basado en nodos para artistas técnicos y desarrolladores de videojuegos.
         </p>
+
+        <div className="flex items-center gap-3 bg-zinc-900 px-4 py-2 rounded-full border border-zinc-800">
+          <span className="text-sm text-zinc-400 font-medium">Modo Difícil</span>
+          <button 
+            onClick={toggleHardMode}
+            className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${hardMode ? 'bg-emerald-500' : 'bg-zinc-700'}`}
+          >
+            <span className={`w-4 h-4 bg-white rounded-full absolute shadow transition-transform ${hardMode ? 'translate-x-5' : 'translate-x-1'}`} />
+          </button>
+        </div>
         
         {isReady && (
           <div className="w-full max-w-xl mt-4">
-            <SearchBar nodes={allNodes} />
+            <SearchBar nodes={allNodes} target={dailyNode} />
           </div>
         )}
 

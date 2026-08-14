@@ -2,20 +2,39 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Fuse from 'fuse.js';
 import { NodeData } from '@/types/node';
 import { useGameStore } from '@/store/useGameStore';
+import { getHardModeConstraints, filterNodesByHardMode } from '@/lib/hardmode';
 
 interface SearchBarProps {
   nodes: NodeData[];
+  target: NodeData | null;
 }
 
-export function SearchBar({ nodes }: SearchBarProps) {
+export function SearchBar({ nodes, target }: SearchBarProps) {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  
   const addAttempt = useGameStore((state) => state.addAttempt);
+  const attempts = useGameStore((state) => state.attempts);
+  const hardMode = useGameStore((state) => state.hardMode);
+  
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  // Inicializar Fuse.js con los pesos especificados
+  // Aplicar restricciones de Hard Mode
+  const filteredNodes = useMemo(() => {
+    if (!hardMode || !target || attempts.length === 0) return nodes;
+    
+    // Obtenemos los objetos NodeData completos de los intentos a partir de los IDs
+    const attemptNodes = attempts
+      .map(id => nodes.find(n => n.id === id))
+      .filter((n): n is NodeData => n !== undefined);
+      
+    const constraints = getHardModeConstraints(attemptNodes, target);
+    return filterNodesByHardMode(nodes, constraints);
+  }, [nodes, target, attempts, hardMode]);
+
+  // Inicializar Fuse.js con la lista (filtrada o completa)
   const fuse = useMemo(() => {
-    return new Fuse(nodes, {
+    return new Fuse(filteredNodes, {
       keys: [
         { name: 'name', weight: 0.7 },
         { name: 'aliases', weight: 0.3 }

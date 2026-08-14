@@ -6,6 +6,7 @@ interface GameState {
   attempts: string[];
   gameStatus: 'playing' | 'won' | 'lost';
   lastPlayedTimestamp: number | null;
+  hardMode: boolean;
   
   // Estadísticas históricas
   currentStreak: number;
@@ -16,6 +17,7 @@ interface GameState {
   addAttempt: (nodeId: string) => void;
   setGameStatus: (status: 'won' | 'lost') => void;
   resetDailyGame: (currentTimestamp: number) => void;
+  toggleHardMode: () => void;
 }
 
 export const useGameStore = create<GameState>()(
@@ -27,6 +29,7 @@ export const useGameStore = create<GameState>()(
       currentStreak: 0,
       maxStreak: 0,
       winDistribution: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+      hardMode: false,
 
       addAttempt: (nodeId: string) =>
         set((state) => ({
@@ -71,6 +74,9 @@ export const useGameStore = create<GameState>()(
             lastPlayedTimestamp: dayIndex, // Now storing the dayIndex instead of ms
           };
         }),
+      
+      toggleHardMode: () =>
+        set((state) => ({ hardMode: !state.hardMode })),
     }),
     {
       name: 'nodle-storage', // Nombre de la clave en localStorage
