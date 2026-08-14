@@ -1,14 +1,38 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Box } from "lucide-react";
 import { useGameStore } from "../store/useGameStore";
+import { getNodes } from "@/lib/nodes";
+import { getUTCDayIndex, getDailyTargetNode } from "@/lib/daily";
+import { NodeData } from "@/types/node";
 
 export default function Home() {
-  // Forzar la persistencia en localStorage en el primer render
+  const resetDailyGame = useGameStore((state) => state.resetDailyGame);
+  const lastPlayedTimestamp = useGameStore((state) => state.lastPlayedTimestamp);
+
+  const [nodeCount, setNodeCount] = useState<number | null>(null);
+  const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
+
   useEffect(() => {
+    // Forzar persistencia inicial
     useGameStore.setState(useGameStore.getState());
-  }, []);
+
+    const currentDay = getUTCDayIndex();
+
+    // Check if we need to reset the game
+    if (lastPlayedTimestamp !== currentDay) {
+      resetDailyGame(currentDay);
+    }
+
+    // Probar carga perezosa y PRNG
+    getNodes().then((nodes) => {
+      setNodeCount(nodes.length);
+      
+      const target = getDailyTargetNode(nodes, currentDay);
+      setDailyNode(target);
+    });
+  }, [lastPlayedTimestamp, resetDailyGame]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6 sm:p-24 bg-background text-foreground">
@@ -19,6 +43,16 @@ export default function Home() {
             Nodle
           </h1>
         </div>
+        {nodeCount !== null && (
+          <div className="mt-4 px-4 py-2 bg-emerald-900/30 text-emerald-400 rounded-md border border-emerald-800 font-mono text-center">
+            ✅ {nodeCount} nodos cargados asíncronamente
+            {dailyNode && (
+              <div className="mt-2 text-emerald-500/50 text-xs">
+                (Motor PRNG iniciado y nodo diario seleccionado en secreto)
+              </div>
+            )}
+          </div>
+        )}
         <p className="text-lg text-zinc-400 text-center max-w-xl">
           El juego de deducción lógica basado en nodos para artistas técnicos y desarrolladores de videojuegos.
         </p>

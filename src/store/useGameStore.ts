@@ -63,12 +63,12 @@ export const useGameStore = create<GameState>()(
           };
         }),
 
-      resetDailyGame: (currentTimestamp: number) =>
+      resetDailyGame: (dayIndex: number) =>
         set((state) => {
           return {
             attempts: [],
             gameStatus: 'playing',
-            lastPlayedTimestamp: currentTimestamp,
+            lastPlayedTimestamp: dayIndex, // Now storing the dayIndex instead of ms
           };
         }),
     }),
