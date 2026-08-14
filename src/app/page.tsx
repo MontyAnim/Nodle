@@ -12,6 +12,7 @@ import { GameBoard } from "@/components/GameBoard";
 import { DebugConsole } from "@/components/DebugConsole";
 import { generateShareImage, copyShareImageToClipboard } from "@/lib/canvas";
 import { Share2, Check } from "lucide-react";
+import { KofiButton } from "@/components/KofiButton";
 
 export default function Home() {
   const resetDailyGame = useGameStore((state) => state.resetDailyGame);
@@ -155,7 +156,7 @@ export default function Home() {
         )}
 
         {isReady && attempts.length > 0 && (
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col items-center gap-4">
             <button 
               onClick={handleShare}
               className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold transition-colors shadow-lg"
@@ -163,11 +164,25 @@ export default function Home() {
               {copied ? <Check className="w-5 h-5" /> : <Share2 className="w-5 h-5" />}
               {copied ? '¡Copiado al Portapapeles!' : 'Compartir Resultado'}
             </button>
+            {gameStatus === 'won' && (
+              <div className="animate-fade-in flex flex-col items-center gap-2 mt-4">
+                <p className="text-zinc-400 text-sm">¿Te gusta Nodle?</p>
+                <KofiButton />
+              </div>
+            )}
           </div>
         )}
 
         <DebugConsole targetNode={dailyNode} />
       </div>
+
+      {/* Global Footer */}
+      <footer className="mt-20 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-800/50 pt-8 w-full max-w-5xl">
+        <p className="text-zinc-500 text-sm">
+          Creado con ♥ para la comunidad de Technical Artists.
+        </p>
+        <KofiButton label="Invítame un café" className="text-xs px-3 py-1.5" />
+      </footer>
     </main>
   );
 }
