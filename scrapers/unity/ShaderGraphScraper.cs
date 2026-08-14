@@ -69,33 +69,9 @@ public class ShaderGraphScraper
             int inputsCount = 2;
             int outputsCount = 1;
             
-            try
-            {
-                // Most Shader Graph nodes inherit from ScriptableObject
-                ScriptableObject nodeInstance = ScriptableObject.CreateInstance(type);
-                if (nodeInstance != null)
-                {
-                    MethodInfo getInputSlots = type.GetMethod("GetInputSlots", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                    MethodInfo getOutputSlots = type.GetMethod("GetOutputSlots", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                    
-                    if (getInputSlots != null)
-                    {
-                        var inSlots = getInputSlots.Invoke(nodeInstance, null) as System.Collections.IEnumerable;
-                        if (inSlots != null) inputsCount = inSlots.Cast<object>().Count();
-                    }
-                    if (getOutputSlots != null)
-                    {
-                        var outSlots = getOutputSlots.Invoke(nodeInstance, null) as System.Collections.IEnumerable;
-                        if (outSlots != null) outputsCount = outSlots.Cast<object>().Count();
-                    }
-                    
-                    UnityEngine.Object.DestroyImmediate(nodeInstance);
-                }
-            }
-            catch (Exception)
-            {
-                // Fallback to defaults if instantiation fails due to internal Unity requirements
-            }
+            // In Unity 6+, many nodes are native/internal and cannot be instantiated via ScriptableObject.CreateInstance 
+            // without spamming the console with 'ExtensionOfNativeClass' errors.
+            // We will rely on default slot counts (2 in, 1 out) for the raw extraction.
 
             string category = GetCategory(name);
             string colorHex = GetColorHex(category);
