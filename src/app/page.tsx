@@ -1,12 +1,17 @@
 "use client";
 
+import { Box } from "lucide-react";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6 sm:p-24 bg-background text-foreground">
       <div className="z-10 max-w-5xl w-full items-center justify-center font-sans text-sm flex flex-col gap-8">
-        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-center">
-          Nodedle
-        </h1>
+        <div className="flex items-center gap-4">
+          <Box className="w-12 h-12 text-zinc-50" />
+          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-center">
+            Nodedle
+          </h1>
+        </div>
         <p className="text-lg text-zinc-400 text-center max-w-xl">
           El juego de deducción lógica basado en nodos para artistas técnicos y desarrolladores de videojuegos.
         </p>

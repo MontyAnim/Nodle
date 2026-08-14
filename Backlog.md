@@ -6,7 +6,7 @@ Este documento define el backlog del producto Nodedle. Cada tarea está prioriza
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | **NDL-01** | Infraestructura | Configuración inicial Next.js y Tailwind | Iniciar repositorio con App Router, Tailwind CSS (neutros oscuros: slate-900, zinc-950) y la configuración base (SSG inicial, componentes de interactividad "use client"). | Alta | S | Done | `feature/init-nextjs` |
 | **NDL-02** | Infraestructura | Implementar Zustand (Estado Global) | Crear store persistente localmente (vía localStorage) para vector de intentos, timestamp, racha actual/histórica y frecuencia de victorias. | Alta | M | Done | `feature/zustand-state` |
-| **NDL-03** | Infraestructura | Configurar UI Base y Dark Mode | Setup de tipografía y biblioteca de íconos geométricos (Lucide Icons). Dark mode por defecto. | Alta | S | To Do | `feature/base-ui` |
+| **NDL-03** | Infraestructura | Configurar UI Base y Dark Mode | Setup de tipografía y biblioteca de íconos geométricos (Lucide Icons). Dark mode por defecto. | Alta | S | Done | `feature/base-ui` |
 | **NDL-04** | Extracción Datos | Scraper para Blender (Python) | Script con `bpy` para extraer propiedades de ShaderNode y GeometryNode, creando árboles de nodos en memoria y validando/descartando. | Alta | L | To Do | `feature/scraper-blender` |
 | **NDL-05** | Extracción Datos | Scraper para Unreal Engine (Python) | Script para extraer nodos de Material Expressions y Blueprints (UK2Node), filtrando pines condicionales. | Media | L | To Do | `feature/scraper-unreal` |
 | **NDL-06** | Extracción Datos | Scraper para Unity (C#) | Script modo Editor usando System.Reflection para extraer atributos decoradores de Shader Graph. | Media | L | To Do | `feature/scraper-unity` |
