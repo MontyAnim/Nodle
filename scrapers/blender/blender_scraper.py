@@ -37,19 +37,22 @@ def get_node_category(idname, name):
 def extract_nodes(context_name):
     if context_name == "Shader":
         mat = bpy.data.materials.new(name="TempExtractMat")
-        mat.use_nodes = True
-        tree = mat.node_tree
-        node_classes = bpy.types.ShaderNode.__subclasses__()
+        tree = mat.node_tree if hasattr(mat, "node_tree") else None
+        if not tree:
+            mat.use_nodes = True
+            tree = mat.node_tree
+        types_to_check = [name for name in dir(bpy.types) if name.startswith("ShaderNode") or name.startswith("FunctionNode")]
     else:
         # Geometry nodes
         group = bpy.data.node_groups.new(name="TempExtractGeo", type="GeometryNodeTree")
         tree = group
-        node_classes = bpy.types.GeometryNode.__subclasses__()
+        types_to_check = [name for name in dir(bpy.types) if name.startswith("GeometryNode") or name.startswith("FunctionNode")]
 
     nodes_data = []
 
-    for cls in node_classes:
-        idname = cls.bl_idname
+    print(f"[{context_name}] Found {len(types_to_check)} candidate types to check.")
+    for class_name in types_to_check:
+        idname = class_name
         
         # Skip some internal or custom group nodes
         if "Custom" in idname or "Group" in idname or idname == "NodeGroup":
@@ -57,7 +60,8 @@ def extract_nodes(context_name):
 
         try:
             node = tree.nodes.new(type=idname)
-        except Exception:
+        except Exception as e:
+            print(f"Error instantiating {idname}: {e}")
             continue
         
         name = node.bl_label if node.bl_label else node.name

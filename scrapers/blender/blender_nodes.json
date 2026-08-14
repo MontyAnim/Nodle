@@ -1,0 +1,5812 @@
+[
+  {
+    "id": "GeometryNodeTool3DCursor",
+    "name": "3D Cursor",
+    "aliases": [
+      "3dcursor"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeAccumulateField",
+    "name": "Accumulate Field",
+    "aliases": [
+      "accumulatefield"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputActiveCamera",
+    "name": "Active Camera",
+    "aliases": [
+      "activecamera"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeToolActiveElement",
+    "name": "Active Element",
+    "aliases": [
+      "activeelement"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridAdvect",
+    "name": "Advect Grid",
+    "aliases": [
+      "advectgrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeAlignEulerToVector",
+    "name": "Align Euler to Vector",
+    "aliases": [
+      "aligneulertovector"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Vector",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeAlignRotationToVector",
+    "name": "Align Rotation to Vector",
+    "aliases": [
+      "alignrotationtovector"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Vector",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveArc",
+    "name": "Arc",
+    "aliases": [
+      "arc"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 10,
+    "outputs": 4,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeAttributeStatistic",
+    "name": "Attribute Statistic",
+    "aliases": [
+      "attributestatistic"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 8,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeAxesToRotation",
+    "name": "Axes to Rotation",
+    "aliases": [
+      "axestorotation"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeAxisAngleToRotation",
+    "name": "Axis Angle to Rotation",
+    "aliases": [
+      "axisangletorotation"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeBake",
+    "name": "Bake",
+    "aliases": [
+      "bake"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeBitMath",
+    "name": "Bit Math",
+    "aliases": [
+      "bitmath"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Math",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeBlurAttribute",
+    "name": "Blur Attribute",
+    "aliases": [
+      "blurattribute"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeBoneInfo",
+    "name": "Bone Info",
+    "aliases": [
+      "boneinfo"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 2,
+    "outputs": 6,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeBooleanMath",
+    "name": "Boolean Math",
+    "aliases": [
+      "booleanmath"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Math",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeBoundBox",
+    "name": "Bounding Box",
+    "aliases": [
+      "boundingbox"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurvePrimitiveBezierSegment",
+    "name": "Bézier Segment",
+    "aliases": [
+      "béziersegment"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCameraInfo",
+    "name": "Camera Info",
+    "aliases": [
+      "camerainfo"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 1,
+    "outputs": 9,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCaptureAttribute",
+    "name": "Capture Attribute",
+    "aliases": [
+      "captureattribute"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridClip",
+    "name": "Clip Grid",
+    "aliases": [
+      "clipgrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 7,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeClosureToList",
+    "name": "Closure to List",
+    "aliases": [
+      "closuretolist"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeClusterByConnected",
+    "name": "Cluster by Connected",
+    "aliases": [
+      "clusterbyconnected"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeClusterByDistance",
+    "name": "Cluster by Distance",
+    "aliases": [
+      "clusterbydistance"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputCollection",
+    "name": "Collection",
+    "aliases": [
+      "collection"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCollectionChildren",
+    "name": "Collection Children",
+    "aliases": [
+      "collectionchildren"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCollectionInfo",
+    "name": "Collection Info",
+    "aliases": [
+      "collectioninfo"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeInputColor",
+    "name": "Color",
+    "aliases": [
+      "color"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Color",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeCombineColor",
+    "name": "Combine Color",
+    "aliases": [
+      "combinecolor"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Color",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeCombineMatrix",
+    "name": "Combine Matrix",
+    "aliases": [
+      "combinematrix"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 16,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeCombineTransform",
+    "name": "Combine Transform",
+    "aliases": [
+      "combinetransform"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeCompare",
+    "name": "Compare",
+    "aliases": [
+      "compare"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshCone",
+    "name": "Cone",
+    "aliases": [
+      "cone"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 5,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeConvexHull",
+    "name": "Convex Hull",
+    "aliases": [
+      "convexhull"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCornersOfEdge",
+    "name": "Corners of Edge",
+    "aliases": [
+      "cornersofedge"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCornersOfFace",
+    "name": "Corners of Face",
+    "aliases": [
+      "cornersofface"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCornersOfVertex",
+    "name": "Corners of Vertex",
+    "aliases": [
+      "cornersofvertex"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Texture",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshCube",
+    "name": "Cube",
+    "aliases": [
+      "cube"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCubeGridTopology",
+    "name": "Cube Grid Topology",
+    "aliases": [
+      "cubegridtopology"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 8,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurvePrimitiveCircle",
+    "name": "Curve Circle",
+    "aliases": [
+      "curvecircle"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputCurveHandlePositions",
+    "name": "Curve Handle Positions",
+    "aliases": [
+      "curvehandlepositions"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveLength",
+    "name": "Curve Length",
+    "aliases": [
+      "curvelength"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurvePrimitiveLine",
+    "name": "Curve Line",
+    "aliases": [
+      "curveline"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputTangent",
+    "name": "Curve Tangent",
+    "aliases": [
+      "curvetangent"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputCurveTilt",
+    "name": "Curve Tilt",
+    "aliases": [
+      "curvetilt"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveOfPoint",
+    "name": "Curve of Point",
+    "aliases": [
+      "curveofpoint"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveToMesh",
+    "name": "Curve to Mesh",
+    "aliases": [
+      "curvetomesh"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveToPoints",
+    "name": "Curve to Points",
+    "aliases": [
+      "curvetopoints"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 4,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurvesToGreasePencil",
+    "name": "Curves to Grease Pencil",
+    "aliases": [
+      "curvestogreasepencil"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshCylinder",
+    "name": "Cylinder",
+    "aliases": [
+      "cylinder"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 5,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeDeformCurvesOnSurface",
+    "name": "Deform Curves on Surface",
+    "aliases": [
+      "deformcurvesonsurface"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeDeleteGeometry",
+    "name": "Delete Geometry",
+    "aliases": [
+      "deletegeometry"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGizmoDial",
+    "name": "Dial Gizmo",
+    "aliases": [
+      "dialgizmo"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeDistributePointsInGrid",
+    "name": "Distribute Points in Grid",
+    "aliases": [
+      "distributepointsingrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeDistributePointsInVolume",
+    "name": "Distribute Points in Volume",
+    "aliases": [
+      "distributepointsinvolume"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeDistributePointsOnFaces",
+    "name": "Distribute Points on Faces",
+    "aliases": [
+      "distributepointsonfaces"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 7,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeAttributeDomainSize",
+    "name": "Domain Size",
+    "aliases": [
+      "domainsize"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 7,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeDualMesh",
+    "name": "Dual Mesh",
+    "aliases": [
+      "dualmesh"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeDuplicateElements",
+    "name": "Duplicate Elements",
+    "aliases": [
+      "duplicateelements"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMeshEdgeAngle",
+    "name": "Edge Angle",
+    "aliases": [
+      "edgeangle"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMeshEdgeNeighbors",
+    "name": "Edge Neighbors",
+    "aliases": [
+      "edgeneighbors"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeEdgePathsToCurves",
+    "name": "Edge Paths to Curves",
+    "aliases": [
+      "edgepathstocurves"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeEdgePathsToSelection",
+    "name": "Edge Paths to Selection",
+    "aliases": [
+      "edgepathstoselection"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMeshEdgeVertices",
+    "name": "Edge Vertices",
+    "aliases": [
+      "edgevertices"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 4,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeEdgesOfCorner",
+    "name": "Edges of Corner",
+    "aliases": [
+      "edgesofcorner"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeEdgesOfVertex",
+    "name": "Edges of Vertex",
+    "aliases": [
+      "edgesofvertex"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Texture",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveEndpointSelection",
+    "name": "Endpoint Selection",
+    "aliases": [
+      "endpointselection"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeEulerToRotation",
+    "name": "Euler to Rotation",
+    "aliases": [
+      "eulertorotation"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFieldAtIndex",
+    "name": "Evaluate at Index",
+    "aliases": [
+      "evaluateatindex"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFieldOnDomain",
+    "name": "Evaluate on Domain",
+    "aliases": [
+      "evaluateondomain"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeExtrudeMesh",
+    "name": "Extrude Mesh",
+    "aliases": [
+      "extrudemesh"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMeshFaceArea",
+    "name": "Face Area",
+    "aliases": [
+      "facearea"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshFaceSetBoundaries",
+    "name": "Face Group Boundaries",
+    "aliases": [
+      "facegroupboundaries"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMeshFaceNeighbors",
+    "name": "Face Neighbors",
+    "aliases": [
+      "faceneighbors"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeToolFaceSet",
+    "name": "Face Set",
+    "aliases": [
+      "faceset"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFaceOfCorner",
+    "name": "Face of Corner",
+    "aliases": [
+      "faceofcorner"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFieldAverage",
+    "name": "Field Average",
+    "aliases": [
+      "fieldaverage"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFieldMinAndMax",
+    "name": "Field Min & Max",
+    "aliases": [
+      "fieldmin&max"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFieldVariance",
+    "name": "Field Variance",
+    "aliases": [
+      "fieldvariance"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFieldToGrid",
+    "name": "Field to Grid",
+    "aliases": [
+      "fieldtogrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFieldToList",
+    "name": "Field to List",
+    "aliases": [
+      "fieldtolist"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFillCurve",
+    "name": "Fill Curve",
+    "aliases": [
+      "fillcurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFilletCurve",
+    "name": "Fillet Curve",
+    "aliases": [
+      "filletcurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFilterList",
+    "name": "Filter List",
+    "aliases": [
+      "filterlist"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeFindInString",
+    "name": "Find in String",
+    "aliases": [
+      "findinstring"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeFlipFaces",
+    "name": "Flip Faces",
+    "aliases": [
+      "flipfaces"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeFloatToInt",
+    "name": "Float to Integer",
+    "aliases": [
+      "floattointeger"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputFont",
+    "name": "Font",
+    "aliases": [
+      "font"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeForeachGeometryElementInput",
+    "name": "For Each Geometry Element Input",
+    "aliases": [
+      "foreachgeometryelementinput"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 3,
+    "outputs": 3,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeForeachGeometryElementOutput",
+    "name": "For Each Geometry Element Output",
+    "aliases": [
+      "foreachgeometryelementoutput"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Output",
+    "inputs": 3,
+    "outputs": 4,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeFormatString",
+    "name": "Format String",
+    "aliases": [
+      "formatstring"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeProximity",
+    "name": "Geometry Proximity",
+    "aliases": [
+      "geometryproximity"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGeometryToInstance",
+    "name": "Geometry to Instance",
+    "aliases": [
+      "geometrytoinstance"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGetAttributeNames",
+    "name": "Get Attribute Names",
+    "aliases": [
+      "getattributenames"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGetGeometryBundle",
+    "name": "Get Geometry Bundle",
+    "aliases": [
+      "getgeometrybundle"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGetGeometryComponent",
+    "name": "Get Geometry Component",
+    "aliases": [
+      "getgeometrycomponent"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeListGetItem",
+    "name": "Get List Item",
+    "aliases": [
+      "getlistitem"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGetNamedGrid",
+    "name": "Get Named Grid",
+    "aliases": [
+      "getnamedgrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGreasePencilToCurves",
+    "name": "Grease Pencil to Curves",
+    "aliases": [
+      "greasepenciltocurves"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshGrid",
+    "name": "Grid",
+    "aliases": [
+      "grid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridCurl",
+    "name": "Grid Curl",
+    "aliases": [
+      "gridcurl"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridDilateAndErode",
+    "name": "Grid Dilate & Erode",
+    "aliases": [
+      "griddilate&erode"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridDivergence",
+    "name": "Grid Divergence",
+    "aliases": [
+      "griddivergence"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridGradient",
+    "name": "Grid Gradient",
+    "aliases": [
+      "gridgradient"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridInfo",
+    "name": "Grid Info",
+    "aliases": [
+      "gridinfo"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridLaplacian",
+    "name": "Grid Laplacian",
+    "aliases": [
+      "gridlaplacian"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridMean",
+    "name": "Grid Mean",
+    "aliases": [
+      "gridmean"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridMedian",
+    "name": "Grid Median",
+    "aliases": [
+      "gridmedian"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridToMesh",
+    "name": "Grid to Mesh",
+    "aliases": [
+      "gridtomesh"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridToPoints",
+    "name": "Grid to Points",
+    "aliases": [
+      "gridtopoints"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 7,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveHandleTypeSelection",
+    "name": "Handle Type Selection",
+    "aliases": [
+      "handletypeselection"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeHashValue",
+    "name": "Hash Value",
+    "aliases": [
+      "hashvalue"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputID",
+    "name": "ID",
+    "aliases": [
+      "id"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshIcoSphere",
+    "name": "Ico Sphere",
+    "aliases": [
+      "icosphere"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputImage",
+    "name": "Image",
+    "aliases": [
+      "image"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeImageInfo",
+    "name": "Image Info",
+    "aliases": [
+      "imageinfo"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 2,
+    "outputs": 5,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeImageTexture",
+    "name": "Image Texture",
+    "aliases": [
+      "imagetexture"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Texture",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeImportCSV",
+    "name": "Import CSV",
+    "aliases": [
+      "importcsv"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeImportOBJ",
+    "name": "Import OBJ",
+    "aliases": [
+      "importobj"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeImportPLY",
+    "name": "Import PLY",
+    "aliases": [
+      "importply"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeImportSTL",
+    "name": "Import STL",
+    "aliases": [
+      "importstl"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeImportText",
+    "name": "Import Text",
+    "aliases": [
+      "importtext"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Texture",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeImportVDB",
+    "name": "Import VDB",
+    "aliases": [
+      "importvdb"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputIndex",
+    "name": "Index",
+    "aliases": [
+      "index"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeIndexSwitch",
+    "name": "Index Switch",
+    "aliases": [
+      "indexswitch"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeIndexOfNearest",
+    "name": "Index of Nearest",
+    "aliases": [
+      "indexofnearest"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputInstanceBounds",
+    "name": "Instance Bounds",
+    "aliases": [
+      "instancebounds"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputInstanceReference",
+    "name": "Instance Reference",
+    "aliases": [
+      "instancereference"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputInstanceRotation",
+    "name": "Instance Rotation",
+    "aliases": [
+      "instancerotation"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputInstanceScale",
+    "name": "Instance Scale",
+    "aliases": [
+      "instancescale"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInstanceTransform",
+    "name": "Instance Transform",
+    "aliases": [
+      "instancetransform"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInstanceOnPoints",
+    "name": "Instance on Points",
+    "aliases": [
+      "instanceonpoints"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 7,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInstancesToPoints",
+    "name": "Instances to Points",
+    "aliases": [
+      "instancestopoints"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeIntegerMath",
+    "name": "Integer Math",
+    "aliases": [
+      "integermath"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Math",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeInputIntVector",
+    "name": "Integer Vector",
+    "aliases": [
+      "integervector"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Vector",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInterpolateCurves",
+    "name": "Interpolate Curves",
+    "aliases": [
+      "interpolatecurves"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 7,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeInvertMatrix",
+    "name": "Invert Matrix",
+    "aliases": [
+      "invertmatrix"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeInvertRotation",
+    "name": "Invert Rotation",
+    "aliases": [
+      "invertrotation"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputEdgeSmooth",
+    "name": "Is Edge Smooth",
+    "aliases": [
+      "isedgesmooth"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMeshFaceIsPlanar",
+    "name": "Is Face Planar",
+    "aliases": [
+      "isfaceplanar"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputShadeSmooth",
+    "name": "Is Face Smooth",
+    "aliases": [
+      "isfacesmooth"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputSplineCyclic",
+    "name": "Is Spline Cyclic",
+    "aliases": [
+      "issplinecyclic"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeIsViewport",
+    "name": "Is Viewport",
+    "aliases": [
+      "isviewport"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeJoinGeometry",
+    "name": "Join Geometry",
+    "aliases": [
+      "joingeometry"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeStringJoin",
+    "name": "Join Strings",
+    "aliases": [
+      "joinstrings"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGizmoLinear",
+    "name": "Linear Gizmo",
+    "aliases": [
+      "lineargizmo"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeListLength",
+    "name": "List Length",
+    "aliases": [
+      "listlength"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeMatchString",
+    "name": "Match String",
+    "aliases": [
+      "matchstring"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMaterial",
+    "name": "Material",
+    "aliases": [
+      "material"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMaterialIndex",
+    "name": "Material Index",
+    "aliases": [
+      "materialindex"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMaterialSelection",
+    "name": "Material Selection",
+    "aliases": [
+      "materialselection"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeMatrixDeterminant",
+    "name": "Matrix Determinant",
+    "aliases": [
+      "matrixdeterminant"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeMatrixSVD",
+    "name": "Matrix SVD",
+    "aliases": [
+      "matrixsvd"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 3,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMenuSwitch",
+    "name": "Menu Switch",
+    "aliases": [
+      "menuswitch"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMergeLayers",
+    "name": "Merge Layers",
+    "aliases": [
+      "mergelayers"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMergePoints",
+    "name": "Merge Points",
+    "aliases": [
+      "mergepoints"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMergeByDistance",
+    "name": "Merge by Distance",
+    "aliases": [
+      "mergebydistance"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshBevel",
+    "name": "Mesh Bevel",
+    "aliases": [
+      "meshbevel"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 13,
+    "outputs": 5,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshBoolean",
+    "name": "Mesh Boolean",
+    "aliases": [
+      "meshboolean"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshCircle",
+    "name": "Mesh Circle",
+    "aliases": [
+      "meshcircle"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMeshIsland",
+    "name": "Mesh Island",
+    "aliases": [
+      "meshisland"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshLine",
+    "name": "Mesh Line",
+    "aliases": [
+      "meshline"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshToCurve",
+    "name": "Mesh to Curve",
+    "aliases": [
+      "meshtocurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshToDensityGrid",
+    "name": "Mesh to Density Grid",
+    "aliases": [
+      "meshtodensitygrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshToPoints",
+    "name": "Mesh to Points",
+    "aliases": [
+      "meshtopoints"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshToSDFGrid",
+    "name": "Mesh to SDF Grid",
+    "aliases": [
+      "meshtosdfgrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshToVolume",
+    "name": "Mesh to Volume",
+    "aliases": [
+      "meshtovolume"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeToolMousePosition",
+    "name": "Mouse Position",
+    "aliases": [
+      "mouseposition"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 4,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeMatrixMultiply",
+    "name": "Multiply Matrices",
+    "aliases": [
+      "multiplymatrices"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputNamedAttribute",
+    "name": "Named Attribute",
+    "aliases": [
+      "namedattribute"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputNamedLayerSelection",
+    "name": "Named Layer Selection",
+    "aliases": [
+      "namedlayerselection"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputNormal",
+    "name": "Normal",
+    "aliases": [
+      "normal"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputObject",
+    "name": "Object",
+    "aliases": [
+      "object"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeObjectInfo",
+    "name": "Object Info",
+    "aliases": [
+      "objectinfo"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 2,
+    "outputs": 5,
+    "color_hex": "#E35622",
+    "frequency_tier": 1
+  },
+  {
+    "id": "GeometryNodeOffsetCornerInFace",
+    "name": "Offset Corner in Face",
+    "aliases": [
+      "offsetcornerinface"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeOffsetPointInCurve",
+    "name": "Offset Point in Curve",
+    "aliases": [
+      "offsetpointincurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeUVPackIslands",
+    "name": "Pack UV Islands",
+    "aliases": [
+      "packuvislands"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 7,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodePoints",
+    "name": "Points",
+    "aliases": [
+      "points"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodePointsOfCurve",
+    "name": "Points of Curve",
+    "aliases": [
+      "pointsofcurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodePointsToCurves",
+    "name": "Points to Curves",
+    "aliases": [
+      "pointstocurves"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodePointsToSDFGrid",
+    "name": "Points to SDF Grid",
+    "aliases": [
+      "pointstosdfgrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodePointsToVertices",
+    "name": "Points to Vertices",
+    "aliases": [
+      "pointstovertices"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodePointsToVolume",
+    "name": "Points to Volume",
+    "aliases": [
+      "pointstovolume"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputPosition",
+    "name": "Position",
+    "aliases": [
+      "position"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeProjectPoint",
+    "name": "Project Point",
+    "aliases": [
+      "projectpoint"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridPrune",
+    "name": "Prune Grid",
+    "aliases": [
+      "prunegrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveQuadraticBezier",
+    "name": "Quadratic Bézier",
+    "aliases": [
+      "quadraticbézier"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurvePrimitiveQuadrilateral",
+    "name": "Quadrilateral",
+    "aliases": [
+      "quadrilateral"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 11,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeQuaternionToRotation",
+    "name": "Quaternion to Rotation",
+    "aliases": [
+      "quaterniontorotation"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputRadius",
+    "name": "Radius",
+    "aliases": [
+      "radius"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeRandomValue",
+    "name": "Random Value",
+    "aliases": [
+      "randomvalue"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeRaycast",
+    "name": "Raycast",
+    "aliases": [
+      "raycast"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 5,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeRealizeInstances",
+    "name": "Realize Instances",
+    "aliases": [
+      "realizeinstances"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeRemoveAttribute",
+    "name": "Remove Named Attribute",
+    "aliases": [
+      "removenamedattribute"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeRenameAttribute",
+    "name": "Rename Attribute",
+    "aliases": [
+      "renameattribute"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeRepeatInput",
+    "name": "Repeat Input",
+    "aliases": [
+      "repeatinput"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeRepeatOutput",
+    "name": "Repeat Output",
+    "aliases": [
+      "repeatoutput"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Output",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeReplaceMaterial",
+    "name": "Replace Material",
+    "aliases": [
+      "replacematerial"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeReplaceString",
+    "name": "Replace String",
+    "aliases": [
+      "replacestring"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeResampleCurve",
+    "name": "Resample Curve",
+    "aliases": [
+      "resamplecurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeReverseCurve",
+    "name": "Reverse Curve",
+    "aliases": [
+      "reversecurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeReverseString",
+    "name": "Reverse String",
+    "aliases": [
+      "reversestring"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeRotateEuler",
+    "name": "Rotate Euler",
+    "aliases": [
+      "rotateeuler"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeRotateInstances",
+    "name": "Rotate Instances",
+    "aliases": [
+      "rotateinstances"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeRotateRotation",
+    "name": "Rotate Rotation",
+    "aliases": [
+      "rotaterotation"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeRotateVector",
+    "name": "Rotate Vector",
+    "aliases": [
+      "rotatevector"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Vector",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeInputRotation",
+    "name": "Rotation",
+    "aliases": [
+      "rotation"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeRotationToAxisAngle",
+    "name": "Rotation to Axis Angle",
+    "aliases": [
+      "rotationtoaxisangle"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeRotationToEuler",
+    "name": "Rotation to Euler",
+    "aliases": [
+      "rotationtoeuler"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeRotationToQuaternion",
+    "name": "Rotation to Quaternion",
+    "aliases": [
+      "rotationtoquaternion"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 4,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSDFGridBoolean",
+    "name": "SDF Grid Boolean",
+    "aliases": [
+      "sdfgridboolean"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSDFGridFillet",
+    "name": "SDF Grid Fillet",
+    "aliases": [
+      "sdfgridfillet"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSDFGridLaplacian",
+    "name": "SDF Grid Laplacian",
+    "aliases": [
+      "sdfgridlaplacian"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSDFGridMean",
+    "name": "SDF Grid Mean",
+    "aliases": [
+      "sdfgridmean"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSDFGridMeanCurvature",
+    "name": "SDF Grid Mean Curvature",
+    "aliases": [
+      "sdfgridmeancurvature"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSDFGridMedian",
+    "name": "SDF Grid Median",
+    "aliases": [
+      "sdfgridmedian"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSDFGridOffset",
+    "name": "SDF Grid Offset",
+    "aliases": [
+      "sdfgridoffset"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSampleCurve",
+    "name": "Sample Curve",
+    "aliases": [
+      "samplecurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 4,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSampleGrid",
+    "name": "Sample Grid",
+    "aliases": [
+      "samplegrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSampleGridIndex",
+    "name": "Sample Grid Index",
+    "aliases": [
+      "samplegridindex"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSampleIndex",
+    "name": "Sample Index",
+    "aliases": [
+      "sampleindex"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSampleNearest",
+    "name": "Sample Nearest",
+    "aliases": [
+      "samplenearest"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSampleNearestSurface",
+    "name": "Sample Nearest Surface",
+    "aliases": [
+      "samplenearestsurface"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSampleSoundFrequencies",
+    "name": "Sample Sound Frequencies",
+    "aliases": [
+      "samplesoundfrequencies"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 8,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSampleUVSurface",
+    "name": "Sample UV Surface",
+    "aliases": [
+      "sampleuvsurface"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeScaleElements",
+    "name": "Scale Elements",
+    "aliases": [
+      "scaleelements"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeScaleInstances",
+    "name": "Scale Instances",
+    "aliases": [
+      "scaleinstances"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputSceneTime",
+    "name": "Scene Time",
+    "aliases": [
+      "scenetime"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeToolSelection",
+    "name": "Selection",
+    "aliases": [
+      "selection"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSelfObject",
+    "name": "Self Object",
+    "aliases": [
+      "selfobject"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeSeparateColor",
+    "name": "Separate Color",
+    "aliases": [
+      "separatecolor"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Color",
+    "inputs": 1,
+    "outputs": 4,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSeparateComponents",
+    "name": "Separate Components",
+    "aliases": [
+      "separatecomponents"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 6,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSeparateGeometry",
+    "name": "Separate Geometry",
+    "aliases": [
+      "separategeometry"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeSeparateMatrix",
+    "name": "Separate Matrix",
+    "aliases": [
+      "separatematrix"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 16,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeSeparateTransform",
+    "name": "Separate Transform",
+    "aliases": [
+      "separatetransform"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 3,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetCurveNormal",
+    "name": "Set Curve Normal",
+    "aliases": [
+      "setcurvenormal"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetCurveRadius",
+    "name": "Set Curve Radius",
+    "aliases": [
+      "setcurveradius"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetCurveTilt",
+    "name": "Set Curve Tilt",
+    "aliases": [
+      "setcurvetilt"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeToolSetFaceSet",
+    "name": "Set Face Set",
+    "aliases": [
+      "setfaceset"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetGeometryBundle",
+    "name": "Set Geometry Bundle",
+    "aliases": [
+      "setgeometrybundle"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetGeometryName",
+    "name": "Set Geometry Name",
+    "aliases": [
+      "setgeometryname"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetGreasePencilColor",
+    "name": "Set Grease Pencil Color",
+    "aliases": [
+      "setgreasepencilcolor"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Color",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetGreasePencilDepth",
+    "name": "Set Grease Pencil Depth",
+    "aliases": [
+      "setgreasepencildepth"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetGreasePencilSoftness",
+    "name": "Set Grease Pencil Softness",
+    "aliases": [
+      "setgreasepencilsoftness"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetGridBackground",
+    "name": "Set Grid Background",
+    "aliases": [
+      "setgridbackground"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetGridTransform",
+    "name": "Set Grid Transform",
+    "aliases": [
+      "setgridtransform"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetCurveHandlePositions",
+    "name": "Set Handle Positions",
+    "aliases": [
+      "sethandlepositions"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveSetHandles",
+    "name": "Set Handle Type",
+    "aliases": [
+      "sethandletype"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetID",
+    "name": "Set ID",
+    "aliases": [
+      "setid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetInstanceTransform",
+    "name": "Set Instance Transform",
+    "aliases": [
+      "setinstancetransform"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetMaterial",
+    "name": "Set Material",
+    "aliases": [
+      "setmaterial"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetMaterialIndex",
+    "name": "Set Material Index",
+    "aliases": [
+      "setmaterialindex"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetMeshNormal",
+    "name": "Set Mesh Normal",
+    "aliases": [
+      "setmeshnormal"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetNURBSOrder",
+    "name": "Set NURBS Order",
+    "aliases": [
+      "setnurbsorder"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetNURBSWeight",
+    "name": "Set NURBS Weight",
+    "aliases": [
+      "setnurbsweight"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetPointRadius",
+    "name": "Set Point Radius",
+    "aliases": [
+      "setpointradius"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetPosition",
+    "name": "Set Position",
+    "aliases": [
+      "setposition"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeToolSetSelection",
+    "name": "Set Selection",
+    "aliases": [
+      "setselection"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetShadeSmooth",
+    "name": "Set Shade Smooth",
+    "aliases": [
+      "setshadesmooth"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetSplineCyclic",
+    "name": "Set Spline Cyclic",
+    "aliases": [
+      "setsplinecyclic"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSetSplineResolution",
+    "name": "Set Spline Resolution",
+    "aliases": [
+      "setsplineresolution"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveSplineType",
+    "name": "Set Spline Type",
+    "aliases": [
+      "setsplinetype"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeSetStringCase",
+    "name": "Set String Case",
+    "aliases": [
+      "setstringcase"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputShortestEdgePaths",
+    "name": "Shortest Edge Paths",
+    "aliases": [
+      "shortestedgepaths"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSimulationInput",
+    "name": "Simulation Input",
+    "aliases": [
+      "simulationinput"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSimulationOutput",
+    "name": "Simulation Output",
+    "aliases": [
+      "simulationoutput"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Output",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeSliceString",
+    "name": "Slice String",
+    "aliases": [
+      "slicestring"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSortElements",
+    "name": "Sort Elements",
+    "aliases": [
+      "sortelements"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSortList",
+    "name": "Sort List",
+    "aliases": [
+      "sortlist"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeInputSpecialCharacters",
+    "name": "Special Characters",
+    "aliases": [
+      "specialcharacters"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveSpiral",
+    "name": "Spiral",
+    "aliases": [
+      "spiral"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSplineLength",
+    "name": "Spline Length",
+    "aliases": [
+      "splinelength"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSplineParameter",
+    "name": "Spline Parameter",
+    "aliases": [
+      "splineparameter"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputSplineResolution",
+    "name": "Spline Resolution",
+    "aliases": [
+      "splineresolution"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSplitEdges",
+    "name": "Split Edges",
+    "aliases": [
+      "splitedges"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeSplitString",
+    "name": "Split String",
+    "aliases": [
+      "splitstring"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSplitToInstances",
+    "name": "Split to Instances",
+    "aliases": [
+      "splittoinstances"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeCurveStar",
+    "name": "Star",
+    "aliases": [
+      "star"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeStoreNamedAttribute",
+    "name": "Store Named Attribute",
+    "aliases": [
+      "storenamedattribute"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeStoreNamedGrid",
+    "name": "Store Named Grid",
+    "aliases": [
+      "storenamedgrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeInputString",
+    "name": "String",
+    "aliases": [
+      "string"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeStringLength",
+    "name": "String Length",
+    "aliases": [
+      "stringlength"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeStringToCurves",
+    "name": "String to Curves",
+    "aliases": [
+      "stringtocurves"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 12,
+    "outputs": 5,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeStringToValue",
+    "name": "String to Value",
+    "aliases": [
+      "stringtovalue"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSubdivideCurve",
+    "name": "Subdivide Curve",
+    "aliases": [
+      "subdividecurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSubdivideMesh",
+    "name": "Subdivide Mesh",
+    "aliases": [
+      "subdividemesh"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSubdivisionSurface",
+    "name": "Subdivision Surface",
+    "aliases": [
+      "subdivisionsurface"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 8,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeSwitch",
+    "name": "Switch",
+    "aliases": [
+      "switch"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeTagFilter",
+    "name": "Tag Filter",
+    "aliases": [
+      "tagfilter"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeTransferAttributes",
+    "name": "Transfer Attributes",
+    "aliases": [
+      "transferattributes"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 17,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeTransformDirection",
+    "name": "Transform Direction",
+    "aliases": [
+      "transformdirection"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeTransform",
+    "name": "Transform Geometry",
+    "aliases": [
+      "transformgeometry"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 1
+  },
+  {
+    "id": "GeometryNodeGizmoTransform",
+    "name": "Transform Gizmo",
+    "aliases": [
+      "transformgizmo"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeTransformPoint",
+    "name": "Transform Point",
+    "aliases": [
+      "transformpoint"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeTranslateInstances",
+    "name": "Translate Instances",
+    "aliases": [
+      "translateinstances"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeTransposeMatrix",
+    "name": "Transpose Matrix",
+    "aliases": [
+      "transposematrix"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeTriangulate",
+    "name": "Triangulate",
+    "aliases": [
+      "triangulate"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeTrimCurve",
+    "name": "Trim Curve",
+    "aliases": [
+      "trimcurve"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeTrimString",
+    "name": "Trim String",
+    "aliases": [
+      "trimstring"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeMeshUVSphere",
+    "name": "UV Sphere",
+    "aliases": [
+      "uvsphere"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeUVTangent",
+    "name": "UV Tangent",
+    "aliases": [
+      "uvtangent"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeUVUnwrap",
+    "name": "UV Unwrap",
+    "aliases": [
+      "uvunwrap"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 7,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeValueToString",
+    "name": "Value to String",
+    "aliases": [
+      "valuetostring"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Converter",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputMeshVertexNeighbors",
+    "name": "Vertex Neighbors",
+    "aliases": [
+      "vertexneighbors"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Texture",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeVertexOfCorner",
+    "name": "Vertex of Corner",
+    "aliases": [
+      "vertexofcorner"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Texture",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeViewer",
+    "name": "Viewer",
+    "aliases": [
+      "viewer"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 0,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeViewportTransform",
+    "name": "Viewport Transform",
+    "aliases": [
+      "viewporttransform"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 0,
+    "outputs": 3,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeVolumeCube",
+    "name": "Volume Cube",
+    "aliases": [
+      "volumecube"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 7,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeVolumeToMesh",
+    "name": "Volume to Mesh",
+    "aliases": [
+      "volumetomesh"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 6,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeInputVoxelIndex",
+    "name": "Voxel Index",
+    "aliases": [
+      "voxelindex"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 7,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeGridVoxelize",
+    "name": "Voxelize Grid",
+    "aliases": [
+      "voxelizegrid"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeWarning",
+    "name": "Warning",
+    "aliases": [
+      "warning"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "GeometryNodeXPBDSolver",
+    "name": "XPBD Solver",
+    "aliases": [
+      "xpbdsolver"
+    ],
+    "software": "Blender",
+    "context": "Geometry",
+    "category": "Geometry",
+    "inputs": 9,
+    "outputs": 1,
+    "color_hex": "#00D6A3",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeOutputAOV",
+    "name": "AOV Output",
+    "aliases": [
+      "aovoutput"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 0,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeAddShader",
+    "name": "Add Shader",
+    "aliases": [
+      "addshader"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeAmbientOcclusion",
+    "name": "Ambient Occlusion",
+    "aliases": [
+      "ambientocclusion"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeAttribute",
+    "name": "Attribute",
+    "aliases": [
+      "attribute"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 4,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBackground",
+    "name": "Background",
+    "aliases": [
+      "background"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBevel",
+    "name": "Bevel",
+    "aliases": [
+      "bevel"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBlackbody",
+    "name": "Blackbody",
+    "aliases": [
+      "blackbody"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeInputBool",
+    "name": "Boolean",
+    "aliases": [
+      "boolean"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexBrick",
+    "name": "Brick Texture",
+    "aliases": [
+      "bricktexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 10,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBrightContrast",
+    "name": "Brightness/Contrast",
+    "aliases": [
+      "brightness/contrast"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBump",
+    "name": "Bump",
+    "aliases": [
+      "bump"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeCameraData",
+    "name": "Camera Data",
+    "aliases": [
+      "cameradata"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 3,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexChecker",
+    "name": "Checker Texture",
+    "aliases": [
+      "checkertexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 4,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeClamp",
+    "name": "Clamp",
+    "aliases": [
+      "clamp"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeRGB",
+    "name": "Color",
+    "aliases": [
+      "color"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVertexColor",
+    "name": "Color Attribute",
+    "aliases": [
+      "colorattribute"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Color",
+    "inputs": 0,
+    "outputs": 2,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeValToRGB",
+    "name": "Color Ramp",
+    "aliases": [
+      "colorramp"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeCombineColor",
+    "name": "Combine Color",
+    "aliases": [
+      "combinecolor"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Color",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeCombineXYZ",
+    "name": "Combine XYZ",
+    "aliases": [
+      "combinexyz"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeHairInfo",
+    "name": "Curves Info",
+    "aliases": [
+      "curvesinfo"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 6,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfDiffuse",
+    "name": "Diffuse BSDF",
+    "aliases": [
+      "diffusebsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeDisplacement",
+    "name": "Displacement",
+    "aliases": [
+      "displacement"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeEmission",
+    "name": "Emission",
+    "aliases": [
+      "emission"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexEnvironment",
+    "name": "Environment Texture",
+    "aliases": [
+      "environmenttexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeFloatCurve",
+    "name": "Float Curve",
+    "aliases": [
+      "floatcurve"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeFresnel",
+    "name": "Fresnel",
+    "aliases": [
+      "fresnel"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexGabor",
+    "name": "Gabor Texture",
+    "aliases": [
+      "gabortexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 6,
+    "outputs": 3,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeGamma",
+    "name": "Gamma",
+    "aliases": [
+      "gamma"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeNewGeometry",
+    "name": "Geometry",
+    "aliases": [
+      "geometry"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 9,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfGlass",
+    "name": "Glass BSDF",
+    "aliases": [
+      "glassbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 7,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfAnisotropic",
+    "name": "Glossy BSDF",
+    "aliases": [
+      "glossybsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 7,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexGradient",
+    "name": "Gradient Texture",
+    "aliases": [
+      "gradienttexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfHair",
+    "name": "Hair BSDF",
+    "aliases": [
+      "hairbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 6,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeHoldout",
+    "name": "Holdout",
+    "aliases": [
+      "holdout"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeHueSaturation",
+    "name": "Hue/Saturation/Value",
+    "aliases": [
+      "hue/saturation/value"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexIES",
+    "name": "IES Texture",
+    "aliases": [
+      "iestexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexImage",
+    "name": "Image Texture",
+    "aliases": [
+      "imagetexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 1
+  },
+  {
+    "id": "FunctionNodeInputInt",
+    "name": "Integer",
+    "aliases": [
+      "integer"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeInvert",
+    "name": "Invert Color",
+    "aliases": [
+      "invertcolor"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeLayerWeight",
+    "name": "Layer Weight",
+    "aliases": [
+      "layerweight"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeLightFalloff",
+    "name": "Light Falloff",
+    "aliases": [
+      "lightfalloff"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 3,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeOutputLight",
+    "name": "Light Output",
+    "aliases": [
+      "lightoutput"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 1,
+    "outputs": 0,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeLightPath",
+    "name": "Light Path",
+    "aliases": [
+      "lightpath"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 15,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeOutputLineStyle",
+    "name": "Line Style Output",
+    "aliases": [
+      "linestyleoutput"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 4,
+    "outputs": 0,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexMagic",
+    "name": "Magic Texture",
+    "aliases": [
+      "magictexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 3,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeMapRange",
+    "name": "Map Range",
+    "aliases": [
+      "maprange"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 12,
+    "outputs": 2,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeMapping",
+    "name": "Mapping",
+    "aliases": [
+      "mapping"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Vector",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 1
+  },
+  {
+    "id": "ShaderNodeOutputMaterial",
+    "name": "Material Output",
+    "aliases": [
+      "materialoutput"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 4,
+    "outputs": 0,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeMath",
+    "name": "Math",
+    "aliases": [
+      "math"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Math",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 1
+  },
+  {
+    "id": "FunctionNodeInputMenu",
+    "name": "Menu",
+    "aliases": [
+      "menu"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Input",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#E35622",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfMetallic",
+    "name": "Metallic BSDF",
+    "aliases": [
+      "metallicbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 12,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeMix",
+    "name": "Mix",
+    "aliases": [
+      "mix"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Color",
+    "inputs": 10,
+    "outputs": 4,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 1
+  },
+  {
+    "id": "ShaderNodeMixRGB",
+    "name": "Mix (Legacy)",
+    "aliases": [
+      "mix(legacy)"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Color",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeMixShader",
+    "name": "Mix Shader",
+    "aliases": [
+      "mixshader"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Color",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexNoise",
+    "name": "Noise Texture",
+    "aliases": [
+      "noisetexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 9,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeNormal",
+    "name": "Normal",
+    "aliases": [
+      "normal"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeNormalMap",
+    "name": "Normal Map",
+    "aliases": [
+      "normalmap"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeObjectInfo",
+    "name": "Object Info",
+    "aliases": [
+      "objectinfo"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 6,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeParticleInfo",
+    "name": "Particle Info",
+    "aliases": [
+      "particleinfo"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 8,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodePointInfo",
+    "name": "Point Info",
+    "aliases": [
+      "pointinfo"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 3,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfPrincipled",
+    "name": "Principled BSDF",
+    "aliases": [
+      "principledbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 32,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 1
+  },
+  {
+    "id": "ShaderNodeBsdfHairPrincipled",
+    "name": "Principled Hair BSDF",
+    "aliases": [
+      "principledhairbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 18,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVolumePrincipled",
+    "name": "Principled Volume",
+    "aliases": [
+      "principledvolume"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 13,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeRGBCurve",
+    "name": "RGB Curves",
+    "aliases": [
+      "rgbcurves"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeRGBToBW",
+    "name": "RGB to BW",
+    "aliases": [
+      "rgbtobw"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeRadialTiling",
+    "name": "Radial Tiling",
+    "aliases": [
+      "radialtiling"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 4,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfRayPortal",
+    "name": "Ray Portal BSDF",
+    "aliases": [
+      "rayportalbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeRaycast",
+    "name": "Raycast",
+    "aliases": [
+      "raycast"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 4,
+    "outputs": 6,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfRefraction",
+    "name": "Refraction BSDF",
+    "aliases": [
+      "refractionbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeScript",
+    "name": "Script",
+    "aliases": [
+      "script"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 0,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeSeparateColor",
+    "name": "Separate Color",
+    "aliases": [
+      "separatecolor"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Color",
+    "inputs": 1,
+    "outputs": 3,
+    "color_hex": "#C4A62D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeSeparateXYZ",
+    "name": "Separate XYZ",
+    "aliases": [
+      "separatexyz"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 1,
+    "outputs": 3,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeShaderToRGB",
+    "name": "Shader to RGB",
+    "aliases": [
+      "shadertorgb"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 1,
+    "outputs": 2,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfSheen",
+    "name": "Sheen BSDF",
+    "aliases": [
+      "sheenbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 4,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexSky",
+    "name": "Sky Texture",
+    "aliases": [
+      "skytexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeEeveeSpecular",
+    "name": "Specular BSDF",
+    "aliases": [
+      "specularbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 10,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeSqueeze",
+    "name": "Squeeze Value (Legacy)",
+    "aliases": [
+      "squeezevalue(legacy)"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeSubsurfaceScattering",
+    "name": "Subsurface Scattering",
+    "aliases": [
+      "subsurfacescattering"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 8,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTangent",
+    "name": "Tangent",
+    "aliases": [
+      "tangent"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexCoord",
+    "name": "Texture Coordinate",
+    "aliases": [
+      "texturecoordinate"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 0,
+    "outputs": 7,
+    "color_hex": "#B55A25",
+    "frequency_tier": 1
+  },
+  {
+    "id": "ShaderNodeBsdfToon",
+    "name": "Toon BSDF",
+    "aliases": [
+      "toonbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfTranslucent",
+    "name": "Translucent BSDF",
+    "aliases": [
+      "translucentbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeBsdfTransparent",
+    "name": "Transparent BSDF",
+    "aliases": [
+      "transparentbsdf"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeUVAlongStroke",
+    "name": "UV Along Stroke",
+    "aliases": [
+      "uvalongstroke"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeUVMap",
+    "name": "UV Map",
+    "aliases": [
+      "uvmap"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeValue",
+    "name": "Value",
+    "aliases": [
+      "value"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "FunctionNodeInputVector",
+    "name": "Vector",
+    "aliases": [
+      "vector"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Vector",
+    "inputs": 0,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVectorCurve",
+    "name": "Vector Curves",
+    "aliases": [
+      "vectorcurves"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Vector",
+    "inputs": 2,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVectorDisplacement",
+    "name": "Vector Displacement",
+    "aliases": [
+      "vectordisplacement"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Vector",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVectorMath",
+    "name": "Vector Math",
+    "aliases": [
+      "vectormath"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Math",
+    "inputs": 4,
+    "outputs": 2,
+    "color_hex": "#4D76A5",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVectorRotate",
+    "name": "Vector Rotate",
+    "aliases": [
+      "vectorrotate"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Vector",
+    "inputs": 5,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVectorTransform",
+    "name": "Vector Transform",
+    "aliases": [
+      "vectortransform"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Vector",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#665C9D",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVolumeAbsorption",
+    "name": "Volume Absorption",
+    "aliases": [
+      "volumeabsorption"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 3,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVolumeCoefficients",
+    "name": "Volume Coefficients",
+    "aliases": [
+      "volumecoefficients"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 9,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVolumeInfo",
+    "name": "Volume Info",
+    "aliases": [
+      "volumeinfo"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 0,
+    "outputs": 4,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeVolumeScatter",
+    "name": "Volume Scatter",
+    "aliases": [
+      "volumescatter"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 8,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexVoronoi",
+    "name": "Voronoi Texture",
+    "aliases": [
+      "voronoitexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 9,
+    "outputs": 5,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexWave",
+    "name": "Wave Texture",
+    "aliases": [
+      "wavetexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 7,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeWavelength",
+    "name": "Wavelength",
+    "aliases": [
+      "wavelength"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeTexWhiteNoise",
+    "name": "White Noise Texture",
+    "aliases": [
+      "whitenoisetexture"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Texture",
+    "inputs": 2,
+    "outputs": 2,
+    "color_hex": "#B55A25",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeWireframe",
+    "name": "Wireframe",
+    "aliases": [
+      "wireframe"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 1,
+    "outputs": 1,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  },
+  {
+    "id": "ShaderNodeOutputWorld",
+    "name": "World Output",
+    "aliases": [
+      "worldoutput"
+    ],
+    "software": "Blender",
+    "context": "Shader",
+    "category": "Shader",
+    "inputs": 2,
+    "outputs": 0,
+    "color_hex": "#468B5E",
+    "frequency_tier": 2
+  }
+]
