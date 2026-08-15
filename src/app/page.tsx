@@ -6,10 +6,12 @@ import {
   Layers, 
   Trophy, 
   MonitorPlay,
-  ArrowLeft
+  ArrowLeft,
+  Heart
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { KofiButton } from "@/components/KofiButton";
 
 export default function ModesHub() {
   return (
@@ -136,6 +138,23 @@ export default function ModesHub() {
                 disabled
                 comingSoon
               />
+            </div>
+          </section>
+
+          {/* Donation / Support Section */}
+          <section className="mt-8 relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/40 p-8 sm:p-10 text-center flex flex-col items-center">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none" />
+            
+            <Heart className="w-10 h-10 text-indigo-400 mb-4 animate-pulse" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-100 mb-4">
+              Mantén vivo a Nodle
+            </h2>
+            <p className="text-zinc-400 max-w-2xl mb-8 leading-relaxed">
+              Nodle es un proyecto creado con cariño para la comunidad técnica, sin publicidad invasiva ni muros de pago. Sin embargo, los costos de los servidores, las bases de datos en tiempo real para el Leaderboard y el hosting crecen con cada nuevo jugador. <br/><br/>
+              Si disfrutas el juego, por favor considera invitarnos un café. ¡Toda ayuda es inmensamente agradecida y nos permite seguir creando más retos!
+            </p>
+            <div className="scale-110">
+              <KofiButton label="Apoyar el proyecto en Ko-fi" />
             </div>
           </section>
         </div>
