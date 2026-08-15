@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { PostHogProvider } from "@/providers/PostHogProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,12 +26,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {children}
-        <Script
-          async
-          src="https://media.ethicalads.io/media/client/ethicalads.min.js"
-          strategy="lazyOnload"
-        />
+        <PostHogProvider>
+          {children}
+          <Script
+            async
+            src="https://media.ethicalads.io/media/client/ethicalads.min.js"
+            strategy="lazyOnload"
+          />
+        </PostHogProvider>
       </body>
     </html>
   );

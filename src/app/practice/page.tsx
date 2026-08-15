@@ -13,6 +13,7 @@ import { useGameStore } from "@/store/useGameStore";
 import { DebugConsole } from "@/components/DebugConsole";
 import { KofiButton } from "@/components/KofiButton";
 import { EthicalAd } from "@/components/EthicalAd";
+import { usePostHog } from "posthog-js/react";
 
 const MAX_ATTEMPTS = 6;
 
@@ -23,9 +24,10 @@ export default function PracticePage() {
   const [targetNode, setTargetNode] = useState<NodeData | null>(null);
   const [attempts, setAttempts] = useState<string[]>([]);
   const [gameStatus, setGameStatus] = useState<"playing" | "won" | "lost">("playing");
-  const [isReady, setIsReady] = useState(false);
-  const [roundCount, setRoundCount] = useState(1);
   const [wins, setWins] = useState(0);
+  const [roundCount, setRoundCount] = useState(1);
+  const posthog = usePostHog();
+  const [isReady, setIsReady] = useState(false);
 
   const [filter, setFilter] = useState<PracticeFilter>({
     software: null,
@@ -74,11 +76,25 @@ export default function PracticePage() {
       if (nodeId === targetNode?.id) {
         setGameStatus("won");
         setWins((w) => w + 1);
+        posthog?.capture("game_completed", {
+          mode: "practice",
+          status: "won",
+          attempts_used: newAttempts.length,
+          target_node_id: targetNode.id,
+          target_node_name: targetNode.name
+        });
       } else if (newAttempts.length >= MAX_ATTEMPTS) {
         setGameStatus("lost");
+        posthog?.capture("game_completed", {
+          mode: "practice",
+          status: "lost",
+          attempts_used: MAX_ATTEMPTS,
+          target_node_id: targetNode?.id,
+          target_node_name: targetNode?.name
+        });
       }
     },
-    [attempts, gameStatus, targetNode]
+    [attempts, gameStatus, targetNode, posthog]
   );
 
   const handleNextRound = () => {

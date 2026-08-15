@@ -14,6 +14,7 @@ import { generateShareImage, copyShareImageToClipboard } from "@/lib/canvas";
 import { Share2, Check } from "lucide-react";
 import { KofiButton } from "@/components/KofiButton";
 import { EthicalAd } from "@/components/EthicalAd";
+import { usePostHog } from "posthog-js/react";
 
 export default function Home() {
   const resetDailyGame = useGameStore((state) => state.resetDailyGame);
@@ -33,6 +34,7 @@ export default function Home() {
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [copied, setCopied] = useState(false);
+  const posthog = usePostHog();
 
   useEffect(() => {
     useGameStore.setState(useGameStore.getState());
@@ -58,6 +60,14 @@ export default function Home() {
         console.log("[Leaderboard] Victory detected! userId:", userId, "dailyStartTime:", dailyStartTime);
         setGameStatus('won');
         
+        posthog?.capture("game_completed", {
+          mode: "daily",
+          status: "won",
+          attempts_used: attempts.length,
+          target_node_id: dailyNode.id,
+          target_node_name: dailyNode.name
+        });
+        
         // Fallback en caso de estado obsoleto
         const safeUserId = userId || "anonymous-" + Math.floor(Math.random() * 10000);
         const safeStartTime = dailyStartTime || (Date.now() - 30000); // Asumir 30 segundos si falta
@@ -81,6 +91,13 @@ export default function Home() {
     } else if (attempts.length >= 6) {
       if (gameStatus !== 'lost') {
         setGameStatus('lost');
+        posthog?.capture("game_completed", {
+          mode: "daily",
+          status: "lost",
+          attempts_used: 6,
+          target_node_id: dailyNode.id,
+          target_node_name: dailyNode.name
+        });
       }
     }
   }, [attempts, dailyNode, gameStatus, setGameStatus, userId, dailyStartTime]);
