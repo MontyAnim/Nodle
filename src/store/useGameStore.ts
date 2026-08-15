@@ -111,3 +111,5 @@ export const createGameStore = (storageKey: string) => create<GameState>()(
 
 export const useClassicStore = createGameStore('nodle-storage');
 export const useTier1Store = createGameStore('nodle-storage-tier1');
+export const useTier2Store = createGameStore('nodle-storage-tier2');
+export const useTier3Store = createGameStore('nodle-storage-tier3');

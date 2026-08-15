@@ -37,6 +37,16 @@ export const MODES_CONFIG: Record<string, DailyModeConfig> = {
     id: 'tier1',
     seedOffset: 10001,
     filter: (n) => n.frequency_tier === 1,
+  },
+  tier2: {
+    id: 'tier2',
+    seedOffset: 20002,
+    filter: (n) => n.frequency_tier === 2,
+  },
+  tier3: {
+    id: 'tier3',
+    seedOffset: 30003,
+    filter: (n) => n.frequency_tier === 3,
   }
 };
 

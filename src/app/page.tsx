@@ -7,7 +7,8 @@ import {
   Trophy, 
   MonitorPlay,
   ArrowLeft,
-  Heart
+  Heart,
+  Network
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -74,21 +75,17 @@ export default function ModesHub() {
               />
               <ModeCard 
                 title="Tier 2: Avanzados" 
-                description="Nodos técnicos o matemáticos de uso específico (ej. Dot Product, Cross Product)."
-                icon={Layers}
-                href="/modes/tier2"
-                colorClass="border-amber-500/20 [&_svg]:text-amber-400"
-                disabled
-                comingSoon
+                description="Nodos intermedios y matemáticos más específicos (ej. Map Range, Dot Product)."
+                icon={Boxes}
+                href="/daily/tier2"
+                colorClass="border-sky-500/20 [&_svg]:text-sky-400"
               />
               <ModeCard 
                 title="Tier 3: Expertos" 
-                description="Nodos oscuros, misceláneos o de uso muy de nicho. El desafío definitivo."
-                icon={Layers}
-                href="/modes/tier3"
-                colorClass="border-red-500/20 [&_svg]:text-red-400"
-                disabled
-                comingSoon
+                description="El abismo procedimental. Solo los nodos más oscuros y menos usados."
+                icon={Network}
+                href="/daily/tier3"
+                colorClass="border-rose-500/20 [&_svg]:text-rose-400"
               />
             </div>
           </section>
