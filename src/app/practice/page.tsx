@@ -21,6 +21,8 @@ import { triggerVictoryConfetti } from "@/lib/confetti";
 const MAX_ATTEMPTS = 6;
 
 export default function PracticePage() {
+  const t = useTranslations('Game');
+  const tHub = useTranslations('Hub');
   const colorblindMode = useClassicStore((state) => state.colorblindMode);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
@@ -140,14 +142,14 @@ export default function PracticePage() {
         </div>
 
         {/* Title */}
-        <div className="flex flex-col items-center gap-2">
-          <div className="flex items-center gap-3">
-            <Box className="w-10 h-10 text-violet-400" />
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-              <span className="text-violet-400">Modo</span> Práctica
+        <div className="flex flex-col items-center justify-center mb-8 mt-4 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Box className="w-8 h-8 text-zinc-400" />
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-100 dark:text-zinc-100 text-zinc-900">
+              <span className="text-purple-400">{tHub('practice')}</span>
             </h1>
           </div>
-          <p className="text-zinc-600 dark:text-zinc-400 text-center max-w-md text-sm">
+          <p className="text-zinc-400 text-sm sm:text-base font-medium max-w-md">
             {t('practice_desc')}
           </p>
           <div className="flex items-center gap-2 px-3 py-1 bg-violet-500/10 border border-violet-500/20 rounded-full">

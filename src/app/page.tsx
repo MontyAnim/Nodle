@@ -21,19 +21,12 @@ import {
 import Link from "next/link";
 import React from "react";
 import { KofiButton } from "@/components/KofiButton";
-import { LanguageToggle } from "@/components/LanguageToggle";
-
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function ModesHub() {
   const t = useTranslations('Hub');
 
   return (
     <main className="min-h-screen bg-background text-foreground flex flex-col p-6 sm:p-12 md:p-24 pb-32">
-      <div className="absolute top-6 right-6 flex items-center gap-2">
-        <ThemeToggle />
-        <LanguageToggle />
-      </div>
       <div className="max-w-5xl mx-auto w-full">
         {/* Header */}
         <div className="mb-12 text-center flex flex-col items-center">

@@ -3,18 +3,13 @@
 import { useState } from "react";
 import { AVAILABLE_SOFTWARE, AvailableSoftware, PracticeFilter } from "@/lib/daily";
 import { SlidersHorizontal } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface PracticeConfigProps {
   filter: PracticeFilter;
   onChange: (filter: PracticeFilter) => void;
   nodeCount: number;
 }
-
-const TIER_LABELS: Record<number, { label: string; description: string; color: string }> = {
-  1: { label: "Tier 1", description: "Básicos", color: "text-emerald-400 border-emerald-500/40 bg-emerald-500/10" },
-  2: { label: "Tier 2", description: "Intermedios", color: "text-amber-400 border-amber-500/40 bg-amber-500/10" },
-  3: { label: "Tier 3", description: "Avanzados", color: "text-rose-400 border-rose-500/40 bg-rose-500/10" },
-};
 
 const SOFTWARE_ICONS: Record<string, string> = {
   "Blender": "🟧",
@@ -26,6 +21,13 @@ const SOFTWARE_ICONS: Record<string, string> = {
 
 export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations('Game');
+
+  const TIER_LABELS: Record<number, { label: string; description: string; color: string }> = {
+    1: { label: "Tier 1", description: t('tier1_desc'), color: "text-emerald-400 border-emerald-500/40 bg-emerald-500/10" },
+    2: { label: "Tier 2", description: t('tier2_desc'), color: "text-amber-400 border-amber-500/40 bg-amber-500/10" },
+    3: { label: "Tier 3", description: t('tier3_desc'), color: "text-rose-400 border-rose-500/40 bg-rose-500/10" },
+  };
 
   const setSoftware = (software: AvailableSoftware | null) => {
     onChange({ ...filter, software });
@@ -43,13 +45,13 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
         className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-white transition-colors mb-3 mx-auto"
       >
         <SlidersHorizontal className="w-4 h-4" />
-        Filtros
+        {t('filters')}
         {(filter.software || filter.tier) && (
           <span className="ml-1 px-1.5 py-0.5 bg-violet-500/20 border border-violet-500/40 text-violet-300 text-xs rounded-full">
             {[filter.software, filter.tier ? `T${filter.tier}` : null].filter(Boolean).join(" · ")}
           </span>
         )}
-        <span className="text-xs text-zinc-600">({nodeCount} nodos)</span>
+        <span className="text-xs text-zinc-600">({nodeCount} {t('nodes')})</span>
       </button>
 
       {isOpen && (
