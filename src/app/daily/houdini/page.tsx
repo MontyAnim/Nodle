@@ -33,7 +33,7 @@ export default function HoudiniDaily() {
   const dailyStartTime = useHoudiniStore((state) => state.dailyStartTime);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
-  const [houdiniNodes, setTier1Nodes] = useState<NodeData[]>([]);
+  const [houdiniNodes, sethoudiniNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -49,7 +49,7 @@ export default function HoudiniDaily() {
     getNodes().then((nodes) => {
       setAllNodes(nodes);
       const filtered = nodes.filter(MODES_CONFIG.houdini.filter);
-      setTier1Nodes(filtered);
+      sethoudiniNodes(filtered);
       
       const target = getDailyTargetNode(nodes, currentDay, MODES_CONFIG.houdini);
       setDailyNode(target);

@@ -33,7 +33,7 @@ export default function Tier1Daily() {
   const dailyStartTime = useTier1Store((state) => state.dailyStartTime);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
-  const [tier1Nodes, setTier1Nodes] = useState<NodeData[]>([]);
+  const [tier1Nodes, settier1Nodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -49,7 +49,7 @@ export default function Tier1Daily() {
     getNodes().then((nodes) => {
       setAllNodes(nodes);
       const filtered = nodes.filter(MODES_CONFIG.tier1.filter);
-      setTier1Nodes(filtered);
+      settier1Nodes(filtered);
       
       const target = getDailyTargetNode(nodes, currentDay, MODES_CONFIG.tier1);
       setDailyNode(target);

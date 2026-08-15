@@ -33,7 +33,7 @@ export default function UnityDaily() {
   const dailyStartTime = useUnityStore((state) => state.dailyStartTime);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
-  const [unityNodes, setTier1Nodes] = useState<NodeData[]>([]);
+  const [unityNodes, setunityNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -49,7 +49,7 @@ export default function UnityDaily() {
     getNodes().then((nodes) => {
       setAllNodes(nodes);
       const filtered = nodes.filter(MODES_CONFIG.unity.filter);
-      setTier1Nodes(filtered);
+      setunityNodes(filtered);
       
       const target = getDailyTargetNode(nodes, currentDay, MODES_CONFIG.unity);
       setDailyNode(target);

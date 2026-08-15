@@ -33,7 +33,7 @@ export default function SubstanceDaily() {
   const dailyStartTime = useSubstanceStore((state) => state.dailyStartTime);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
-  const [substanceNodes, setTier1Nodes] = useState<NodeData[]>([]);
+  const [substanceNodes, setsubstanceNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -49,7 +49,7 @@ export default function SubstanceDaily() {
     getNodes().then((nodes) => {
       setAllNodes(nodes);
       const filtered = nodes.filter(MODES_CONFIG.substance.filter);
-      setTier1Nodes(filtered);
+      setsubstanceNodes(filtered);
       
       const target = getDailyTargetNode(nodes, currentDay, MODES_CONFIG.substance);
       setDailyNode(target);

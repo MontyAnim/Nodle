@@ -33,7 +33,7 @@ export default function BlenderDaily() {
   const dailyStartTime = useBlenderStore((state) => state.dailyStartTime);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
-  const [blenderNodes, setTier1Nodes] = useState<NodeData[]>([]);
+  const [blenderNodes, setblenderNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -49,7 +49,7 @@ export default function BlenderDaily() {
     getNodes().then((nodes) => {
       setAllNodes(nodes);
       const filtered = nodes.filter(MODES_CONFIG.blender.filter);
-      setTier1Nodes(filtered);
+      setblenderNodes(filtered);
       
       const target = getDailyTargetNode(nodes, currentDay, MODES_CONFIG.blender);
       setDailyNode(target);

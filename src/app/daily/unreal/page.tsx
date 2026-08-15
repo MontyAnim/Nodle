@@ -33,7 +33,7 @@ export default function UnrealDaily() {
   const dailyStartTime = useUnrealStore((state) => state.dailyStartTime);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
-  const [unrealNodes, setTier1Nodes] = useState<NodeData[]>([]);
+  const [unrealNodes, setunrealNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -49,7 +49,7 @@ export default function UnrealDaily() {
     getNodes().then((nodes) => {
       setAllNodes(nodes);
       const filtered = nodes.filter(MODES_CONFIG.unreal.filter);
-      setTier1Nodes(filtered);
+      setunrealNodes(filtered);
       
       const target = getDailyTargetNode(nodes, currentDay, MODES_CONFIG.unreal);
       setDailyNode(target);
