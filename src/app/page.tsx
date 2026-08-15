@@ -96,42 +96,41 @@ export default function ModesHub() {
               <MonitorPlay className="w-6 h-6 text-blue-500" />
               Retos por Software
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <ModeCard 
                 title="Blender Daily" 
                 description="Un nodo diario exclusivo del ecosistema de Blender (Shader y Geometry Nodes)."
                 icon={Boxes}
-                href="/modes/blender"
+                href="/daily/blender"
                 colorClass="border-orange-500/20 [&_svg]:text-orange-400"
-                disabled
-                comingSoon
               />
               <ModeCard 
                 title="Unreal Daily" 
                 description="Un nodo diario del sistema de Blueprints o Material Expressions de UE5."
                 icon={Boxes}
-                href="/modes/unreal"
-                colorClass="border-zinc-300/20 [&_svg]:text-zinc-200"
-                disabled
-                comingSoon
+                href="/daily/unreal"
+                colorClass="border-indigo-500/20 [&_svg]:text-indigo-400"
               />
               <ModeCard 
                 title="Unity Daily" 
                 description="Reto diario enfocado en Unity Shader Graph y Visual Scripting."
                 icon={Boxes}
-                href="/modes/unity"
-                colorClass="border-zinc-300/20 [&_svg]:text-zinc-400"
-                disabled
-                comingSoon
+                href="/daily/unity"
+                colorClass="border-zinc-500/20 [&_svg]:text-zinc-400"
               />
               <ModeCard 
-                title="Procedural Daily" 
-                description="Reto enfocado en Houdini VOPs/SOPs y Substance Designer."
+                title="Houdini Daily" 
+                description="Reto diario enfocado en Houdini VOPs/SOPs."
                 icon={Boxes}
-                href="/modes/procedural"
-                colorClass="border-yellow-500/20 [&_svg]:text-yellow-400"
-                disabled
-                comingSoon
+                href="/daily/houdini"
+                colorClass="border-amber-500/20 [&_svg]:text-amber-400"
+              />
+              <ModeCard 
+                title="Substance Daily" 
+                description="Reto diario enfocado en nodos de Substance Designer."
+                icon={Boxes}
+                href="/daily/substance"
+                colorClass="border-red-500/20 [&_svg]:text-red-400"
               />
             </div>
           </section>

@@ -47,6 +47,31 @@ export const MODES_CONFIG: Record<string, DailyModeConfig> = {
     id: 'tier3',
     seedOffset: 30003,
     filter: (n) => n.frequency_tier === 3,
+  },
+  blender: {
+    id: 'blender',
+    seedOffset: 40004,
+    filter: (n) => n.software === 'Blender',
+  },
+  houdini: {
+    id: 'houdini',
+    seedOffset: 50005,
+    filter: (n) => n.software === 'Houdini',
+  },
+  substance: {
+    id: 'substance',
+    seedOffset: 60006,
+    filter: (n) => n.software === 'Substance',
+  },
+  unity: {
+    id: 'unity',
+    seedOffset: 70007,
+    filter: (n) => n.software === 'Unity',
+  },
+  unreal: {
+    id: 'unreal',
+    seedOffset: 80008,
+    filter: (n) => n.software === 'Unreal Engine',
   }
 };
 
