@@ -62,16 +62,16 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-      <div className="relative w-full max-w-md bg-zinc-950 border border-zinc-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+      <div className="relative w-full max-w-md bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-zinc-800/50 bg-zinc-900/20">
-          <div className="flex items-center gap-2 text-zinc-100">
+        <div className="flex items-center justify-between p-4 border-b border-zinc-200 dark:border-zinc-800/50 bg-zinc-50 dark:bg-zinc-900/20">
+          <div className="flex items-center gap-2 text-zinc-900 dark:text-zinc-100">
             <Trophy className="w-5 h-5 text-amber-400" />
             <h2 className="font-semibold text-lg">{t('title')}</h2>
           </div>
           <button
             onClick={onClose}
-            className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-full transition-colors"
+            className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-white hover:bg-zinc-100 dark:bg-zinc-800 rounded-full transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -80,7 +80,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
         {/* Content */}
         <div className="p-4 min-h-[300px]">
           {loading ? (
-            <div className="w-full h-full flex flex-col items-center justify-center text-zinc-500 gap-2 mt-16">
+            <div className="w-full h-full flex flex-col items-center justify-center text-zinc-950 dark:text-zinc-500 gap-2 mt-16">
               <Loader2 className="w-8 h-8 animate-spin" />
               <p>Cargando puntajes...</p>
             </div>
@@ -89,12 +89,12 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
               <p>{error}</p>
             </div>
           ) : scores.length === 0 ? (
-            <div className="w-full h-full flex items-center justify-center text-zinc-500 mt-16 text-center px-4">
+            <div className="w-full h-full flex items-center justify-center text-zinc-950 dark:text-zinc-500 mt-16 text-center px-4">
               <p>{t('empty')}</p>
             </div>
           ) : (
             <div className="flex flex-col gap-2">
-              <div className="grid grid-cols-12 text-xs font-medium text-zinc-500 px-4 py-2 uppercase tracking-wider">
+              <div className="grid grid-cols-12 text-xs font-medium text-zinc-950 dark:text-zinc-500 px-4 py-2 uppercase tracking-wider">
                 <div className="col-span-2 text-center">{t('rank')}</div>
                 <div className="col-span-6">{t('user')}</div>
                 <div className="col-span-2 text-center">{t('attempts')}</div>
@@ -112,14 +112,14 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
                       className={`grid grid-cols-12 items-center px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                         isCurrentPlayer 
                           ? "bg-violet-600/20 border border-violet-500/30 text-violet-100" 
-                          : "bg-zinc-900/30 hover:bg-zinc-900/50 border border-transparent text-zinc-300"
+                          : "bg-zinc-50 dark:bg-zinc-900/30 hover:bg-zinc-50 dark:bg-zinc-900/50 border border-transparent text-zinc-700 dark:text-zinc-300"
                       }`}
                     >
                       <div className="col-span-2 text-center flex justify-center">
                         {rank === 1 ? (
                           <Trophy className="w-4 h-4 text-amber-400" />
                         ) : rank === 2 ? (
-                          <span className="text-zinc-300 font-bold">2</span>
+                          <span className="text-zinc-700 dark:text-zinc-300 font-bold">2</span>
                         ) : rank === 3 ? (
                           <span className="text-amber-700 font-bold">3</span>
                         ) : (
@@ -135,7 +135,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
                         {score.attempts}
                       </div>
                       
-                      <div className="col-span-2 text-right font-mono text-xs text-zinc-400">
+                      <div className="col-span-2 text-right font-mono text-xs text-zinc-600 dark:text-zinc-400">
                         {formatTime(score.timeMs)}
                       </div>
                     </div>

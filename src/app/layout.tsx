@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { PostHogProvider } from "@/providers/PostHogProvider";
 import { I18nProvider } from "@/components/I18nProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,9 +29,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <PostHogProvider>
-          <I18nProvider>
-            {children}
-          </I18nProvider>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <I18nProvider>
+              {children}
+            </I18nProvider>
+          </ThemeProvider>
           <Script
             async
             src="https://media.ethicalads.io/media/client/ethicalads.min.js"

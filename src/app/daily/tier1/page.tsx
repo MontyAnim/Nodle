@@ -135,7 +135,7 @@ export default function Tier1Daily() {
         {/* Navigation */}
         <Link 
           href="/" 
-          className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
+          className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
         >
           <ArrowLeft className="w-4 h-4" />
           Volver al Hub
@@ -145,7 +145,7 @@ export default function Tier1Daily() {
         <div className="flex flex-col items-center mb-6">
           <div className="flex items-center gap-3 mb-2">
             <Boxes className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-400" />
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-50">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
               Nodle
             </h1>
           </div>
@@ -164,8 +164,8 @@ export default function Tier1Daily() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
-          <div className="flex items-center gap-3 bg-zinc-900 px-4 py-2 rounded-full border border-zinc-800">
-            <span className="text-sm text-zinc-400 font-medium">Modo Difícil</span>
+          <div className="flex items-center gap-3 bg-zinc-50 dark:bg-zinc-900 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800">
+            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">Modo Difícil</span>
             <button 
               onClick={toggleHardMode}
               className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${hardMode ? 'bg-emerald-500' : 'bg-zinc-700'}`}
@@ -173,8 +173,8 @@ export default function Tier1Daily() {
               <span className={`w-4 h-4 bg-white rounded-full absolute shadow transition-transform ${hardMode ? 'translate-x-5' : 'translate-x-1'}`} />
             </button>
           </div>
-          <div className="flex items-center gap-3 bg-zinc-900 px-4 py-2 rounded-full border border-zinc-800">
-            <span className="text-sm text-zinc-400 font-medium">Modo Daltónico</span>
+          <div className="flex items-center gap-3 bg-zinc-50 dark:bg-zinc-900 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800">
+            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">Modo Daltónico</span>
             <button 
               onClick={toggleColorblindMode}
               className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${colorblindMode ? 'bg-[#0070B8]' : 'bg-zinc-700'}`}
@@ -211,7 +211,7 @@ export default function Tier1Daily() {
             </button>
             {gameStatus === 'won' && (
               <div className="animate-fade-in flex flex-col items-center gap-2 mt-4">
-                <p className="text-zinc-400 text-sm">¿Te gusta Nodle?</p>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">¿Te gusta Nodle?</p>
                 <KofiButton />
               </div>
             )}
@@ -227,8 +227,8 @@ export default function Tier1Daily() {
       </div>
 
       {/* Global Footer */}
-      <footer className="mt-12 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-800/50 pt-8 w-full max-w-5xl">
-        <p className="text-zinc-500 text-sm">
+      <footer className="mt-12 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-200 dark:border-zinc-800/50 pt-8 w-full max-w-5xl">
+        <p className="text-zinc-950 dark:text-zinc-500 text-sm">
           Creado con ♥ para la comunidad de Technical Artists.
         </p>
         <KofiButton label="Invítame un café" className="text-xs px-3 py-1.5" />

@@ -40,7 +40,7 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
       {/* Config toggle button */}
       <button
         onClick={() => setIsOpen((p) => !p)}
-        className="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors mb-3 mx-auto"
+        className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-white transition-colors mb-3 mx-auto"
       >
         <SlidersHorizontal className="w-4 h-4" />
         Filtros
@@ -53,17 +53,17 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
       </button>
 
       {isOpen && (
-        <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-4 space-y-4 mb-4 backdrop-blur-sm">
+        <div className="bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 space-y-4 mb-4 backdrop-blur-sm">
           {/* Software filter */}
           <div>
-            <p className="text-xs text-zinc-500 uppercase tracking-widest mb-2">Software</p>
+            <p className="text-xs text-zinc-950 dark:text-zinc-500 uppercase tracking-widest mb-2">Software</p>
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setSoftware(null)}
                 className={`px-3 py-1.5 text-xs rounded-full border transition-all ${
                   filter.software === null
                     ? "bg-violet-600 border-violet-500 text-white"
-                    : "border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-white"
+                    : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-500 hover:text-white"
                 }`}
               >
                 Todos
@@ -75,7 +75,7 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
                   className={`px-3 py-1.5 text-xs rounded-full border transition-all ${
                     filter.software === sw
                       ? "bg-violet-600 border-violet-500 text-white"
-                      : "border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-white"
+                      : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-500 hover:text-white"
                   }`}
                 >
                   {SOFTWARE_ICONS[sw]} {sw}
@@ -86,14 +86,14 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
 
           {/* Tier filter */}
           <div>
-            <p className="text-xs text-zinc-500 uppercase tracking-widest mb-2">Dificultad (Tier)</p>
+            <p className="text-xs text-zinc-950 dark:text-zinc-500 uppercase tracking-widest mb-2">Dificultad (Tier)</p>
             <div className="flex gap-2">
               <button
                 onClick={() => setTier(null)}
                 className={`flex-1 py-1.5 text-xs rounded-lg border transition-all ${
                   filter.tier === null
                     ? "bg-violet-600 border-violet-500 text-white"
-                    : "border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-white"
+                    : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-500 hover:text-white"
                 }`}
               >
                 Todos
@@ -105,7 +105,7 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
                   className={`flex-1 py-1.5 text-xs rounded-lg border transition-all ${
                     filter.tier === t
                       ? `border ${TIER_LABELS[t].color}`
-                      : "border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-white"
+                      : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-500 hover:text-white"
                   }`}
                 >
                   {TIER_LABELS[t].label}

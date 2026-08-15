@@ -29,9 +29,9 @@ function getBgColor(state: ValidationState, isColorblind: boolean): string {
     case 'incorrect':
     case 'higher':
     case 'lower':
-      return 'bg-zinc-800 border-zinc-700 text-zinc-300';
+      return 'bg-zinc-100 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300';
     default:
-      return 'bg-zinc-900 border-zinc-800';
+      return 'bg-zinc-50 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800';
   }
 }
 
@@ -72,7 +72,7 @@ export function GameBoard({ attempts, target, colorblindMode = false }: GameBoar
           return (
             <div key={i} className="grid grid-cols-6 gap-2 opacity-30">
               {Array.from({ length: 6 }).map((_, j) => (
-                <div key={j} className="w-full h-16 sm:h-20 rounded-md border-2 border-zinc-800 bg-zinc-900/50" />
+                <div key={j} className="w-full h-16 sm:h-20 rounded-md border-2 border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50" />
               ))}
             </div>
           );
@@ -82,7 +82,7 @@ export function GameBoard({ attempts, target, colorblindMode = false }: GameBoar
 
         return (
           <div key={i} className="flex flex-col gap-1 mb-2">
-            <h3 className="text-sm font-semibold text-zinc-300 ml-1">{attempt.name}</h3>
+            <h3 className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 ml-1">{attempt.name}</h3>
             <div className="grid grid-cols-6 gap-2" style={{ perspective: "1000px" }}>
               {renderCell(attempt.software, validation.software, t('software_col'), 0, colorblindMode)}
               {renderCell(attempt.context, validation.context, t('context_col'), 1, colorblindMode)}

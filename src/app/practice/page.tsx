@@ -127,12 +127,12 @@ export default function PracticePage() {
         <div className="w-full flex items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-zinc-400 hover:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
+            className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
           >
             <ArrowLeft className="w-4 h-4" />
             {t('back_to_hub')}
           </Link>
-          <div className="flex items-center gap-2 text-xs text-zinc-500">
+          <div className="flex items-center gap-2 text-xs text-zinc-950 dark:text-zinc-500">
             <Trophy className="w-4 h-4 text-amber-400" />
             <span className="text-amber-400 font-bold">{wins}</span>
             <span>{t('practice_wins')} {roundCount}</span>
@@ -147,7 +147,7 @@ export default function PracticePage() {
               <span className="text-violet-400">Modo</span> Práctica
             </h1>
           </div>
-          <p className="text-zinc-400 text-center max-w-md text-sm">
+          <p className="text-zinc-600 dark:text-zinc-400 text-center max-w-md text-sm">
             {t('practice_desc')}
           </p>
           <div className="flex items-center gap-2 px-3 py-1 bg-violet-500/10 border border-violet-500/20 rounded-full">
@@ -208,7 +208,7 @@ export default function PracticePage() {
             )}
           </>
         ) : isReady && !targetNode ? (
-          <div className="text-center text-zinc-500 mt-8">
+          <div className="text-center text-zinc-950 dark:text-zinc-500 mt-8">
             <p>No hay nodos con estos filtros. Prueba una combinación diferente.</p>
           </div>
         ) : (
@@ -224,8 +224,8 @@ export default function PracticePage() {
       </div>
 
       {/* Global Footer */}
-      <footer className="mt-12 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-800/50 pt-8 w-full max-w-5xl">
-        <p className="text-zinc-500 text-sm">
+      <footer className="mt-12 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-200 dark:border-zinc-800/50 pt-8 w-full max-w-5xl">
+        <p className="text-zinc-950 dark:text-zinc-500 text-sm">
           Creado con ♥ para la comunidad de Technical Artists.
         </p>
         <KofiButton label="Invítame un café" className="text-xs px-3 py-1.5" />

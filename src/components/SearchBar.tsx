@@ -81,23 +81,23 @@ export function SearchBar({ nodes, target, onAttempt, attempts, hardMode = false
         onFocus={() => setIsOpen(true)}
         placeholder={t('search_placeholder')}
         disabled={disabled}
-        className={`w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder:text-zinc-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+        className={`w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg text-white placeholder:text-zinc-950 dark:text-zinc-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
       />
 
       {isOpen && results.length > 0 && (
-        <ul className="absolute z-50 w-full mt-2 bg-zinc-900 border border-zinc-700 rounded-lg shadow-xl overflow-hidden max-h-60 overflow-y-auto">
+        <ul className="absolute z-50 w-full mt-2 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg shadow-xl overflow-hidden max-h-60 overflow-y-auto">
           {results.map((node, index) => (
             <li
               key={`${node.id}-${index}`}
               onClick={() => handleSelect(node)}
-              className="px-4 py-3 cursor-pointer hover:bg-zinc-800 flex items-center justify-between border-b border-zinc-800/50 last:border-0 transition-colors"
+              className="px-4 py-3 cursor-pointer hover:bg-zinc-100 dark:bg-zinc-800 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800/50 last:border-0 transition-colors"
             >
-              <span className="font-medium text-zinc-100">{node.name}</span>
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">{node.name}</span>
               <span className="flex items-center gap-1.5 flex-shrink-0 ml-2">
-                <span className="text-xs text-zinc-400 bg-zinc-950 px-2 py-0.5 rounded-full border border-zinc-800">
+                <span className="text-xs text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-950 px-2 py-0.5 rounded-full border border-zinc-200 dark:border-zinc-800">
                 {node.software}
                 </span>
-                <span className="text-xs text-zinc-500 bg-zinc-900 px-2 py-0.5 rounded-full border border-zinc-700/50">
+                <span className="text-xs text-zinc-950 dark:text-zinc-500 bg-zinc-50 dark:bg-zinc-900 px-2 py-0.5 rounded-full border border-zinc-300 dark:border-zinc-700/50">
                   {node.context}
                 </span>
               </span>
@@ -107,7 +107,7 @@ export function SearchBar({ nodes, target, onAttempt, attempts, hardMode = false
       )}
       
       {isOpen && query && results.length === 0 && (
-        <div className="absolute z-50 w-full mt-2 bg-zinc-900 border border-zinc-700 rounded-lg shadow-xl px-4 py-3 text-sm text-zinc-500 text-center">
+        <div className="absolute z-50 w-full mt-2 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg shadow-xl px-4 py-3 text-sm text-zinc-950 dark:text-zinc-500 text-center">
           No se encontraron nodos.
         </div>
       )}

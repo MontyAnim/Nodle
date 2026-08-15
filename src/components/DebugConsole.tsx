@@ -52,29 +52,29 @@ export function DebugConsole({ targetNode }: DebugConsoleProps) {
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
           DEBUG CONSOLE
         </h3>
-        <button onClick={() => setIsVisible(false)} className="text-zinc-500 hover:text-white">✕</button>
+        <button onClick={() => setIsVisible(false)} className="text-zinc-950 dark:text-zinc-500 hover:text-white">✕</button>
       </div>
 
       <div className="space-y-3">
         <div>
-          <div className="text-zinc-500 mb-1">Target Node</div>
-          <div className="bg-zinc-900 px-2 py-1 rounded border border-zinc-800 text-yellow-300 truncate">
+          <div className="text-zinc-950 dark:text-zinc-500 mb-1">Target Node</div>
+          <div className="bg-zinc-50 dark:bg-zinc-900 px-2 py-1 rounded border border-zinc-200 dark:border-zinc-800 text-yellow-300 truncate">
             {targetNode ? `${targetNode.name} (${targetNode.software})` : 'Cargando...'}
           </div>
         </div>
 
         <div>
-          <div className="text-zinc-500 mb-1">Time Machine (Day: {currentDay})</div>
+          <div className="text-zinc-950 dark:text-zinc-500 mb-1">Time Machine (Day: {currentDay})</div>
           <div className="flex gap-2">
             <button 
               onClick={() => handleChangeDay(-1)}
-              className="flex-1 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 py-1 rounded transition-colors"
+              className="flex-1 bg-zinc-50 dark:bg-zinc-900 hover:bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 py-1 rounded transition-colors"
             >
               -1 Día
             </button>
             <button 
               onClick={() => handleChangeDay(1)}
-              className="flex-1 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 py-1 rounded transition-colors"
+              className="flex-1 bg-zinc-50 dark:bg-zinc-900 hover:bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 py-1 rounded transition-colors"
             >
               +1 Día
             </button>
@@ -82,7 +82,7 @@ export function DebugConsole({ targetNode }: DebugConsoleProps) {
         </div>
 
         <div>
-          <div className="text-zinc-500 mb-1">Quick Actions</div>
+          <div className="text-zinc-950 dark:text-zinc-500 mb-1">Quick Actions</div>
           <div className="flex flex-col gap-2">
             <button 
               onClick={handleAutoWin}
