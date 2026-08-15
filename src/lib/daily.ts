@@ -21,20 +21,38 @@ function mulberry32(a: number) {
   };
 }
 
+export interface DailyModeConfig {
+  id: string;
+  seedOffset: number;
+  filter: (node: NodeData) => boolean;
+}
+
+export const MODES_CONFIG: Record<string, DailyModeConfig> = {
+  classic: {
+    id: 'classic',
+    seedOffset: 19937,
+    filter: () => true, // El modo clásico usa todo el catálogo
+  },
+  tier1: {
+    id: 'tier1',
+    seedOffset: 10001,
+    filter: (n) => n.frequency_tier === 1,
+  }
+};
+
 /**
- * Obtiene el nodo correspondiente al reto del día.
- * Se asegura de filtrar solo nodos del tier 1 y de ordenarlos
- * consistentemente antes de elegir uno basado en el PRNG sembrado.
+ * Obtiene el nodo correspondiente al reto del día basado en el modo.
  */
 export function getDailyTargetNode(
   nodes: NodeData[],
-  dayIndex: number
+  dayIndex: number,
+  modeConfig: DailyModeConfig = MODES_CONFIG.classic
 ): NodeData {
-  // 1. Filtrar solo los nodos más universales/comunes
-  const validNodes = nodes.filter((n) => n.frequency_tier === 1);
+  // 1. Filtrar los nodos según el modo
+  const validNodes = nodes.filter(modeConfig.filter);
 
   if (validNodes.length === 0) {
-    throw new Error("No hay nodos válidos en el catálogo (Tier 1).");
+    throw new Error(`No hay nodos válidos en el catálogo para el modo ${modeConfig.id}.`);
   }
 
   // 2. Ordenamiento estricto por ID para garantizar la misma posición
@@ -42,8 +60,8 @@ export function getDailyTargetNode(
   validNodes.sort((a, b) => a.id.localeCompare(b.id));
 
   // 3. Inicializar el PRNG con el día actual como semilla.
-  // Sumamos un offset numérico arbitrario para ofuscar ligeramente el patrón.
-  const prng = mulberry32(dayIndex + 19937);
+  // Sumamos un offset numérico arbitrario por modo.
+  const prng = mulberry32(dayIndex + modeConfig.seedOffset);
 
   // 4. Extraer el índice
   const index = Math.floor(prng() * validNodes.length);

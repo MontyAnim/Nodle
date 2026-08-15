@@ -1,23 +1,20 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Fuse from 'fuse.js';
 import { NodeData } from '@/types/node';
-import { useGameStore } from '@/store/useGameStore';
 import { getHardModeConstraints, filterNodesByHardMode } from '@/lib/hardmode';
 
 interface SearchBarProps {
   nodes: NodeData[];
   target: NodeData | null;
-  onAttempt?: (nodeId: string) => void; // callback externo (Modo Práctica)
+  onAttempt: (nodeId: string) => void;
+  attempts: string[];
+  hardMode?: boolean;
   disabled?: boolean;
 }
 
-export function SearchBar({ nodes, target, onAttempt, disabled = false }: SearchBarProps) {
+export function SearchBar({ nodes, target, onAttempt, attempts, hardMode = false, disabled = false }: SearchBarProps) {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-  
-  const addAttempt = useGameStore((state) => state.addAttempt);
-  const attempts = useGameStore((state) => state.attempts);
-  const hardMode = useGameStore((state) => state.hardMode);
   
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -65,13 +62,9 @@ export function SearchBar({ nodes, target, onAttempt, disabled = false }: Search
 
   const handleSelect = (node: NodeData) => {
     if (disabled) return;
-    if (onAttempt) {
-      onAttempt(node.id);
-    } else {
-      addAttempt(node.id);
-    }
     setQuery('');
     setIsOpen(false);
+    onAttempt(node.id);
   };
 
   return (

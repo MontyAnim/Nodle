@@ -9,7 +9,7 @@ import { NodeData } from "@/types/node";
 import { SearchBar } from "@/components/SearchBar";
 import { GameBoard } from "@/components/GameBoard";
 import { PracticeConfig } from "@/components/PracticeConfig";
-import { useGameStore } from "@/store/useGameStore";
+import { useClassicStore } from "@/store/useGameStore";
 import { DebugConsole } from "@/components/DebugConsole";
 import { KofiButton } from "@/components/KofiButton";
 import { EthicalAd } from "@/components/EthicalAd";
@@ -19,7 +19,7 @@ import { triggerVictoryConfetti } from "@/lib/confetti";
 const MAX_ATTEMPTS = 6;
 
 export default function PracticePage() {
-  const colorblindMode = useGameStore((state) => state.colorblindMode);
+  const colorblindMode = useClassicStore((state) => state.colorblindMode);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
   const [targetNode, setTargetNode] = useState<NodeData | null>(null);
@@ -171,6 +171,8 @@ export default function PracticePage() {
                 target={targetNode}
                 onAttempt={handleAttempt}
                 disabled={gameStatus !== "playing"}
+                attempts={attempts}
+                hardMode={false}
               />
             </div>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useGameStore } from '@/store/useGameStore';
+import { useClassicStore } from '@/store/useGameStore';
 import { NodeData } from '@/types/node';
 import { getUTCDayIndex } from '@/lib/daily';
 
@@ -9,10 +9,10 @@ interface DebugConsoleProps {
 
 export function DebugConsole({ targetNode }: DebugConsoleProps) {
   const [isVisible, setIsVisible] = useState(false);
-  const debugDayOverride = useGameStore((state) => state.debugDayOverride);
-  const setDebugDayOverride = useGameStore((state) => state.setDebugDayOverride);
-  const addAttempt = useGameStore((state) => state.addAttempt);
-  const gameStatus = useGameStore((state) => state.gameStatus);
+  const debugDayOverride = useClassicStore((state) => state.debugDayOverride);
+  const setDebugDayOverride = useClassicStore((state) => state.setDebugDayOverride);
+  const addAttempt = useClassicStore((state) => state.addAttempt);
+  const gameStatus = useClassicStore((state) => state.gameStatus);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -35,14 +35,14 @@ export function DebugConsole({ targetNode }: DebugConsoleProps) {
     window.location.reload();
   };
 
-  const handleChangeDay = (offset: number) => {
-    setDebugDayOverride(currentDay + offset);
-  };
-
   const handleAutoWin = () => {
     if (targetNode && gameStatus !== 'won' && gameStatus !== 'lost') {
       addAttempt(targetNode.id);
     }
+  };
+
+  const handleChangeDay = (offset: number) => {
+    setDebugDayOverride(currentDay + offset);
   };
 
   return (

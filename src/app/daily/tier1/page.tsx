@@ -3,9 +3,9 @@
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { Box, ArrowLeft, Boxes, Share2, Check, Trophy } from "lucide-react";
-import { useClassicStore } from "@/store/useGameStore";
+import { useTier1Store } from "@/store/useGameStore";
 import { getNodes } from "@/lib/nodes";
-import { getUTCDayIndex, getDailyTargetNode } from "@/lib/daily";
+import { getUTCDayIndex, getDailyTargetNode, MODES_CONFIG } from "@/lib/daily";
 import { NodeData } from "@/types/node";
 import { SearchBar } from "@/components/SearchBar";
 import { GameBoard } from "@/components/GameBoard";
@@ -17,22 +17,23 @@ import { usePostHog } from "posthog-js/react";
 import { LeaderboardModal } from "@/components/LeaderboardModal";
 import { triggerVictoryConfetti } from "@/lib/confetti";
 
-export default function Home() {
-  const resetDailyGame = useClassicStore((state) => state.resetDailyGame);
-  const lastPlayedTimestamp = useClassicStore((state) => state.lastPlayedTimestamp);
-  const attempts = useClassicStore((state) => state.attempts);
-  const addAttempt = useClassicStore((state) => state.addAttempt);
-  const hardMode = useClassicStore((state) => state.hardMode);
-  const toggleHardMode = useClassicStore((state) => state.toggleHardMode);
-  const colorblindMode = useClassicStore((state) => state.colorblindMode);
-  const toggleColorblindMode = useClassicStore((state) => state.toggleColorblindMode);
-  const debugDayOverride = useClassicStore((state) => state.debugDayOverride);
-  const gameStatus = useClassicStore((state) => state.gameStatus);
-  const setGameStatus = useClassicStore((state) => state.setGameStatus);
-  const userId = useClassicStore((state) => state.userId);
-  const dailyStartTime = useClassicStore((state) => state.dailyStartTime);
+export default function Tier1Daily() {
+  const resetDailyGame = useTier1Store((state) => state.resetDailyGame);
+  const lastPlayedTimestamp = useTier1Store((state) => state.lastPlayedTimestamp);
+  const attempts = useTier1Store((state) => state.attempts);
+  const addAttempt = useTier1Store((state) => state.addAttempt);
+  const hardMode = useTier1Store((state) => state.hardMode);
+  const toggleHardMode = useTier1Store((state) => state.toggleHardMode);
+  const colorblindMode = useTier1Store((state) => state.colorblindMode);
+  const toggleColorblindMode = useTier1Store((state) => state.toggleColorblindMode);
+  const debugDayOverride = useTier1Store((state) => state.debugDayOverride);
+  const gameStatus = useTier1Store((state) => state.gameStatus);
+  const setGameStatus = useTier1Store((state) => state.setGameStatus);
+  const userId = useTier1Store((state) => state.userId);
+  const dailyStartTime = useTier1Store((state) => state.dailyStartTime);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
+  const [tier1Nodes, setTier1Nodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -40,14 +41,17 @@ export default function Home() {
   const posthog = usePostHog();
 
   useEffect(() => {
-    useClassicStore.setState(useClassicStore.getState());
+    useTier1Store.setState(useTier1Store.getState());
     const currentDay = debugDayOverride ?? getUTCDayIndex();
     if (lastPlayedTimestamp !== currentDay) {
       resetDailyGame(currentDay);
     }
     getNodes().then((nodes) => {
       setAllNodes(nodes);
-      const target = getDailyTargetNode(nodes, currentDay);
+      const filtered = nodes.filter(MODES_CONFIG.tier1.filter);
+      setTier1Nodes(filtered);
+      
+      const target = getDailyTargetNode(nodes, currentDay, MODES_CONFIG.tier1);
       setDailyNode(target);
       setIsReady(true);
     });
@@ -60,13 +64,13 @@ export default function Home() {
     
     if (lastAttemptId === dailyNode.id) {
       if (gameStatus !== 'won') {
-        console.log("[Leaderboard] Victory detected! userId:", userId, "dailyStartTime:", dailyStartTime);
+        console.log("[Leaderboard Tier1] Victory detected! userId:", userId, "dailyStartTime:", dailyStartTime);
         setGameStatus('won');
         
         triggerVictoryConfetti();
         
         posthog?.capture("game_completed", {
-          mode: "daily",
+          mode: "tier1",
           status: "won",
           attempts_used: attempts.length,
           target_node_id: dailyNode.id,
@@ -97,7 +101,7 @@ export default function Home() {
       if (gameStatus !== 'lost') {
         setGameStatus('lost');
         posthog?.capture("game_completed", {
-          mode: "daily",
+          mode: "tier1",
           status: "lost",
           attempts_used: 6,
           target_node_id: dailyNode.id,
@@ -140,19 +144,19 @@ export default function Home() {
         {/* Header */}
         <div className="flex flex-col items-center mb-6">
           <div className="flex items-center gap-3 mb-2">
-            <Boxes className="w-8 h-8 sm:w-10 sm:h-10 text-zinc-50" />
+            <Boxes className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-400" />
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-50">
               Nodle
             </h1>
           </div>
-          <p className="text-zinc-400 text-sm sm:text-base font-medium">Reto Diario Clásico</p>
+          <p className="text-emerald-400 text-sm sm:text-base font-medium">Reto Diario Tier 1</p>
         </div>
 
         {/* Navigation to Leaderboard */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <button
             onClick={() => setIsLeaderboardOpen(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 hover:border-amber-500/60 text-amber-400 rounded-full text-sm font-medium transition-all"
+            className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-500/60 text-emerald-400 rounded-full text-sm font-medium transition-all"
           >
             <Trophy className="w-4 h-4" />
             Ver Leaderboard
@@ -183,7 +187,7 @@ export default function Home() {
         {isReady && (
           <div className="w-full max-w-xl mt-2 z-20">
             <SearchBar 
-              nodes={allNodes} 
+              nodes={tier1Nodes} 
               target={dailyNode} 
               onAttempt={addAttempt}
               attempts={attempts}
@@ -200,7 +204,7 @@ export default function Home() {
           <div className="mt-8 flex flex-col items-center gap-4">
             <button 
               onClick={handleShare}
-              className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold transition-colors shadow-lg"
+              className="flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full font-bold transition-colors shadow-lg"
             >
               {copied ? <Check className="w-5 h-5" /> : <Share2 className="w-5 h-5" />}
               {copied ? '¡Copiado al Portapapeles!' : 'Compartir Resultado'}

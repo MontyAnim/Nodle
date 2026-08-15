@@ -30,7 +30,7 @@ interface GameState {
   setDebugDayOverride: (day: number | null) => void;
 }
 
-export const useGameStore = create<GameState>()(
+export const createGameStore = (storageKey: string) => create<GameState>()(
   persist(
     (set) => ({
       userId: typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2, 15),
@@ -104,7 +104,10 @@ export const useGameStore = create<GameState>()(
         set(() => ({ debugDayOverride: day })),
     }),
     {
-      name: 'nodle-storage', // Nombre de la clave en localStorage
+      name: storageKey,
     }
   )
 );
+
+export const useClassicStore = createGameStore('nodle-storage');
+export const useTier1Store = createGameStore('nodle-storage-tier1');

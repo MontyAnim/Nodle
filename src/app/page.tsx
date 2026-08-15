@@ -69,10 +69,8 @@ export default function ModesHub() {
                 title="Tier 1: Esenciales" 
                 description="Solo nodos de uso muy frecuente (ej. Math, Multiply, Texture Coordinate). Ideal para principiantes."
                 icon={Layers}
-                href="/modes/tier1"
+                href="/daily/tier1"
                 colorClass="border-emerald-500/20 [&_svg]:text-emerald-400"
-                disabled
-                comingSoon
               />
               <ModeCard 
                 title="Tier 2: Avanzados" 
