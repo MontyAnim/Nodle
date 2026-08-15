@@ -81,7 +81,7 @@ export function SearchBar({ nodes, target, onAttempt, attempts, hardMode = false
         onFocus={() => setIsOpen(true)}
         placeholder={t('search_placeholder')}
         disabled={disabled}
-        className={`w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg text-white placeholder:text-zinc-950 dark:text-zinc-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+        className={`w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg text-zinc-950 dark:text-white placeholder:text-zinc-500 dark:placeholder:text-zinc-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
       />
 
       {isOpen && results.length > 0 && (
