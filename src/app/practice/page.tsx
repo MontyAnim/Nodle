@@ -32,7 +32,6 @@ export default function PracticePage() {
   const [wins, setWins] = useState(0);
   const [roundCount, setRoundCount] = useState(1);
   const posthog = usePostHog();
-  const t = useTranslations('Game');
   const [isReady, setIsReady] = useState(false);
 
   const [filter, setFilter] = useState<PracticeFilter>({
