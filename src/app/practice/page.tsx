@@ -12,6 +12,7 @@ import { PracticeConfig } from "@/components/PracticeConfig";
 import { useGameStore } from "@/store/useGameStore";
 import { DebugConsole } from "@/components/DebugConsole";
 import { KofiButton } from "@/components/KofiButton";
+import { EthicalAd } from "@/components/EthicalAd";
 
 const MAX_ATTEMPTS = 6;
 
@@ -194,8 +195,13 @@ export default function PracticePage() {
         <DebugConsole targetNode={targetNode} />
       </div>
 
+      {/* Ethical Ads Integration */}
+      <div className="w-full max-w-3xl mt-12">
+        <EthicalAd />
+      </div>
+
       {/* Global Footer */}
-      <footer className="mt-20 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-800/50 pt-8 w-full max-w-5xl">
+      <footer className="mt-12 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-800/50 pt-8 w-full max-w-5xl">
         <p className="text-zinc-500 text-sm">
           Creado con ♥ para la comunidad de Technical Artists.
         </p>

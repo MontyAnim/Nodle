@@ -13,6 +13,7 @@ import { DebugConsole } from "@/components/DebugConsole";
 import { generateShareImage, copyShareImageToClipboard } from "@/lib/canvas";
 import { Share2, Check } from "lucide-react";
 import { KofiButton } from "@/components/KofiButton";
+import { EthicalAd } from "@/components/EthicalAd";
 
 export default function Home() {
   const resetDailyGame = useGameStore((state) => state.resetDailyGame);
@@ -176,8 +177,13 @@ export default function Home() {
         <DebugConsole targetNode={dailyNode} />
       </div>
 
+      {/* Ethical Ads Integration */}
+      <div className="w-full max-w-3xl mt-12">
+        <EthicalAd />
+      </div>
+
       {/* Global Footer */}
-      <footer className="mt-20 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-800/50 pt-8 w-full max-w-5xl">
+      <footer className="mt-12 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-800/50 pt-8 w-full max-w-5xl">
         <p className="text-zinc-500 text-sm">
           Creado con ♥ para la comunidad de Technical Artists.
         </p>
