@@ -22,11 +22,12 @@ const SOFTWARE_ICONS: Record<string, string> = {
 export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigProps) {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('Game');
+  const tHub = useTranslations('Hub');
 
   const TIER_LABELS: Record<number, { label: string; description: string; color: string }> = {
-    1: { label: "Tier 1", description: t('tier1_desc'), color: "text-emerald-400 border-emerald-500/40 bg-emerald-500/10" },
-    2: { label: "Tier 2", description: t('tier2_desc'), color: "text-amber-400 border-amber-500/40 bg-amber-500/10" },
-    3: { label: "Tier 3", description: t('tier3_desc'), color: "text-rose-400 border-rose-500/40 bg-rose-500/10" },
+    1: { label: "Tier 1", description: tHub('tier1_desc'), color: "text-emerald-400 border-emerald-500/40 bg-emerald-500/10" },
+    2: { label: "Tier 2", description: tHub('tier2_desc'), color: "text-amber-400 border-amber-500/40 bg-amber-500/10" },
+    3: { label: "Tier 3", description: tHub('tier3_desc'), color: "text-rose-400 border-rose-500/40 bg-rose-500/10" },
   };
 
   const setSoftware = (software: AvailableSoftware | null) => {
