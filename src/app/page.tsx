@@ -139,14 +139,14 @@ export default function Home() {
           El juego de deducción lógica basado en nodos para artistas técnicos y desarrolladores de videojuegos.
         </p>
 
-        {/* Navigation to Practice Mode and Leaderboard */}
+        {/* Navigation to Modes Hub and Leaderboard */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <Link
-            href="/practice"
+            href="/modes"
             className="flex items-center gap-2 px-4 py-2 bg-violet-600/10 hover:bg-violet-600/20 border border-violet-500/30 hover:border-violet-500/60 text-violet-300 rounded-full text-sm font-medium transition-all"
           >
             <span className="w-2 h-2 rounded-full bg-violet-400" />
-            Modo Práctica — Practica sin límite
+            Más Modos de Juego
           </Link>
           <button
             onClick={() => setIsLeaderboardOpen(true)}
