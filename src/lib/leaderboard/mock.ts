@@ -8,4 +8,9 @@ export class MockLeaderboardClient implements LeaderboardClient {
     console.log('[MockLeaderboardClient] Score submitted successfully.');
     return true;
   }
+
+  async getTopScores(dayIndex: number, limit: number = 10): Promise<LeaderboardEntry[]> {
+    console.log(`[MockLeaderboard] fetching top scores for day ${dayIndex}`);
+    return [];
+  }
 }

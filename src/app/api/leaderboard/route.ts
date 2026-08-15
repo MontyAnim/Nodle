@@ -31,3 +31,25 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
+
+export async function GET(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const dayIndexStr = searchParams.get('dayIndex');
+    
+    if (!dayIndexStr) {
+      return NextResponse.json({ error: 'dayIndex is required' }, { status: 400 });
+    }
+
+    const dayIndex = parseInt(dayIndexStr, 10);
+    if (isNaN(dayIndex)) {
+      return NextResponse.json({ error: 'Invalid dayIndex' }, { status: 400 });
+    }
+
+    const scores = await leaderboardClient.getTopScores(dayIndex, 10);
+    return NextResponse.json({ scores });
+  } catch (error) {
+    console.error('API /leaderboard GET error:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
+}

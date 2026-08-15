@@ -55,4 +55,44 @@ export class UpstashLeaderboardClient implements LeaderboardClient {
       return false;
     }
   }
+
+  async getTopScores(dayIndex: number, limit: number = 10): Promise<LeaderboardEntry[]> {
+    if (!this.isConfigured()) return [];
+
+    try {
+      const key = `leaderboard:day:${dayIndex}`;
+      // ZRANGE key 0 limit-1
+      const response = await fetch(`${this.url}/zrange/${key}/0/${limit - 1}`, {
+        headers: { Authorization: `Bearer ${this.token}` }
+      });
+
+      if (!response.ok) {
+        console.error('[UpstashLeaderboardClient] Failed to fetch top scores:', await response.text());
+        return [];
+      }
+
+      const data = await response.json();
+      const results: string[] = data.result || [];
+
+      // Parse JSON from the sorted set members
+      const entries: LeaderboardEntry[] = results.map(str => {
+        try {
+          const parsed = JSON.parse(str);
+          return {
+            userId: parsed.userId,
+            dayIndex: dayIndex,
+            timeMs: parsed.timeMs,
+            attempts: parsed.attempts
+          };
+        } catch {
+          return null;
+        }
+      }).filter((e): e is LeaderboardEntry => e !== null);
+
+      return entries;
+    } catch (error) {
+      console.error('[UpstashLeaderboardClient] Error fetching top scores:', error);
+      return [];
+    }
+  }
 }

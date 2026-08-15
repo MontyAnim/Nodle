@@ -7,4 +7,5 @@ export interface LeaderboardEntry {
 
 export interface LeaderboardClient {
   submitScore: (entry: LeaderboardEntry) => Promise<boolean>;
+  getTopScores: (dayIndex: number, limit?: number) => Promise<LeaderboardEntry[]>;
 }

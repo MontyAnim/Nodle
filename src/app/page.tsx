@@ -15,6 +15,8 @@ import { Share2, Check } from "lucide-react";
 import { KofiButton } from "@/components/KofiButton";
 import { EthicalAd } from "@/components/EthicalAd";
 import { usePostHog } from "posthog-js/react";
+import { LeaderboardModal } from "@/components/LeaderboardModal";
+import { Trophy } from "lucide-react";
 
 export default function Home() {
   const resetDailyGame = useGameStore((state) => state.resetDailyGame);
@@ -34,6 +36,7 @@ export default function Home() {
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [isLeaderboardOpen, setIsLeaderboardOpen] = useState(false);
   const posthog = usePostHog();
 
   useEffect(() => {
@@ -133,16 +136,25 @@ export default function Home() {
           El juego de deducción lógica basado en nodos para artistas técnicos y desarrolladores de videojuegos.
         </p>
 
-        {/* Navigation to Practice Mode */}
-        <Link
-          href="/practice"
-          className="flex items-center gap-2 px-4 py-2 bg-violet-600/10 hover:bg-violet-600/20 border border-violet-500/30 hover:border-violet-500/60 text-violet-300 rounded-full text-sm font-medium transition-all"
-        >
-          <span className="w-2 h-2 rounded-full bg-violet-400" />
-          Modo Práctica — Practica sin límite
-        </Link>
-
+        {/* Navigation to Practice Mode and Leaderboard */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
+          <Link
+            href="/practice"
+            className="flex items-center gap-2 px-4 py-2 bg-violet-600/10 hover:bg-violet-600/20 border border-violet-500/30 hover:border-violet-500/60 text-violet-300 rounded-full text-sm font-medium transition-all"
+          >
+            <span className="w-2 h-2 rounded-full bg-violet-400" />
+            Modo Práctica — Practica sin límite
+          </Link>
+          <button
+            onClick={() => setIsLeaderboardOpen(true)}
+            className="flex items-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 hover:border-amber-500/60 text-amber-300 rounded-full text-sm font-medium transition-all"
+          >
+            <Trophy className="w-4 h-4 text-amber-400" />
+            Leaderboard
+          </button>
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
           <div className="flex items-center gap-3 bg-zinc-900 px-4 py-2 rounded-full border border-zinc-800">
             <span className="text-sm text-zinc-400 font-medium">Modo Difícil</span>
             <button 
@@ -206,6 +218,14 @@ export default function Home() {
         </p>
         <KofiButton label="Invítame un café" className="text-xs px-3 py-1.5" />
       </footer>
+
+      {/* Leaderboard Modal */}
+      <LeaderboardModal 
+        isOpen={isLeaderboardOpen} 
+        onClose={() => setIsLeaderboardOpen(false)} 
+        dayIndex={getUTCDayIndex()} 
+        currentUserId={userId || undefined}
+      />
     </main>
   );
 }
