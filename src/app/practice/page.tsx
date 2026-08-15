@@ -14,6 +14,7 @@ import { DebugConsole } from "@/components/DebugConsole";
 import { KofiButton } from "@/components/KofiButton";
 import { EthicalAd } from "@/components/EthicalAd";
 import { usePostHog } from "posthog-js/react";
+import { triggerVictoryConfetti } from "@/lib/confetti";
 
 const MAX_ATTEMPTS = 6;
 
@@ -76,6 +77,7 @@ export default function PracticePage() {
       if (nodeId === targetNode?.id) {
         setGameStatus("won");
         setWins((w) => w + 1);
+        triggerVictoryConfetti();
         posthog?.capture("game_completed", {
           mode: "practice",
           status: "won",

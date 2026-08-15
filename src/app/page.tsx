@@ -17,6 +17,7 @@ import { EthicalAd } from "@/components/EthicalAd";
 import { usePostHog } from "posthog-js/react";
 import { LeaderboardModal } from "@/components/LeaderboardModal";
 import { Trophy } from "lucide-react";
+import { triggerVictoryConfetti } from "@/lib/confetti";
 
 export default function Home() {
   const resetDailyGame = useGameStore((state) => state.resetDailyGame);
@@ -62,6 +63,8 @@ export default function Home() {
       if (gameStatus !== 'won') {
         console.log("[Leaderboard] Victory detected! userId:", userId, "dailyStartTime:", dailyStartTime);
         setGameStatus('won');
+        
+        triggerVictoryConfetti();
         
         posthog?.capture("game_completed", {
           mode: "daily",
