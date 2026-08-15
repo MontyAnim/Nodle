@@ -124,10 +124,10 @@ export default function PracticePage() {
         <div className="w-full flex items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-zinc-400 hover:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            Reto Diario
+            Volver al Hub
           </Link>
           <div className="flex items-center gap-2 text-xs text-zinc-500">
             <Trophy className="w-4 h-4 text-amber-400" />
