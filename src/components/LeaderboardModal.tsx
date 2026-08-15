@@ -71,7 +71,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
           </div>
           <button
             onClick={onClose}
-            className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-white hover:bg-zinc-100 dark:bg-zinc-800 rounded-full transition-colors"
+            className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -112,7 +112,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
                       className={`grid grid-cols-12 items-center px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                         isCurrentPlayer 
                           ? "bg-violet-600/20 border border-violet-500/30 text-violet-100" 
-                          : "bg-zinc-50 dark:bg-zinc-900/30 hover:bg-zinc-50 dark:bg-zinc-900/50 border border-transparent text-zinc-700 dark:text-zinc-300"
+                          : "bg-zinc-50 dark:bg-zinc-900/30 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 border border-transparent text-zinc-700 dark:text-zinc-300"
                       }`}
                     >
                       <div className="col-span-2 text-center flex justify-center">

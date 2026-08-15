@@ -64,7 +64,7 @@ export default function ModesHub() {
                 </div>
               </Link>
               <Link href="/practice" className="group flex-1">
-                <div className="h-full px-6 py-4 bg-zinc-100 dark:bg-zinc-800/50 hover:bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700/50 hover:border-zinc-600 rounded-2xl transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center">
+                <div className="h-full px-6 py-4 bg-zinc-100 dark:bg-zinc-800/50 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-300 dark:border-zinc-700/50 hover:border-zinc-600 rounded-2xl transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center">
                   <div className="p-3 bg-zinc-700/50 rounded-full text-zinc-600 dark:text-zinc-400 group-hover:scale-110 transition-transform">
                     <Dumbbell className="w-6 h-6" />
                   </div>

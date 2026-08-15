@@ -134,7 +134,7 @@ export default function Home() {
         {/* Navigation */}
         <Link 
           href="/" 
-          className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
+          className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
         >
           <ArrowLeft className="w-4 h-4" />
           {t('back_to_hub')}

@@ -26,7 +26,7 @@ export function ModeCard({
       className={`relative h-full flex flex-col p-6 rounded-2xl border transition-all duration-200 ${
         disabled
           ? "bg-zinc-50 dark:bg-zinc-900/20 border-zinc-200 dark:border-zinc-800/30 opacity-60 cursor-not-allowed"
-          : `bg-zinc-50 dark:bg-zinc-900/50 hover:bg-zinc-100 dark:bg-zinc-800/80 hover:-translate-y-1 hover:shadow-xl ${colorClass}`
+          : `bg-zinc-50 dark:bg-zinc-900/50 hover:bg-zinc-100 dark:hover:bg-zinc-800/80 hover:-translate-y-1 hover:shadow-xl ${colorClass}`
       }`}
     >
       <div className="flex items-center justify-between mb-4">

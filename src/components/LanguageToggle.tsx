@@ -10,7 +10,7 @@ export function LanguageToggle() {
       <button
         onClick={() => setLocale('es')}
         className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
-          locale === 'es' ? 'bg-indigo-600 text-white' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-200 hover:bg-zinc-100 dark:bg-zinc-800'
+          locale === 'es' ? 'bg-indigo-600 text-white' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-800'
         }`}
       >
         ES
@@ -18,7 +18,7 @@ export function LanguageToggle() {
       <button
         onClick={() => setLocale('en')}
         className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
-          locale === 'en' ? 'bg-indigo-600 text-white' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-200 hover:bg-zinc-100 dark:bg-zinc-800'
+          locale === 'en' ? 'bg-indigo-600 text-white' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-800'
         }`}
       >
         EN

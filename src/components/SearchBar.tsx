@@ -90,7 +90,7 @@ export function SearchBar({ nodes, target, onAttempt, attempts, hardMode = false
             <li
               key={`${node.id}-${index}`}
               onClick={() => handleSelect(node)}
-              className="px-4 py-3 cursor-pointer hover:bg-zinc-100 dark:bg-zinc-800 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800/50 last:border-0 transition-colors"
+              className="px-4 py-3 cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800/50 last:border-0 transition-colors"
             >
               <span className="font-medium text-zinc-900 dark:text-zinc-100">{node.name}</span>
               <span className="flex items-center gap-1.5 flex-shrink-0 ml-2">

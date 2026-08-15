@@ -68,13 +68,13 @@ export function DebugConsole({ targetNode }: DebugConsoleProps) {
           <div className="flex gap-2">
             <button 
               onClick={() => handleChangeDay(-1)}
-              className="flex-1 bg-zinc-50 dark:bg-zinc-900 hover:bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 py-1 rounded transition-colors"
+              className="flex-1 bg-zinc-50 dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 py-1 rounded transition-colors"
             >
               -1 Día
             </button>
             <button 
               onClick={() => handleChangeDay(1)}
-              className="flex-1 bg-zinc-50 dark:bg-zinc-900 hover:bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 py-1 rounded transition-colors"
+              className="flex-1 bg-zinc-50 dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 py-1 rounded transition-colors"
             >
               +1 Día
             </button>
