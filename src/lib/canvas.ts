@@ -49,24 +49,34 @@ function drawCanvas(attempts: NodeData[], target: NodeData, isColorblind: boolea
   const gap = 8;
   const padding = 30;
   const headerHeight = 70;
+  const footerHeight = 40;
 
-  canvas.width = padding * 2 + (cols * cellSize) + ((cols - 1) * gap);
-  canvas.height = padding * 2 + headerHeight + (rows * cellSize) + ((rows - 1) * gap);
+  // Alta resolución
+  const pixelRatio = typeof window !== 'undefined' ? (window.devicePixelRatio || 2) : 2;
+
+  const logicalWidth = padding * 2 + (cols * cellSize) + ((cols - 1) * gap);
+  const logicalHeight = padding * 2 + headerHeight + (rows * cellSize) + ((rows - 1) * gap) + footerHeight;
+
+  canvas.width = logicalWidth * pixelRatio;
+  canvas.height = logicalHeight * pixelRatio;
+
+  ctx.scale(pixelRatio, pixelRatio);
 
   // Background
   ctx.fillStyle = COLORS.bg;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillRect(0, 0, logicalWidth, logicalHeight);
 
   // Header (Nodle logo/text)
   ctx.fillStyle = COLORS.text;
   ctx.font = 'bold 32px sans-serif';
   ctx.textAlign = 'center';
-  ctx.fillText('Nodle', canvas.width / 2, padding + 25);
+  ctx.fillText('Nodle', logicalWidth / 2, padding + 25);
   
   ctx.fillStyle = COLORS.textMuted;
   ctx.font = '14px sans-serif';
-  const day = getUTCDayIndex();
-  ctx.fillText(`Día ${day} • ${attempts.length}/6`, canvas.width / 2, padding + 50);
+  const formatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long' });
+  const dateStr = formatter.format(new Date());
+  ctx.fillText(`${dateStr} • ${attempts.length}/6`, logicalWidth / 2, padding + 50);
 
   // Grid
   const startX = padding;
@@ -115,6 +125,12 @@ function drawCanvas(attempts: NodeData[], target: NodeData, isColorblind: boolea
       }
     }
   }
+
+  // Footer (nodle.app watermark)
+  ctx.fillStyle = '#52525b'; // zinc-600
+  ctx.font = '12px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('nodle.app', logicalWidth / 2, logicalHeight - 15);
 
   return canvas;
 }
