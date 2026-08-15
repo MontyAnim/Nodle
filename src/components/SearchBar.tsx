@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Fuse from 'fuse.js';
+import { useTranslations } from 'next-intl';
 import { NodeData } from '@/types/node';
 import { getHardModeConstraints, filterNodesByHardMode } from '@/lib/hardmode';
 
@@ -15,6 +16,7 @@ interface SearchBarProps {
 export function SearchBar({ nodes, target, onAttempt, attempts, hardMode = false, disabled = false }: SearchBarProps) {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations('Game');
   
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -41,7 +43,7 @@ export function SearchBar({ nodes, target, onAttempt, attempts, hardMode = false
       threshold: 0.3,
       includeScore: true,
     });
-  }, [nodes]);
+  }, [filteredNodes]);
 
   // Obtener resultados
   const results = useMemo(() => {
@@ -77,7 +79,7 @@ export function SearchBar({ nodes, target, onAttempt, attempts, hardMode = false
           setIsOpen(true);
         }}
         onFocus={() => setIsOpen(true)}
-        placeholder="Busca un nodo (ej. Multiply)..."
+        placeholder={t('search_placeholder')}
         disabled={disabled}
         className={`w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder:text-zinc-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
       />

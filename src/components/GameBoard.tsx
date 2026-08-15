@@ -6,6 +6,7 @@ import { validateGuess } from '@/lib/validation';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 import { ValidationState } from '@/types/validation';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 interface GameBoardProps {
   attempts: NodeData[];
@@ -58,6 +59,7 @@ function renderCell(value: string | number, state: ValidationState, label: strin
 }
 
 export function GameBoard({ attempts, target, colorblindMode = false }: GameBoardProps) {
+  const t = useTranslations('Game');
   const rows = Array.from({ length: MAX_ATTEMPTS });
 
   return (
@@ -82,12 +84,12 @@ export function GameBoard({ attempts, target, colorblindMode = false }: GameBoar
           <div key={i} className="flex flex-col gap-1 mb-2">
             <h3 className="text-sm font-semibold text-zinc-300 ml-1">{attempt.name}</h3>
             <div className="grid grid-cols-6 gap-2" style={{ perspective: "1000px" }}>
-              {renderCell(attempt.software, validation.software, 'Software', 0, colorblindMode)}
-              {renderCell(attempt.context, validation.context, 'Contexto', 1, colorblindMode)}
-              {renderCell(attempt.category, validation.category, 'Categoría', 2, colorblindMode)}
-              {renderCell(attempt.inputs, validation.inputs, 'Entradas', 3, colorblindMode)}
-              {renderCell(attempt.outputs, validation.outputs, 'Salidas', 4, colorblindMode)}
-              {renderCell(`Tier ${attempt.frequency_tier}`, validation.tier, 'Tier', 5, colorblindMode)}
+              {renderCell(attempt.software, validation.software, t('software_col'), 0, colorblindMode)}
+              {renderCell(attempt.context, validation.context, t('context_col'), 1, colorblindMode)}
+              {renderCell(attempt.category, validation.category, t('category_col'), 2, colorblindMode)}
+              {renderCell(attempt.inputs, validation.inputs, t('inputs_col'), 3, colorblindMode)}
+              {renderCell(attempt.outputs, validation.outputs, t('outputs_col'), 4, colorblindMode)}
+              {renderCell(`Tier ${attempt.frequency_tier}`, validation.tier, t('tier_col'), 5, colorblindMode)}
             </div>
           </div>
         );

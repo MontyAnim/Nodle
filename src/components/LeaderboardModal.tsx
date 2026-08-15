@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { X, Trophy, Loader2 } from "lucide-react";
 import { LeaderboardEntry } from "@/lib/leaderboard/interface";
+import { useTranslations } from 'next-intl';
 
 interface LeaderboardModalProps {
   isOpen: boolean;
@@ -25,6 +26,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
   const [scores, setScores] = useState<LeaderboardEntry[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const t = useTranslations('Leaderboard');
 
   useEffect(() => {
     if (!isOpen) return;
@@ -65,7 +67,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
         <div className="flex items-center justify-between p-4 border-b border-zinc-800/50 bg-zinc-900/20">
           <div className="flex items-center gap-2 text-zinc-100">
             <Trophy className="w-5 h-5 text-amber-400" />
-            <h2 className="font-semibold text-lg">Top 10 del Día</h2>
+            <h2 className="font-semibold text-lg">{t('title')}</h2>
           </div>
           <button
             onClick={onClose}
@@ -87,16 +89,16 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
               <p>{error}</p>
             </div>
           ) : scores.length === 0 ? (
-            <div className="w-full h-full flex items-center justify-center text-zinc-500 mt-16">
-              <p>Sé el primero en resolver el reto de hoy.</p>
+            <div className="w-full h-full flex items-center justify-center text-zinc-500 mt-16 text-center px-4">
+              <p>{t('empty')}</p>
             </div>
           ) : (
             <div className="flex flex-col gap-2">
               <div className="grid grid-cols-12 text-xs font-medium text-zinc-500 px-4 py-2 uppercase tracking-wider">
-                <div className="col-span-2 text-center">#</div>
-                <div className="col-span-6">Jugador</div>
-                <div className="col-span-2 text-center">Int</div>
-                <div className="col-span-2 text-right">Tiempo</div>
+                <div className="col-span-2 text-center">{t('rank')}</div>
+                <div className="col-span-6">{t('user')}</div>
+                <div className="col-span-2 text-center">{t('attempts')}</div>
+                <div className="col-span-2 text-right">{t('time')}</div>
               </div>
               
               <div className="flex flex-col gap-1">
@@ -126,7 +128,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
                       </div>
                       
                       <div className="col-span-6 truncate font-mono text-xs">
-                        {isCurrentPlayer ? "¡Tú!" : score.userId.split('-')[0]}
+                        {isCurrentPlayer ? t('you') : score.userId.split('-')[0]}
                       </div>
                       
                       <div className="col-span-2 text-center font-mono">

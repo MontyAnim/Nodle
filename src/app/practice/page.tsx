@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from 'next-intl';
+
 import { useEffect, useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 import { ArrowLeft, Box, RefreshCw, Trophy } from "lucide-react";
@@ -28,6 +30,7 @@ export default function PracticePage() {
   const [wins, setWins] = useState(0);
   const [roundCount, setRoundCount] = useState(1);
   const posthog = usePostHog();
+  const t = useTranslations('Game');
   const [isReady, setIsReady] = useState(false);
 
   const [filter, setFilter] = useState<PracticeFilter>({
@@ -127,12 +130,12 @@ export default function PracticePage() {
             className="flex items-center gap-2 text-zinc-400 hover:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            Volver al Hub
+            {t('back_to_hub')}
           </Link>
           <div className="flex items-center gap-2 text-xs text-zinc-500">
             <Trophy className="w-4 h-4 text-amber-400" />
             <span className="text-amber-400 font-bold">{wins}</span>
-            <span>victorias · Ronda {roundCount}</span>
+            <span>{t('practice_wins')} {roundCount}</span>
           </div>
         </div>
 
@@ -145,11 +148,11 @@ export default function PracticePage() {
             </h1>
           </div>
           <p className="text-zinc-400 text-center max-w-md text-sm">
-            Practica sin límite. Los resultados <strong className="text-zinc-300">no</strong> afectan tu racha ni el Leaderboard diario.
+            {t('practice_desc')}
           </p>
           <div className="flex items-center gap-2 px-3 py-1 bg-violet-500/10 border border-violet-500/20 rounded-full">
             <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
-            <span className="text-xs text-violet-300 font-medium">Endless Mode activo</span>
+            <span className="text-xs text-violet-300 font-medium">{t('practice_active')}</span>
           </div>
         </div>
 

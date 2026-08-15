@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from 'next-intl';
+
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { Box, ArrowLeft, Boxes, Share2, Check, Trophy } from "lucide-react";
@@ -38,6 +40,7 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
   const [isLeaderboardOpen, setIsLeaderboardOpen] = useState(false);
   const posthog = usePostHog();
+  const t = useTranslations('Game');
 
   useEffect(() => {
     useClassicStore.setState(useClassicStore.getState());
@@ -134,7 +137,7 @@ export default function Home() {
           className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
         >
           <ArrowLeft className="w-4 h-4" />
-          Volver al Hub
+          {t('back_to_hub')}
         </Link>
 
         {/* Header */}
@@ -145,7 +148,7 @@ export default function Home() {
               Nodle
             </h1>
           </div>
-          <p className="text-zinc-400 text-sm sm:text-base font-medium">Reto Diario Clásico</p>
+          <p className="text-zinc-400 text-sm sm:text-base font-medium">{t('classic_daily')} #{getUTCDayIndex()}</p>
         </div>
 
         {/* Navigation to Leaderboard */}
@@ -155,13 +158,13 @@ export default function Home() {
             className="flex items-center gap-2 px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 hover:border-amber-500/60 text-amber-400 rounded-full text-sm font-medium transition-all"
           >
             <Trophy className="w-4 h-4" />
-            Ver Leaderboard
+            {t('view_leaderboard')}
           </button>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
           <div className="flex items-center gap-3 bg-zinc-900 px-4 py-2 rounded-full border border-zinc-800">
-            <span className="text-sm text-zinc-400 font-medium">Modo Difícil</span>
+            <span className="text-sm text-zinc-400 font-medium">{t('hard_mode')}</span>
             <button 
               onClick={toggleHardMode}
               className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${hardMode ? 'bg-emerald-500' : 'bg-zinc-700'}`}
@@ -170,7 +173,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex items-center gap-3 bg-zinc-900 px-4 py-2 rounded-full border border-zinc-800">
-            <span className="text-sm text-zinc-400 font-medium">Modo Daltónico</span>
+            <span className="text-sm text-zinc-400 font-medium">{t('colorblind_mode')}</span>
             <button 
               onClick={toggleColorblindMode}
               className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${colorblindMode ? 'bg-[#0070B8]' : 'bg-zinc-700'}`}
@@ -203,11 +206,11 @@ export default function Home() {
               className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold transition-colors shadow-lg"
             >
               {copied ? <Check className="w-5 h-5" /> : <Share2 className="w-5 h-5" />}
-              {copied ? '¡Copiado al Portapapeles!' : 'Compartir Resultado'}
+              {copied ? t('copied') : t('share_result')}
             </button>
             {gameStatus === 'won' && (
               <div className="animate-fade-in flex flex-col items-center gap-2 mt-4">
-                <p className="text-zinc-400 text-sm">¿Te gusta Nodle?</p>
+                <p className="text-zinc-400 text-sm">{t('support_prompt')}</p>
                 <KofiButton />
               </div>
             )}
