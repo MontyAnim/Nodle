@@ -22,6 +22,7 @@ const MAX_ATTEMPTS = 6;
 
 export default function PracticePage() {
   const t = useTranslations('Game');
+  const tKofi = useTranslations('Kofi');
   const tHub = useTranslations('Hub');
   const colorblindMode = useClassicStore((state) => state.colorblindMode);
 
@@ -133,7 +134,7 @@ export default function PracticePage() {
             <ArrowLeft className="w-4 h-4" />
             {t('back_to_hub')}
           </Link>
-          <div className="flex items-center gap-2 text-xs text-zinc-950 dark:text-zinc-500">
+          <div className="flex items-center gap-2 text-xs text-zinc-950 dark:text-zinc-500 pr-36 sm:pr-40">
             <Trophy className="w-4 h-4 text-amber-400" />
             <span className="text-amber-400 font-bold">{wins}</span>
             <span>{t('practice_wins')} {roundCount}</span>
@@ -227,9 +228,9 @@ export default function PracticePage() {
       {/* Global Footer */}
       <footer className="mt-12 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-200 dark:border-zinc-800/50 pt-8 w-full max-w-5xl">
         <p className="text-zinc-950 dark:text-zinc-500 text-sm">
-          Creado con ♥ para la comunidad de Technical Artists.
+          {tHub('footer_created')}
         </p>
-        <KofiButton label="Invítame un café" className="text-xs px-3 py-1.5" />
+        <KofiButton label={tKofi('coffee')} className="text-xs px-3 py-1.5" />
       </footer>
     </main>
   );

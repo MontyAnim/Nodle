@@ -229,9 +229,9 @@ export default function BlenderDaily() {
       {/* Global Footer */}
       <footer className="mt-12 flex flex-col items-center justify-center gap-4 text-center border-t border-zinc-200 dark:border-zinc-800/50 pt-8 w-full max-w-5xl">
         <p className="text-zinc-950 dark:text-zinc-500 text-sm">
-          Creado con ♥ para la comunidad de Technical Artists.
+          {tHub('footer_created')}
         </p>
-        <KofiButton label="Invítame un café" className="text-xs px-3 py-1.5" />
+        <KofiButton label={tKofi('coffee')} className="text-xs px-3 py-1.5" />
       </footer>
 
       {/* Leaderboard Modal */}

@@ -41,6 +41,10 @@ def main():
                                 print(f"Warning: Missing key '{k}' in node {node.get('name', 'Unknown')}")
                                 
                         software = node.get("software", "Unknown")
+                        if software == "Substance":
+                            software = "Substance Designer"
+                            node["software"] = software
+                            
                         original_id = node.get("id", "unknown_id")
                         
                         # Generate unique ID to prevent collisions across software

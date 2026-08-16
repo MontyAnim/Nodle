@@ -36845,13 +36845,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_pow2",
+    "id": "substance_designer_sbs_function_pow2",
     "name": "2Pow",
     "aliases": [
       "2pow",
       "pow2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -36860,13 +36860,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_abs",
+    "id": "substance_designer_sbs_function_abs",
     "name": "Absolute",
     "aliases": [
       "absolute",
       "abs"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -36875,13 +36875,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_add",
+    "id": "substance_designer_sbs_function_add",
     "name": "Add",
     "aliases": [
       "add",
       "add"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Math",
     "inputs": 2,
@@ -36890,13 +36890,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_and",
+    "id": "substance_designer_sbs_function_and",
     "name": "And",
     "aliases": [
       "and",
       "and"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -36905,13 +36905,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_atan2",
+    "id": "substance_designer_sbs_function_atan2",
     "name": "Arc tangent 2",
     "aliases": [
       "arc tangent 2",
       "atan2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -36920,13 +36920,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_bitmap",
+    "id": "substance_designer_sbs_compositing_bitmap",
     "name": "Bitmap",
     "aliases": [
       "bitmap",
       "bitmap"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 9,
@@ -36935,13 +36935,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_blend",
+    "id": "substance_designer_sbs_compositing_blend",
     "name": "Blend",
     "aliases": [
       "blend",
       "blend"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Math",
     "inputs": 13,
@@ -36950,13 +36950,13 @@
     "frequency_tier": 1
   },
   {
-    "id": "substance_sbs_compositing_blur",
+    "id": "substance_designer_sbs_compositing_blur",
     "name": "Blur",
     "aliases": [
       "blur",
       "blur"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "UV",
     "inputs": 8,
@@ -36965,13 +36965,13 @@
     "frequency_tier": 1
   },
   {
-    "id": "substance_sbs_function_const_bool",
+    "id": "substance_designer_sbs_function_const_bool",
     "name": "Boolean",
     "aliases": [
       "boolean",
       "const_bool"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -36980,13 +36980,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_cartesian",
+    "id": "substance_designer_sbs_function_cartesian",
     "name": "Cartesian",
     "aliases": [
       "cartesian",
       "cartesian"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -36995,13 +36995,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_ceil",
+    "id": "substance_designer_sbs_function_ceil",
     "name": "Ceil",
     "aliases": [
       "ceil",
       "ceil"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37010,13 +37010,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_shuffle",
+    "id": "substance_designer_sbs_compositing_shuffle",
     "name": "Channels shuffle",
     "aliases": [
       "channels shuffle",
       "shuffle"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 12,
@@ -37025,13 +37025,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_cos",
+    "id": "substance_designer_sbs_function_cos",
     "name": "Cosine",
     "aliases": [
       "cosine",
       "cos"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37040,13 +37040,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_curve",
+    "id": "substance_designer_sbs_compositing_curve",
     "name": "Curve",
     "aliases": [
       "curve",
       "curve"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Color",
     "inputs": 14,
@@ -37055,13 +37055,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_dirmotionblur",
+    "id": "substance_designer_sbs_compositing_dirmotionblur",
     "name": "Directional blur",
     "aliases": [
       "directional blur",
       "dirmotionblur"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "UV",
     "inputs": 9,
@@ -37070,13 +37070,13 @@
     "frequency_tier": 1
   },
   {
-    "id": "substance_sbs_compositing_directionalwarp",
+    "id": "substance_designer_sbs_compositing_directionalwarp",
     "name": "Directional warp",
     "aliases": [
       "directional warp",
       "directionalwarp"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "UV",
     "inputs": 12,
@@ -37085,13 +37085,13 @@
     "frequency_tier": 1
   },
   {
-    "id": "substance_sbs_compositing_distance",
+    "id": "substance_designer_sbs_compositing_distance",
     "name": "Distance",
     "aliases": [
       "distance",
       "distance"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 12,
@@ -37100,13 +37100,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_div",
+    "id": "substance_designer_sbs_function_div",
     "name": "Division",
     "aliases": [
       "division",
       "div"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37115,13 +37115,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_passthrough",
+    "id": "substance_designer_sbs_compositing_passthrough",
     "name": "Dot",
     "aliases": [
       "dot",
       "passthrough"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 7,
@@ -37130,13 +37130,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_passthrough",
+    "id": "substance_designer_sbs_function_passthrough",
     "name": "Dot",
     "aliases": [
       "dot",
       "passthrough"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37145,13 +37145,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_fxmap_passthrough",
+    "id": "substance_designer_sbs_fxmap_passthrough",
     "name": "Dot",
     "aliases": [
       "dot",
       "passthrough"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37160,13 +37160,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_dot",
+    "id": "substance_designer_sbs_function_dot",
     "name": "Dot product",
     "aliases": [
       "dot product",
       "dot"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37175,13 +37175,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_emboss",
+    "id": "substance_designer_sbs_compositing_emboss",
     "name": "Emboss",
     "aliases": [
       "emboss",
       "emboss"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 12,
@@ -37190,13 +37190,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_eq",
+    "id": "substance_designer_sbs_function_eq",
     "name": "Equal",
     "aliases": [
       "equal",
       "eq"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37205,13 +37205,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_exp",
+    "id": "substance_designer_sbs_function_exp",
     "name": "Exponential",
     "aliases": [
       "exponential",
       "exp"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37220,13 +37220,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_fxmaps",
+    "id": "substance_designer_sbs_compositing_fxmaps",
     "name": "FX-Map",
     "aliases": [
       "fx-map",
       "fxmaps"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 14,
@@ -37235,13 +37235,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_const_float1",
+    "id": "substance_designer_sbs_function_const_float1",
     "name": "Float",
     "aliases": [
       "float",
       "const_float1"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37250,13 +37250,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_const_float2",
+    "id": "substance_designer_sbs_function_const_float2",
     "name": "Float2",
     "aliases": [
       "float2",
       "const_float2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37265,13 +37265,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_const_float3",
+    "id": "substance_designer_sbs_function_const_float3",
     "name": "Float3",
     "aliases": [
       "float3",
       "const_float3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37280,13 +37280,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_const_float4",
+    "id": "substance_designer_sbs_function_const_float4",
     "name": "Float4",
     "aliases": [
       "float4",
       "const_float4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37295,13 +37295,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_floor",
+    "id": "substance_designer_sbs_function_floor",
     "name": "Floor",
     "aliases": [
       "floor",
       "floor"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37310,13 +37310,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_bool",
+    "id": "substance_designer_sbs_function_get_bool",
     "name": "Get Boolean",
     "aliases": [
       "get boolean",
       "get_bool"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37325,13 +37325,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_float1",
+    "id": "substance_designer_sbs_function_get_float1",
     "name": "Get Float",
     "aliases": [
       "get float",
       "get_float1"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37340,13 +37340,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_float2",
+    "id": "substance_designer_sbs_function_get_float2",
     "name": "Get Float2",
     "aliases": [
       "get float2",
       "get_float2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37355,13 +37355,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_float3",
+    "id": "substance_designer_sbs_function_get_float3",
     "name": "Get Float3",
     "aliases": [
       "get float3",
       "get_float3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37370,13 +37370,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_float4",
+    "id": "substance_designer_sbs_function_get_float4",
     "name": "Get Float4",
     "aliases": [
       "get float4",
       "get_float4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37385,13 +37385,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_integer1",
+    "id": "substance_designer_sbs_function_get_integer1",
     "name": "Get Integer",
     "aliases": [
       "get integer",
       "get_integer1"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37400,13 +37400,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_integer2",
+    "id": "substance_designer_sbs_function_get_integer2",
     "name": "Get Integer2",
     "aliases": [
       "get integer2",
       "get_integer2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37415,13 +37415,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_integer3",
+    "id": "substance_designer_sbs_function_get_integer3",
     "name": "Get Integer3",
     "aliases": [
       "get integer3",
       "get_integer3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37430,13 +37430,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_integer4",
+    "id": "substance_designer_sbs_function_get_integer4",
     "name": "Get Integer4",
     "aliases": [
       "get integer4",
       "get_integer4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37445,13 +37445,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_get_string",
+    "id": "substance_designer_sbs_function_get_string",
     "name": "Get String",
     "aliases": [
       "get string",
       "get_string"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37460,13 +37460,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_dyngradient",
+    "id": "substance_designer_sbs_compositing_dyngradient",
     "name": "Gradient (Dynamic)",
     "aliases": [
       "gradient (dynamic)",
       "dyngradient"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Color",
     "inputs": 11,
@@ -37475,13 +37475,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_gradient",
+    "id": "substance_designer_sbs_compositing_gradient",
     "name": "Gradient map",
     "aliases": [
       "gradient map",
       "gradient"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Color",
     "inputs": 10,
@@ -37490,13 +37490,13 @@
     "frequency_tier": 1
   },
   {
-    "id": "substance_sbs_compositing_grayscaleconversion",
+    "id": "substance_designer_sbs_compositing_grayscaleconversion",
     "name": "Grayscale conversion",
     "aliases": [
       "grayscale conversion",
       "grayscaleconversion"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Color",
     "inputs": 10,
@@ -37505,13 +37505,13 @@
     "frequency_tier": 1
   },
   {
-    "id": "substance_sbs_function_gt",
+    "id": "substance_designer_sbs_function_gt",
     "name": "Greater",
     "aliases": [
       "greater",
       "gt"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37520,13 +37520,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_gteq",
+    "id": "substance_designer_sbs_function_gteq",
     "name": "Greater or equal",
     "aliases": [
       "greater or equal",
       "gteq"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37535,13 +37535,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_hsl",
+    "id": "substance_designer_sbs_compositing_hsl",
     "name": "HSL",
     "aliases": [
       "hsl",
       "hsl"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Color",
     "inputs": 10,
@@ -37550,13 +37550,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_ifelse",
+    "id": "substance_designer_sbs_function_ifelse",
     "name": "If...Else",
     "aliases": [
       "if...else",
       "ifelse"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 3,
@@ -37565,13 +37565,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_const_int1",
+    "id": "substance_designer_sbs_function_const_int1",
     "name": "Integer",
     "aliases": [
       "integer",
       "const_int1"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37580,13 +37580,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_const_int2",
+    "id": "substance_designer_sbs_function_const_int2",
     "name": "Integer2",
     "aliases": [
       "integer2",
       "const_int2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37595,13 +37595,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_const_int3",
+    "id": "substance_designer_sbs_function_const_int3",
     "name": "Integer3",
     "aliases": [
       "integer3",
       "const_int3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37610,13 +37610,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_const_int4",
+    "id": "substance_designer_sbs_function_const_int4",
     "name": "Integer4",
     "aliases": [
       "integer4",
       "const_int4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37625,13 +37625,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_isdefined",
+    "id": "substance_designer_sbs_function_isdefined",
     "name": "Is defined",
     "aliases": [
       "is defined",
       "isdefined"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37640,13 +37640,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_fxmap_addnode",
+    "id": "substance_designer_sbs_fxmap_addnode",
     "name": "Iterate",
     "aliases": [
       "iterate",
       "addnode"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 5,
@@ -37655,13 +37655,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_levels",
+    "id": "substance_designer_sbs_compositing_levels",
     "name": "Levels",
     "aliases": [
       "levels",
       "levels"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 13,
@@ -37670,13 +37670,13 @@
     "frequency_tier": 1
   },
   {
-    "id": "substance_sbs_function_lerp",
+    "id": "substance_designer_sbs_function_lerp",
     "name": "Linear interpolation",
     "aliases": [
       "linear interpolation",
       "lerp"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 3,
@@ -37685,13 +37685,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_log",
+    "id": "substance_designer_sbs_function_log",
     "name": "Logarithm",
     "aliases": [
       "logarithm",
       "log"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37700,13 +37700,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_log2",
+    "id": "substance_designer_sbs_function_log2",
     "name": "Logarithm base 2",
     "aliases": [
       "logarithm base 2",
       "log2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37715,13 +37715,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_lr",
+    "id": "substance_designer_sbs_function_lr",
     "name": "Lower",
     "aliases": [
       "lower",
       "lr"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37730,13 +37730,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_lreq",
+    "id": "substance_designer_sbs_function_lreq",
     "name": "Lower or equal",
     "aliases": [
       "lower or equal",
       "lreq"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37745,13 +37745,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_max",
+    "id": "substance_designer_sbs_function_max",
     "name": "Maximum",
     "aliases": [
       "maximum",
       "max"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37760,13 +37760,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_min",
+    "id": "substance_designer_sbs_function_min",
     "name": "Minimum",
     "aliases": [
       "minimum",
       "min"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37775,13 +37775,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_mod",
+    "id": "substance_designer_sbs_function_mod",
     "name": "Modulo",
     "aliases": [
       "modulo",
       "mod"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37790,13 +37790,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_mul",
+    "id": "substance_designer_sbs_function_mul",
     "name": "Multiplication",
     "aliases": [
       "multiplication",
       "mul"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37805,13 +37805,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_neg",
+    "id": "substance_designer_sbs_function_neg",
     "name": "Negation",
     "aliases": [
       "negation",
       "neg"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37820,13 +37820,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_normal",
+    "id": "substance_designer_sbs_compositing_normal",
     "name": "Normal",
     "aliases": [
       "normal",
       "normal"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 10,
@@ -37835,13 +37835,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_not",
+    "id": "substance_designer_sbs_function_not",
     "name": "Not",
     "aliases": [
       "not",
       "not"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37850,13 +37850,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_noteq",
+    "id": "substance_designer_sbs_function_noteq",
     "name": "Not equal",
     "aliases": [
       "not equal",
       "noteq"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37865,13 +37865,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_or",
+    "id": "substance_designer_sbs_function_or",
     "name": "Or",
     "aliases": [
       "or",
       "or"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37880,13 +37880,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_pixelprocessor",
+    "id": "substance_designer_sbs_compositing_pixelprocessor",
     "name": "Pixel processor",
     "aliases": [
       "pixel processor",
       "pixelprocessor"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 9,
@@ -37895,13 +37895,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_pow",
+    "id": "substance_designer_sbs_function_pow",
     "name": "Pow",
     "aliases": [
       "pow",
       "pow"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37910,13 +37910,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_fxmap_paramset",
+    "id": "substance_designer_sbs_fxmap_paramset",
     "name": "Quadrant",
     "aliases": [
       "quadrant",
       "paramset"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 17,
@@ -37925,13 +37925,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_rand",
+    "id": "substance_designer_sbs_function_rand",
     "name": "Random",
     "aliases": [
       "random",
       "rand"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -37940,13 +37940,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_svg",
+    "id": "substance_designer_sbs_compositing_svg",
     "name": "SVG",
     "aliases": [
       "svg",
       "svg"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 9,
@@ -37955,13 +37955,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_samplecol",
+    "id": "substance_designer_sbs_function_samplecol",
     "name": "Sample color",
     "aliases": [
       "sample color",
       "samplecol"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37970,13 +37970,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_samplelum",
+    "id": "substance_designer_sbs_function_samplelum",
     "name": "Sample gray",
     "aliases": [
       "sample gray",
       "samplelum"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -37985,13 +37985,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_mulscalar",
+    "id": "substance_designer_sbs_function_mulscalar",
     "name": "Scalar multiplication",
     "aliases": [
       "scalar multiplication",
       "mulscalar"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38000,13 +38000,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_sequence",
+    "id": "substance_designer_sbs_function_sequence",
     "name": "Sequence",
     "aliases": [
       "sequence",
       "sequence"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38015,13 +38015,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_set",
+    "id": "substance_designer_sbs_function_set",
     "name": "Set",
     "aliases": [
       "set",
       "set"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38030,13 +38030,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_sharpen",
+    "id": "substance_designer_sbs_compositing_sharpen",
     "name": "Sharpen",
     "aliases": [
       "sharpen",
       "sharpen"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 9,
@@ -38045,13 +38045,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_sin",
+    "id": "substance_designer_sbs_function_sin",
     "name": "Sine",
     "aliases": [
       "sine",
       "sin"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38060,13 +38060,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_sqrt",
+    "id": "substance_designer_sbs_function_sqrt",
     "name": "Square root",
     "aliases": [
       "square root",
       "sqrt"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38075,13 +38075,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_const_string",
+    "id": "substance_designer_sbs_function_const_string",
     "name": "String",
     "aliases": [
       "string",
       "const_string"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38090,13 +38090,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_sub",
+    "id": "substance_designer_sbs_function_sub",
     "name": "Subtraction",
     "aliases": [
       "subtraction",
       "sub"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Math",
     "inputs": 2,
@@ -38105,13 +38105,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_fxmap_markov2",
+    "id": "substance_designer_sbs_fxmap_markov2",
     "name": "Switch",
     "aliases": [
       "switch",
       "markov2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 5,
@@ -38120,13 +38120,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_swizzle1",
+    "id": "substance_designer_sbs_function_swizzle1",
     "name": "Swizzle Float1",
     "aliases": [
       "swizzle float1",
       "swizzle1"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38135,13 +38135,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_swizzle2",
+    "id": "substance_designer_sbs_function_swizzle2",
     "name": "Swizzle Float2",
     "aliases": [
       "swizzle float2",
       "swizzle2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38150,13 +38150,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_swizzle3",
+    "id": "substance_designer_sbs_function_swizzle3",
     "name": "Swizzle Float3",
     "aliases": [
       "swizzle float3",
       "swizzle3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38165,13 +38165,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_swizzle4",
+    "id": "substance_designer_sbs_function_swizzle4",
     "name": "Swizzle Float4",
     "aliases": [
       "swizzle float4",
       "swizzle4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38180,13 +38180,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_iswizzle1",
+    "id": "substance_designer_sbs_function_iswizzle1",
     "name": "Swizzle Integer1",
     "aliases": [
       "swizzle integer1",
       "iswizzle1"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38195,13 +38195,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_iswizzle2",
+    "id": "substance_designer_sbs_function_iswizzle2",
     "name": "Swizzle Integer2",
     "aliases": [
       "swizzle integer2",
       "iswizzle2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38210,13 +38210,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_iswizzle3",
+    "id": "substance_designer_sbs_function_iswizzle3",
     "name": "Swizzle Integer3",
     "aliases": [
       "swizzle integer3",
       "iswizzle3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38225,13 +38225,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_iswizzle4",
+    "id": "substance_designer_sbs_function_iswizzle4",
     "name": "Swizzle Integer4",
     "aliases": [
       "swizzle integer4",
       "iswizzle4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38240,13 +38240,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_tan",
+    "id": "substance_designer_sbs_function_tan",
     "name": "Tangent",
     "aliases": [
       "tangent",
       "tan"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38255,13 +38255,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_text",
+    "id": "substance_designer_sbs_compositing_text",
     "name": "Text",
     "aliases": [
       "text",
       "text"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 15,
@@ -38270,13 +38270,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_tofloat",
+    "id": "substance_designer_sbs_function_tofloat",
     "name": "To Float",
     "aliases": [
       "to float",
       "tofloat"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38285,13 +38285,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_tofloat2",
+    "id": "substance_designer_sbs_function_tofloat2",
     "name": "To Float2",
     "aliases": [
       "to float2",
       "tofloat2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38300,13 +38300,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_tofloat3",
+    "id": "substance_designer_sbs_function_tofloat3",
     "name": "To Float3",
     "aliases": [
       "to float3",
       "tofloat3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38315,13 +38315,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_tofloat4",
+    "id": "substance_designer_sbs_function_tofloat4",
     "name": "To Float4",
     "aliases": [
       "to float4",
       "tofloat4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38330,13 +38330,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_toint1",
+    "id": "substance_designer_sbs_function_toint1",
     "name": "To Integer",
     "aliases": [
       "to integer",
       "toint1"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38345,13 +38345,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_toint2",
+    "id": "substance_designer_sbs_function_toint2",
     "name": "To Integer2",
     "aliases": [
       "to integer2",
       "toint2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38360,13 +38360,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_toint3",
+    "id": "substance_designer_sbs_function_toint3",
     "name": "To Integer3",
     "aliases": [
       "to integer3",
       "toint3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38375,13 +38375,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_toint4",
+    "id": "substance_designer_sbs_function_toint4",
     "name": "To Integer4",
     "aliases": [
       "to integer4",
       "toint4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 1,
@@ -38390,13 +38390,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_transformation",
+    "id": "substance_designer_sbs_compositing_transformation",
     "name": "Transformation 2D",
     "aliases": [
       "transformation 2d",
       "transformation"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "UV",
     "inputs": 13,
@@ -38405,13 +38405,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_uniform",
+    "id": "substance_designer_sbs_compositing_uniform",
     "name": "Uniform color",
     "aliases": [
       "uniform color",
       "uniform"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 8,
@@ -38420,13 +38420,13 @@
     "frequency_tier": 1
   },
   {
-    "id": "substance_sbs_compositing_valueprocessor",
+    "id": "substance_designer_sbs_compositing_valueprocessor",
     "name": "Value processor",
     "aliases": [
       "value processor",
       "valueprocessor"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 8,
@@ -38435,13 +38435,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_vector2",
+    "id": "substance_designer_sbs_function_vector2",
     "name": "Vector Float2",
     "aliases": [
       "vector float2",
       "vector2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38450,13 +38450,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_vector3",
+    "id": "substance_designer_sbs_function_vector3",
     "name": "Vector Float3",
     "aliases": [
       "vector float3",
       "vector3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38465,13 +38465,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_vector4",
+    "id": "substance_designer_sbs_function_vector4",
     "name": "Vector Float4",
     "aliases": [
       "vector float4",
       "vector4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38480,13 +38480,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_ivector2",
+    "id": "substance_designer_sbs_function_ivector2",
     "name": "Vector Integer2",
     "aliases": [
       "vector integer2",
       "ivector2"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38495,13 +38495,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_ivector3",
+    "id": "substance_designer_sbs_function_ivector3",
     "name": "Vector Integer3",
     "aliases": [
       "vector integer3",
       "ivector3"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38510,13 +38510,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_function_ivector4",
+    "id": "substance_designer_sbs_function_ivector4",
     "name": "Vector Integer4",
     "aliases": [
       "vector integer4",
       "ivector4"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 2,
@@ -38525,13 +38525,13 @@
     "frequency_tier": 2
   },
   {
-    "id": "substance_sbs_compositing_warp",
+    "id": "substance_designer_sbs_compositing_warp",
     "name": "Warp",
     "aliases": [
       "warp",
       "warp"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "UV",
     "inputs": 10,
@@ -38540,13 +38540,13 @@
     "frequency_tier": 1
   },
   {
-    "id": "substance_sbs_function_while",
+    "id": "substance_designer_sbs_function_while",
     "name": "While loop",
     "aliases": [
       "while loop",
       "while"
     ],
-    "software": "Substance",
+    "software": "Substance Designer",
     "context": "Graph",
     "category": "Utility",
     "inputs": 4,

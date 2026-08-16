@@ -29,7 +29,7 @@ export default function ModesHub() {
     <main className="min-h-screen bg-background text-foreground flex flex-col p-6 sm:p-12 md:p-24 pb-32">
       <div className="max-w-5xl mx-auto w-full">
         {/* Header */}
-        <div className="mb-12 text-center flex flex-col items-center">
+        <div className="mb-12 text-center flex flex-col items-center mt-12 sm:mt-4 md:mt-0">
           <div className="flex items-center justify-center gap-4 mb-4">
             <Boxes className="w-12 h-12 text-zinc-950 dark:text-zinc-50" />
             <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50 drop-shadow-sm">

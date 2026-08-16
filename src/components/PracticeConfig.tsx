@@ -90,10 +90,10 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
           {/* Tier filter */}
           <div>
             <p className="text-xs text-zinc-950 dark:text-zinc-500 uppercase tracking-widest mb-2">Dificultad (Tier)</p>
-            <div className="flex gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
               <button
                 onClick={() => setTier(null)}
-                className={`flex-1 py-1.5 text-xs rounded-lg border transition-all ${
+                className={`py-1.5 text-xs rounded-lg border transition-all ${
                   filter.tier === null
                     ? "bg-violet-600 border-violet-500 text-white"
                     : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-500 hover:text-white"
@@ -105,7 +105,7 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
                 <button
                   key={t}
                   onClick={() => setTier(t)}
-                  className={`flex-1 py-1.5 text-xs rounded-lg border transition-all ${
+                  className={`py-1.5 text-xs rounded-lg border transition-all ${
                     filter.tier === t
                       ? `border ${TIER_LABELS[t].color}`
                       : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-500 hover:text-white"
