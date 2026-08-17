@@ -20,8 +20,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nodle - Juego de Deducción Lógica",
-  description: "Deduce el nodo correcto basado en atributos multidimensionales para artistas técnicos.",
+  title: "Nodle - Logic Deduction Game",
+  description: "Guess the correct node based on multidimensional attributes. A daily challenge for tech artists and game developers.",
+  openGraph: {
+    title: "Nodle - Logic Deduction Game",
+    description: "Guess the correct node based on multidimensional attributes. A daily challenge for tech artists and game developers.",
+    url: "https://nodle.online",
+    siteName: "Nodle",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Nodle - Logic Deduction Game",
+    description: "Guess the correct node based on multidimensional attributes. A daily challenge for tech artists and game developers.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

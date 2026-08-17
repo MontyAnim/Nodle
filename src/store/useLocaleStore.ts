@@ -11,7 +11,7 @@ interface LocaleState {
 export const useLocaleStore = create<LocaleState>()(
   persist(
     (set) => ({
-      locale: 'es', // Default language
+      locale: 'en', // Default language
       setLocale: (locale) => set({ locale }),
     }),
     {
