@@ -13,10 +13,13 @@ import { SearchBar } from "@/components/SearchBar";
 import { GameBoard } from "@/components/GameBoard";
 import { DebugConsole } from "@/components/DebugConsole";
 import { generateShareImage, copyShareImageToClipboard } from "@/lib/canvas";
+import { generateEmojiGridText } from "@/lib/share";
 import { KofiButton } from "@/components/KofiButton";
+import { Image as ImageIcon, AlignLeft } from "lucide-react";
 import { EthicalAd } from "@/components/EthicalAd";
 import { usePostHog } from "posthog-js/react";
 import { LeaderboardModal } from "@/components/LeaderboardModal";
+import { GameStatsPanel } from "@/components/GameStatsPanel";
 import { triggerVictoryConfetti } from "@/lib/confetti";
 
 export default function Home() {
@@ -33,11 +36,15 @@ export default function Home() {
   const setGameStatus = useClassicStore((state) => state.setGameStatus);
   const userId = useClassicStore((state) => state.userId);
   const dailyStartTime = useClassicStore((state) => state.dailyStartTime);
+  const currentStreak = useClassicStore((state) => state.currentStreak);
+  const maxStreak = useClassicStore((state) => state.maxStreak);
+  const winDistribution = useClassicStore((state) => state.winDistribution);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const [copiedImage, setCopiedImage] = useState(false);
+  const [copiedText, setCopiedText] = useState(false);
   const [isLeaderboardOpen, setIsLeaderboardOpen] = useState(false);
   const posthog = usePostHog();
   const t = useTranslations('Game');
@@ -118,14 +125,27 @@ export default function Home() {
       .filter((n): n is NodeData => n !== undefined);
   }, [attempts, allNodes]);
 
-  const handleShare = async () => {
+  const handleShareImage = async () => {
     if (dailyNode) {
       const success = await copyShareImageToClipboard(attemptNodes, dailyNode, colorblindMode);
       if (success) {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        setCopiedImage(true);
+        setTimeout(() => setCopiedImage(false), 2000);
       } else {
         alert("Tu navegador no soporta copiar imágenes al portapapeles directamente. ¡Usa el teléfono o un navegador moderno!");
+      }
+    }
+  };
+
+  const handleShareText = async () => {
+    if (dailyNode) {
+      const text = generateEmojiGridText(attemptNodes, dailyNode, t('classic_daily'), getUTCDayIndex(), colorblindMode);
+      try {
+        await navigator.clipboard.writeText(text);
+        setCopiedText(true);
+        setTimeout(() => setCopiedText(false), 2000);
+      } catch (err) {
+        console.error("Failed to copy text: ", err);
       }
     }
   };
@@ -201,15 +221,33 @@ export default function Home() {
           <GameBoard attempts={attemptNodes} target={dailyNode} colorblindMode={colorblindMode} />
         )}
 
-        {isReady && attempts.length > 0 && (
-          <div className="mt-8 flex flex-col items-center gap-4">
-            <button 
-              onClick={handleShare}
-              className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold transition-colors shadow-lg"
-            >
-              {copied ? <Check className="w-5 h-5" /> : <Share2 className="w-5 h-5" />}
-              {copied ? t('copied') : t('share_result')}
-            </button>
+        {isReady && attempts.length > 0 && gameStatus !== 'playing' && (
+          <div className="w-full max-w-md mx-auto mt-8 flex flex-col items-center gap-4 animate-fade-in">
+            <GameStatsPanel 
+              currentStreak={currentStreak} 
+              maxStreak={maxStreak} 
+              winDistribution={winDistribution} 
+              attemptsCount={attempts.length} 
+              gameStatus={gameStatus} 
+            />
+            
+            <div className="flex flex-col sm:flex-row gap-2 w-full mt-2">
+              <button
+                onClick={handleShareImage}
+                className="flex-1 flex items-center justify-center gap-2 py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg font-bold transition-colors text-sm shadow-sm"
+              >
+                {copiedImage ? <Check className="w-4 h-4" /> : <ImageIcon className="w-4 h-4" />}
+                {copiedImage ? t('copied') : t('share_image')}
+              </button>
+              <button
+                onClick={handleShareText}
+                className="flex-1 flex items-center justify-center gap-2 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-bold transition-colors text-sm shadow-sm"
+              >
+                {copiedText ? <Check className="w-4 h-4" /> : <AlignLeft className="w-4 h-4" />}
+                {copiedText ? t('copied') : t('share_text')}
+              </button>
+            </div>
+            
             {gameStatus === 'won' && (
               <div className="animate-fade-in flex flex-col items-center gap-2 mt-4">
                 <p className="text-zinc-600 dark:text-zinc-400 text-sm">{t('support_prompt')}</p>

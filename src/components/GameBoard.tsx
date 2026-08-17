@@ -35,16 +35,19 @@ function getBgColor(state: ValidationState, isColorblind: boolean): string {
   }
 }
 
-function renderCell(value: string | number, state: ValidationState, label: string, index: number, isColorblind: boolean) {
+function renderCell(value: string | number, state: ValidationState, label: string, index: number, isColorblind: boolean, isWinningRow: boolean) {
   return (
     <motion.div 
-      initial={{ rotateX: 90, opacity: 0 }}
-      animate={{ rotateX: 0, opacity: 1 }}
+      initial={{ rotateX: 90, opacity: 0, y: 0 }}
+      animate={{ 
+        rotateX: 0, 
+        opacity: 1,
+        y: isWinningRow ? [0, -20, 0] : 0
+      }}
       transition={{ 
-        delay: index * 0.15, 
-        duration: 0.5, 
-        type: "spring", 
-        bounce: 0.4 
+        rotateX: { delay: index * 0.15, duration: 0.5, type: "spring", bounce: 0.4 },
+        opacity: { delay: index * 0.15, duration: 0.5 },
+        y: { delay: 1.5 + (index * 0.1), duration: 0.4, ease: "easeInOut" }
       }}
       className={`relative flex flex-col items-center justify-center w-full h-16 sm:h-20 rounded-md border-2 ${getBgColor(state, isColorblind)}`}
     >
@@ -79,17 +82,18 @@ export function GameBoard({ attempts, target, colorblindMode = false }: GameBoar
         }
 
         const validation = validateGuess(attempt, target);
+        const isWinningRow = attempt.name === target.name;
 
         return (
           <div key={i} className="flex flex-col gap-1 mb-2">
             <h3 className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 ml-1">{attempt.name}</h3>
             <div className="grid grid-cols-6 gap-2" style={{ perspective: "1000px" }}>
-              {renderCell(attempt.software, validation.software, t('software_col'), 0, colorblindMode)}
-              {renderCell(attempt.context, validation.context, t('context_col'), 1, colorblindMode)}
-              {renderCell(attempt.category, validation.category, t('category_col'), 2, colorblindMode)}
-              {renderCell(attempt.inputs, validation.inputs, t('inputs_col'), 3, colorblindMode)}
-              {renderCell(attempt.outputs, validation.outputs, t('outputs_col'), 4, colorblindMode)}
-              {renderCell(`Tier ${attempt.frequency_tier}`, validation.tier, t('tier_col'), 5, colorblindMode)}
+              {renderCell(attempt.software, validation.software, t('software_col'), 0, colorblindMode, isWinningRow)}
+              {renderCell(attempt.context, validation.context, t('context_col'), 1, colorblindMode, isWinningRow)}
+              {renderCell(attempt.category, validation.category, t('category_col'), 2, colorblindMode, isWinningRow)}
+              {renderCell(attempt.inputs, validation.inputs, t('inputs_col'), 3, colorblindMode, isWinningRow)}
+              {renderCell(attempt.outputs, validation.outputs, t('outputs_col'), 4, colorblindMode, isWinningRow)}
+              {renderCell(`Tier ${attempt.frequency_tier}`, validation.tier, t('tier_col'), 5, colorblindMode, isWinningRow)}
             </div>
           </div>
         );

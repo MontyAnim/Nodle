@@ -6,6 +6,7 @@ import { I18nProvider } from "@/components/I18nProvider";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import { TutorialModal } from "@/components/TutorialModal";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <PostHogProvider>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <I18nProvider>
+              <TutorialModal />
               <div className="absolute top-6 right-6 flex items-center gap-2 z-50">
                 <ThemeToggle />
                 <LanguageToggle />

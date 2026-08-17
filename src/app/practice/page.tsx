@@ -187,16 +187,25 @@ export default function PracticePage() {
               colorblindMode={colorblindMode}
             />
 
+            {gameStatus === "playing" && attempts.length > 0 && (
+              <button
+                onClick={() => setGameStatus("lost")}
+                className="mt-6 text-sm font-medium text-zinc-500 hover:text-rose-400 transition-colors underline underline-offset-4"
+              >
+                {t('give_up')}
+              </button>
+            )}
+
             {/* End of round */}
             {gameStatus !== "playing" && (
               <div className="flex flex-col items-center gap-3 mt-4 animate-fade-in">
                 {gameStatus === "won" ? (
                   <p className="text-emerald-400 font-bold text-lg">
-                    ¡Correcto! Era <span className="underline">{targetNode.name}</span>
+                    {t('correct_reveal')} <span className="underline">{targetNode.name}</span>
                   </p>
                 ) : (
                   <p className="text-rose-400 font-bold text-lg">
-                    Era <span className="underline">{targetNode.name}</span> de {targetNode.software}
+                    {t('incorrect_reveal')} <span className="underline">{targetNode.name}</span> {t('incorrect_reveal_from')} {targetNode.software}
                   </p>
                 )}
                 <button
@@ -204,7 +213,7 @@ export default function PracticePage() {
                   className="flex items-center gap-2 px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white rounded-full font-bold transition-colors shadow-lg"
                 >
                   <RefreshCw className="w-5 h-5" />
-                  Siguiente Nodo
+                  {t('next_node')}
                 </button>
               </div>
             )}

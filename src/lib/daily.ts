@@ -61,7 +61,7 @@ export const MODES_CONFIG: Record<string, DailyModeConfig> = {
   substance: {
     id: 'substance',
     seedOffset: 60006,
-    filter: (n) => n.software === 'Substance',
+    filter: (n) => n.software === 'Substance Designer',
   },
   unity: {
     id: 'unity',

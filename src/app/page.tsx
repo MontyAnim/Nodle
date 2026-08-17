@@ -164,7 +164,7 @@ export default function ModesHub() {
               {t('support_desc_2')}
             </p>
             <div className="scale-110">
-              <KofiButton label="Apoyar el proyecto en Ko-fi" />
+              <KofiButton />
             </div>
           </section>
         </div>
