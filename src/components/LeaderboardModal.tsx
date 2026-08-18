@@ -82,7 +82,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
           {loading ? (
             <div className="w-full h-full flex flex-col items-center justify-center text-zinc-950 dark:text-zinc-500 gap-2 mt-16">
               <Loader2 className="w-8 h-8 animate-spin" />
-              <p>Cargando puntajes...</p>
+              <p>{t('loading_scores')}</p>
             </div>
           ) : error ? (
             <div className="w-full h-full flex items-center justify-center text-red-400 mt-16">

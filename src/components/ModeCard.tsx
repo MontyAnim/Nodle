@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { LucideIcon } from "lucide-react";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 interface ModeCardProps {
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon: React.ElementType;
   href: string;
   colorClass: string;
   disabled?: boolean;
@@ -21,6 +22,8 @@ export function ModeCard({
   disabled = false,
   comingSoon = false,
 }: ModeCardProps) {
+  const t = useTranslations('Hub');
+
   const content = (
     <div
       className={`relative h-full flex flex-col p-6 rounded-2xl border transition-all duration-200 ${
@@ -39,7 +42,7 @@ export function ModeCard({
         </div>
         {comingSoon && (
           <span className="px-3 py-1 text-[10px] uppercase tracking-wider font-bold rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-300 dark:border-zinc-700">
-            Pronto
+            {t('coming_soon')}
           </span>
         )}
       </div>

@@ -59,7 +59,7 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
         <div className="bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 space-y-4 mb-4 backdrop-blur-sm">
           {/* Software filter */}
           <div>
-            <p className="text-xs text-zinc-950 dark:text-zinc-500 uppercase tracking-widest mb-2">Software</p>
+            <p className="text-xs text-zinc-950 dark:text-zinc-500 uppercase tracking-widest mb-2">{t('software_col')}</p>
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setSoftware(null)}
@@ -69,7 +69,7 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
                     : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-500 hover:text-white"
                 }`}
               >
-                Todos
+                {t('software_all')}
               </button>
               {AVAILABLE_SOFTWARE.map((sw) => (
                 <button
@@ -89,7 +89,7 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
 
           {/* Tier filter */}
           <div>
-            <p className="text-xs text-zinc-950 dark:text-zinc-500 uppercase tracking-widest mb-2">Dificultad (Tier)</p>
+            <p className="text-xs text-zinc-950 dark:text-zinc-500 uppercase tracking-widest mb-2">{t('difficulty_tier')}</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
               <button
                 onClick={() => setTier(null)}
@@ -99,7 +99,7 @@ export function PracticeConfig({ filter, onChange, nodeCount }: PracticeConfigPr
                     : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-500 hover:text-white"
                 }`}
               >
-                Todos
+                {t('software_all')}
               </button>
               {([1, 2, 3] as const).map((t) => (
                 <button

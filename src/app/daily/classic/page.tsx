@@ -167,7 +167,7 @@ export default function Home() {
         {/* Header */}
         <div className="flex flex-col items-center mb-6">
           <div className="flex items-center gap-3 mb-2">
-            <h1 className="sr-only">Nodle - classic Mode</h1>
+            <h1 className="sr-only">{tHub('title')} - {t('classic_daily')}</h1>
             <NodleLogo className="w-48 sm:w-56 drop-shadow-sm" nodeColor="text-emerald-400" />
           </div>
           <p className="text-zinc-600 dark:text-zinc-400 text-sm sm:text-base font-medium">{t('classic_daily')} #{getUTCDayIndex()}</p>

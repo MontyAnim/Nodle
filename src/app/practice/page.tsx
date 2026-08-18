@@ -220,10 +220,10 @@ export default function PracticePage() {
           </>
         ) : isReady && !targetNode ? (
           <div className="text-center text-zinc-950 dark:text-zinc-500 mt-8">
-            <p>No hay nodos con estos filtros. Prueba una combinación diferente.</p>
+            <p>{t('no_nodes_filters')}</p>
           </div>
         ) : (
-          <div className="text-center text-zinc-600 mt-8">Cargando nodos...</div>
+          <div className="text-center text-zinc-600 mt-8">{t('loading_nodes')}</div>
         )}
 
         <DebugConsole targetNode={targetNode} />

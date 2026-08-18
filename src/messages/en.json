@@ -25,7 +25,8 @@
     "support_desc_1": "Nodle is a passion project created for the tech art community, with no invasive ads or paywalls. However, server costs, real-time databases for the Leaderboard, and hosting grow with every new player.",
     "support_desc_2": "If you enjoy the game, please consider buying us a coffee. Every bit of help is immensely appreciated and allows us to keep creating more challenges!",
     "footer_created": "Created with ♥ for the Technical Artists community.",
-    "footer_legal": "Nodle is an unofficial fan project. It is not affiliated with or endorsed by Epic Games, Unity Technologies, Blender Foundation, SideFX, or Adobe. All trademarks belong to their respective owners."
+    "footer_legal": "Nodle is an unofficial fan project. It is not affiliated with or endorsed by Epic Games, Unity Technologies, Blender Foundation, SideFX, or Adobe. All trademarks belong to their respective owners.",
+    "coming_soon": "Soon"
   },
   "Game": {
     "back_to_hub": "Back to Hub",
@@ -75,7 +76,12 @@
     "correct_reveal": "Correct! It was ",
     "incorrect_reveal": "It was ",
     "incorrect_reveal_from": " from ",
-    "next_node": "Next Node"
+    "next_node": "Next Node",
+    "loading_nodes": "Loading nodes...",
+    "no_nodes_filters": "No nodes found with these filters. Try a different combination.",
+    "search_no_results": "No nodes found.",
+    "software_all": "All",
+    "difficulty_tier": "Difficulty (Tier)"
   },
   "Tutorial": {
     "title": "How to play",
@@ -97,7 +103,8 @@
     "time": "Time",
     "attempts": "Attempts",
     "you": "YOU",
-    "empty": "No records yet for today. Be the first!"
+    "empty": "No records yet for today. Be the first!",
+    "loading_scores": "Loading scores..."
   },
   "Kofi": {
     "support": "Support the project on Ko-fi",

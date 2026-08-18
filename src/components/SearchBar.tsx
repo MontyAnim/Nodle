@@ -108,7 +108,7 @@ export function SearchBar({ nodes, target, onAttempt, attempts, hardMode = false
       
       {isOpen && query && results.length === 0 && (
         <div className="absolute z-50 w-full mt-2 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg shadow-xl px-4 py-3 text-sm text-zinc-950 dark:text-zinc-500 text-center">
-          No se encontraron nodos.
+          {t('search_no_results')}
         </div>
       )}
     </div>

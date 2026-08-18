@@ -163,17 +163,15 @@ export default function Tier1Daily() {
           href="/" 
           className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors self-start text-sm font-medium -ml-2 p-2"
         >
-          <ArrowLeft className="w-4 h-4" />
-          Volver al Hub
-        </Link>
+          <ArrowLeft className="w-4 h-4" /> {t('back_to_hub')} </Link>
 
         {/* Header */}
         <div className="flex flex-col items-center mb-6">
           <div className="flex items-center gap-3 mb-2">
-            <h1 className="sr-only">Nodle - tier1 Mode</h1>
+            <h1 className="sr-only">{tHub('title')} - {t('tier1_daily')}</h1>
             <NodleLogo className="w-48 sm:w-56 drop-shadow-sm" nodeColor="text-emerald-400" />
           </div>
-          <p className="text-emerald-400 text-sm sm:text-base font-medium">Reto Diario Tier 1</p>
+          <p className="text-emerald-400 text-sm sm:text-base font-medium">{t('tier1_daily')}</p>
         </div>
 
         {/* Navigation to Leaderboard */}
@@ -182,14 +180,12 @@ export default function Tier1Daily() {
             onClick={() => setIsLeaderboardOpen(true)}
             className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-500/60 text-emerald-400 rounded-full text-sm font-medium transition-all"
           >
-            <Trophy className="w-4 h-4" />
-            Ver Leaderboard
-          </button>
+            <Trophy className="w-4 h-4" /> {t('view_leaderboard')} </button>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
           <div className="flex items-center gap-3 bg-zinc-50 dark:bg-zinc-900 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800">
-            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">Modo Difícil</span>
+            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">{t('hard_mode')}</span>
             <button 
               onClick={toggleHardMode}
               className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${hardMode ? 'bg-emerald-500' : 'bg-zinc-700'}`}
@@ -198,7 +194,7 @@ export default function Tier1Daily() {
             </button>
           </div>
           <div className="flex items-center gap-3 bg-zinc-50 dark:bg-zinc-900 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800">
-            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">Modo Daltónico</span>
+            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">{t('colorblind_mode')}</span>
             <button 
               onClick={toggleColorblindMode}
               className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${colorblindMode ? 'bg-[#0070B8]' : 'bg-zinc-700'}`}
