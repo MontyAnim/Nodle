@@ -215,7 +215,7 @@ export default function Tier2Daily() {
               target={dailyNode} 
               onAttempt={addAttempt}
               attempts={attempts}
-              hardMode={hardMode}
+              hardMode={false}
             />
           </div>
         )}

@@ -215,7 +215,7 @@ export default function UnrealDaily() {
               target={dailyNode} 
               onAttempt={addAttempt}
               attempts={attempts}
-              hardMode={hardMode}
+              hardMode={false}
             />
           </div>
         )}
