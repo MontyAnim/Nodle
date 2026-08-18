@@ -29,11 +29,20 @@ export const metadata: Metadata = {
     siteName: "Nodle",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: 'https://nodle.online/Nodle_Logo_Dark.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Nodle - Logic Deduction Game',
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Nodle - Logic Deduction Game",
     description: "Guess the correct node based on multidimensional attributes. A daily challenge for tech artists and game developers.",
+    images: ['https://nodle.online/Nodle_Logo_Dark.svg'],
   },
 };
 
