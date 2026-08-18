@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Box, ArrowLeft, Boxes, Share2, Check, Trophy } from "lucide-react";
+import { NodleLogo } from "@/components/NodleLogo";
 import { useUnrealStore } from "@/store/useGameStore";
 import { getNodes } from "@/lib/nodes";
 import { getUTCDayIndex, getDailyTargetNode, MODES_CONFIG } from "@/lib/daily";
@@ -20,6 +21,7 @@ import { usePostHog } from "posthog-js/react";
 import { LeaderboardModal } from "@/components/LeaderboardModal";
 import { GameStatsPanel } from "@/components/GameStatsPanel";
 import { triggerVictoryConfetti } from "@/lib/confetti";
+
 
 export default function UnrealDaily() {
   const t = useTranslations('Game');
@@ -168,10 +170,8 @@ export default function UnrealDaily() {
         {/* Header */}
         <div className="flex flex-col items-center mb-6">
           <div className="flex items-center gap-3 mb-2">
-            <Boxes className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-400" />
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
-              Nodle
-            </h1>
+            <h1 className="sr-only">Nodle - unreal Mode</h1>
+            <NodleLogo className="w-48 sm:w-56 drop-shadow-sm" nodeColor="text-indigo-400" />
           </div>
           <p className="text-indigo-400 text-sm sm:text-base font-medium">Reto Diario Unreal Engine</p>
         </div>

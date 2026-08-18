@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { Box, ArrowLeft, Boxes, Share2, Check, Trophy } from "lucide-react";
+import { NodleLogo } from "@/components/NodleLogo";
 import { useClassicStore } from "@/store/useGameStore";
 import { getNodes } from "@/lib/nodes";
 import { getUTCDayIndex, getDailyTargetNode } from "@/lib/daily";
@@ -21,6 +22,7 @@ import { usePostHog } from "posthog-js/react";
 import { LeaderboardModal } from "@/components/LeaderboardModal";
 import { GameStatsPanel } from "@/components/GameStatsPanel";
 import { triggerVictoryConfetti } from "@/lib/confetti";
+
 
 export default function Home() {
   const resetDailyGame = useClassicStore((state) => state.resetDailyGame);
@@ -165,10 +167,8 @@ export default function Home() {
         {/* Header */}
         <div className="flex flex-col items-center mb-6">
           <div className="flex items-center gap-3 mb-2">
-            <Boxes className="w-8 h-8 sm:w-10 sm:h-10 text-zinc-950 dark:text-zinc-50" />
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
-              Nodle
-            </h1>
+            <h1 className="sr-only">Nodle - classic Mode</h1>
+            <NodleLogo className="w-48 sm:w-56 drop-shadow-sm" nodeColor="text-emerald-400" />
           </div>
           <p className="text-zinc-600 dark:text-zinc-400 text-sm sm:text-base font-medium">{t('classic_daily')} #{getUTCDayIndex()}</p>
         </div>
