@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
+import Image from "next/image";
 import { ModeCard } from "@/components/ModeCard";
 import { 
   Calendar, 
@@ -30,11 +31,26 @@ export default function ModesHub() {
       <div className="max-w-5xl mx-auto w-full">
         {/* Header */}
         <div className="mb-12 text-center flex flex-col items-center mt-12 sm:mt-4 md:mt-0">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <Boxes className="w-12 h-12 text-zinc-950 dark:text-zinc-50" />
-            <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50 drop-shadow-sm">
-              {t('title')}
-            </h1>
+          <div className="flex items-center justify-center mb-8">
+            <h1 className="sr-only">{t('title')}</h1>
+            {/* Dark Mode Logo */}
+            <Image 
+              src="/Nodle_Logo_Dark.svg" 
+              alt="Nodle" 
+              width={370} 
+              height={158} 
+              priority 
+              className="w-64 sm:w-80 md:w-96 drop-shadow-sm hidden dark:block"
+            />
+            {/* Light Mode Logo */}
+            <Image 
+              src="/Nodle_Logo_Light.svg" 
+              alt="Nodle" 
+              width={370} 
+              height={158} 
+              priority 
+              className="w-64 sm:w-80 md:w-96 drop-shadow-sm block dark:hidden"
+            />
           </div>
           <p className="text-zinc-600 dark:text-zinc-400 text-lg sm:text-xl max-w-2xl mx-auto mb-12 font-medium">
             {t('description')}
