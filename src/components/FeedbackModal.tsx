@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { X, Bug, Loader2, CheckCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Tooltip } from "./Tooltip";
 
 interface FeedbackModalProps {
   isOpen: boolean;
@@ -79,12 +80,15 @@ export function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
             <Bug className="w-5 h-5 text-rose-400" />
             <h2 className="font-semibold text-base">{t("title")}</h2>
           </div>
-          <button
-            onClick={handleClose}
-            className="p-1.5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
-          >
-            <X className="w-4 h-4" />
-          </button>
+          <Tooltip content={t('close')} side="bottom">
+            <button
+              onClick={handleClose}
+              aria-label={t('close')}
+              className="p-1.5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </Tooltip>
         </div>
 
         {/* Content */}

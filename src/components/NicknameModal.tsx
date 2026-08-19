@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { X, User, Check, Sparkles } from "lucide-react";
 import { useSettingsStore } from "@/store/useSettingsStore";
 import { useTranslations } from "next-intl";
+import { Tooltip } from "./Tooltip";
 
 interface NicknameModalProps {
   isOpen: boolean;
@@ -48,12 +49,15 @@ export function NicknameModal({ isOpen, onClose }: NicknameModalProps) {
             </div>
             <h2 className="font-semibold text-base">{t("title")}</h2>
           </div>
-          <button
-            onClick={onClose}
-            className="p-1.5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
-          >
-            <X className="w-4 h-4" />
-          </button>
+          <Tooltip content="Close" side="bottom">
+            <button
+              onClick={onClose}
+              aria-label="Close"
+              className="p-1.5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </Tooltip>
         </div>
 
         {/* Form Body */}

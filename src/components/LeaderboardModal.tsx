@@ -5,6 +5,7 @@ import { X, Trophy, Loader2, Pencil, Check } from "lucide-react";
 import { LeaderboardEntry } from "@/lib/leaderboard/interface";
 import { useSettingsStore } from "@/store/useSettingsStore";
 import { useTranslations } from 'next-intl';
+import { Tooltip } from "./Tooltip";
 
 interface LeaderboardModalProps {
   isOpen: boolean;
@@ -84,12 +85,15 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
             <Trophy className="w-5 h-5 text-amber-400" />
             <h2 className="font-semibold text-lg">{t('title')}</h2>
           </div>
-          <button
-            onClick={onClose}
-            className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          <Tooltip content="Close" side="bottom">
+            <button
+              onClick={onClose}
+              aria-label="Close"
+              className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </Tooltip>
         </div>
 
         {/* Content */}
@@ -185,19 +189,24 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
                 }}
                 className="flex-1 px-2.5 py-1 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-1 focus:ring-amber-500 text-xs"
               />
-              <button
-                onClick={handleSaveNickname}
-                className="p-1 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold rounded-lg transition-colors"
-                title={t('save_nickname')}
-              >
-                <Check className="w-3.5 h-3.5" />
-              </button>
-              <button
-                onClick={() => setIsEditingNickname(false)}
-                className="p-1 text-zinc-400 hover:text-zinc-100 rounded-lg transition-colors"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
+              <Tooltip content={t('save_nickname')} side="top">
+                <button
+                  onClick={handleSaveNickname}
+                  className="p-1 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold rounded-lg transition-colors"
+                  aria-label={t('save_nickname')}
+                >
+                  <Check className="w-3.5 h-3.5" />
+                </button>
+              </Tooltip>
+              <Tooltip content="Cancel" side="top">
+                <button
+                  onClick={() => setIsEditingNickname(false)}
+                  className="p-1 text-zinc-400 hover:text-zinc-100 rounded-lg transition-colors"
+                  aria-label="Cancel"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              </Tooltip>
             </div>
           ) : (
             <div className="flex items-center gap-2">
