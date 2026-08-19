@@ -109,5 +109,24 @@
   "Kofi": {
     "support": "Apoyar el proyecto en Ko-fi",
     "coffee": "Invítame un café"
+  },
+  "Feedback": {
+    "button_tooltip": "¿Bug o sugerencia?",
+    "title": "Enviar Feedback",
+    "subtitle": "Ayúdanos a mejorar Nodle reportando bugs o compartiendo ideas.",
+    "category_label": "Categoría",
+    "category_bug": "Reporte de Bug",
+    "category_suggestion": "Sugerencia",
+    "category_other": "Otro",
+    "description_label": "Descripción",
+    "description_placeholder": "Describe el problema o tu idea con detalle...",
+    "contact_label": "Contacto (opcional)",
+    "contact_placeholder": "Tu email o usuario de Discord",
+    "submit": "Enviar Feedback",
+    "submitting": "Enviando...",
+    "success_title": "¡Gracias!",
+    "success_message": "Tu feedback ha sido recibido. ¡Lo agradecemos muchísimo!",
+    "error_message": "Algo salió mal. Por favor intenta de nuevo.",
+    "close": "Cerrar"
   }
 }

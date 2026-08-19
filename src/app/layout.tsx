@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { TutorialModal } from "@/components/TutorialModal";
+import { FeedbackButton } from "@/components/FeedbackButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 <LanguageToggle />
               </div>
               {children}
+              <FeedbackButton />
             </I18nProvider>
           </ThemeProvider>
           <Script

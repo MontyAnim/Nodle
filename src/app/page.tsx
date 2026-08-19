@@ -66,8 +66,8 @@ export default function ModesHub() {
                     <div 
                       className="w-6 h-6 bg-current" 
                       style={{ 
-                        WebkitMaskImage: 'url(/Node1.svg)', 
-                        maskImage: 'url(/Node1.svg)',
+                        WebkitMaskImage: 'url(/Nodle_Icon.svg)', 
+                        maskImage: 'url(/Nodle_Icon.svg)',
                         WebkitMaskSize: 'contain',
                         maskSize: 'contain',
                         WebkitMaskRepeat: 'no-repeat',
