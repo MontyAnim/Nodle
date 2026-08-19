@@ -21,9 +21,11 @@ import { usePostHog } from "posthog-js/react";
 import { LeaderboardModal } from "@/components/LeaderboardModal";
 import { GameStatsPanel } from "@/components/GameStatsPanel";
 import { triggerVictoryConfetti } from "@/lib/confetti";
+import { useSettingsStore } from "@/store/useSettingsStore";
 
 
 export default function SubstanceDaily() {
+  const nickname = useSettingsStore((state) => state.nickname);
   const t = useTranslations('Game');
   const tHub = useTranslations('Hub');
   const tKofi = useTranslations('Kofi');
@@ -100,6 +102,7 @@ export default function SubstanceDaily() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             userId: safeUserId,
+            nickname: nickname || undefined,
             dayIndex: getUTCDayIndex(),
             timeMs,
             attempts: attempts.length
@@ -183,16 +186,7 @@ export default function SubstanceDaily() {
             <Trophy className="w-4 h-4" /> {t('view_leaderboard')} </button>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
-          <div className="flex items-center gap-3 bg-zinc-50 dark:bg-zinc-900 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800">
-            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">{t('hard_mode')}</span>
-            <button 
-              onClick={toggleHardMode}
-              className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${hardMode ? 'bg-red-500' : 'bg-zinc-700'}`}
-            >
-              <span className={`w-4 h-4 bg-white rounded-full absolute shadow transition-transform ${hardMode ? 'translate-x-5' : 'translate-x-1'}`} />
-            </button>
-          </div>
+        <div className="flex items-center justify-center gap-4 mt-2">
           <div className="flex items-center gap-3 bg-zinc-50 dark:bg-zinc-900 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800">
             <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">{t('colorblind_mode')}</span>
             <button 

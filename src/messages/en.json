@@ -104,7 +104,12 @@
     "attempts": "Attempts",
     "you": "YOU",
     "empty": "No records yet for today. Be the first!",
-    "loading_scores": "Loading scores..."
+    "loading_scores": "Loading scores...",
+    "your_nickname": "Nickname:",
+    "edit_nickname": "Edit",
+    "save_nickname": "Save",
+    "nickname_placeholder": "Enter nickname...",
+    "anonymous": "Anonymous"
   },
   "Kofi": {
     "support": "Support the project on Ko-fi",
@@ -128,5 +133,18 @@
     "success_message": "Your feedback has been received. We really appreciate it!",
     "error_message": "Something went wrong. Please try again.",
     "close": "Close"
+  },
+  "Profile": {
+    "title": "Player Profile",
+    "description": "Choose a nickname to represent you on the global daily Leaderboards.",
+    "nickname_label": "Nickname",
+    "nickname_placeholder": "e.g. NodeWizard",
+    "set_nickname": "Set Nickname",
+    "change_nickname": "Change",
+    "save": "Save Profile",
+    "saved": "Saved!",
+    "welcome": "Welcome back",
+    "playing_as": "Leaderboard name:",
+    "anonymous": "Anonymous"
   }
 }

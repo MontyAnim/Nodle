@@ -22,9 +22,11 @@ import { usePostHog } from "posthog-js/react";
 import { LeaderboardModal } from "@/components/LeaderboardModal";
 import { GameStatsPanel } from "@/components/GameStatsPanel";
 import { triggerVictoryConfetti } from "@/lib/confetti";
+import { useSettingsStore } from "@/store/useSettingsStore";
 
 
 export default function Home() {
+  const nickname = useSettingsStore((state) => state.nickname);
   const resetDailyGame = useClassicStore((state) => state.resetDailyGame);
   const lastPlayedTimestamp = useClassicStore((state) => state.lastPlayedTimestamp);
   const attempts = useClassicStore((state) => state.attempts);
@@ -97,6 +99,7 @@ export default function Home() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             userId: safeUserId,
+            nickname: nickname || undefined,
             dayIndex: getUTCDayIndex(),
             timeMs,
             attempts: attempts.length

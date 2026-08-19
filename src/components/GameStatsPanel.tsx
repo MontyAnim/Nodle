@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Flame, Gem, Crown, Sparkles } from 'lucide-react';
+import { Flame, Gem, Crown, Sparkles, User, Pencil } from 'lucide-react';
+import { useSettingsStore } from '@/store/useSettingsStore';
+import { NicknameModal } from './NicknameModal';
 
 interface GameStatsPanelProps {
   currentStreak: number;
@@ -18,6 +20,9 @@ export function GameStatsPanel({
   gameStatus
 }: GameStatsPanelProps) {
   const t = useTranslations('Game');
+  const tProfile = useTranslations('Profile');
+  const { nickname } = useSettingsStore();
+  const [isNicknameModalOpen, setIsNicknameModalOpen] = useState(false);
   
   // Calculate max distribution to scale bars
   const totalWins = Object.values(winDistribution).reduce((a, b) => a + b, 0);
@@ -63,6 +68,19 @@ export function GameStatsPanel({
         </div>
       </div>
 
+      {/* Player Identity Row */}
+      <div className="flex items-center justify-center -mt-2">
+        <button
+          onClick={() => setIsNicknameModalOpen(true)}
+          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-900/80 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 text-xs font-medium text-zinc-600 dark:text-zinc-400 transition-colors group"
+        >
+          <User className="w-3 h-3 text-amber-500" />
+          <span>{tProfile('playing_as')}</span>
+          <span className="font-bold text-zinc-900 dark:text-zinc-100">{nickname || tProfile('anonymous')}</span>
+          <Pencil className="w-2.5 h-2.5 text-zinc-400 group-hover:text-amber-500 transition-colors ml-0.5" />
+        </button>
+      </div>
+
       {/* Win Distribution Histogram */}
       <div className="flex flex-col gap-1.5 mt-2">
         {/* We assume 6 attempts max */}
@@ -88,6 +106,8 @@ export function GameStatsPanel({
           );
         })}
       </div>
+
+      <NicknameModal isOpen={isNicknameModalOpen} onClose={() => setIsNicknameModalOpen(false)} />
     </div>
   );
 }

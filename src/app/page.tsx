@@ -21,11 +21,15 @@ import {
   PaintBucket,
   Smile,
   Meh,
-  Angry
+  Angry,
+  User,
+  Pencil
 } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { KofiButton } from "@/components/KofiButton";
+import { useSettingsStore } from "@/store/useSettingsStore";
+import { NicknameModal } from "@/components/NicknameModal";
 
 const BlenderIcon = ({ className }: { className?: string }) => <svg viewBox="0.499 48.118 511.002 415.763" className={className} fill="currentColor"><path d="M510.003 279.642c-2.998-21.097-10.305-41.104-21.725-59.459-9.959-16.019-22.738-30.266-37.991-42.375l.041-.038L290.133 54.731a4.569 4.569 0 0 0-.361-.287c-5.326-4.08-12.537-6.325-20.297-6.325-7.77 0-15.263 2.25-21.088 6.338-6.263 4.375-9.843 10.18-10.093 16.359-.229 5.765 2.521 11.312 7.764 15.636 10.31 8.135 20.597 16.447 30.898 24.769 9.997 8.08 20.298 16.401 30.549 24.502l-196.213-.133c-22.439 0-37.718 10.537-40.861 28.178-1.381 7.727 1.056 16.223 6.504 22.73 5.78 6.898 14.172 10.703 23.629 10.703l14.958.01c20.664 0 41.419-.051 62.146-.101l19.766-.046-178.08 131.748-.707.517C8.7 336.953 2.188 347.642.783 358.653c-1.065 8.342.881 15.965 5.63 22.053 5.66 7.258 14.497 11.25 24.885 11.25 10.205 0 20.618-3.867 29.334-10.908l96.166-78.7c-.411 3.843-.91 9.481-.853 13.573.108 6.479 2.188 19.479 5.481 30.033 6.804 21.69 18.265 41.535 34.063 58.963 16.438 18.132 36.458 32.509 59.5 42.722 24.36 10.774 50.547 16.243 77.836 16.243h.253c27.376-.066 53.646-5.622 78.085-16.519 23.08-10.334 43.091-24.769 59.467-42.898 15.778-17.517 27.223-37.395 34.014-59.067a151.124 151.124 0 0 0 6.416-33.003c.839-10.83.478-21.85-1.057-32.753zM334.82 383.601c-60.141 0-108.911-43.627-108.911-97.447 0-53.814 48.771-97.441 108.911-97.441 60.142 0 108.907 43.627 108.907 97.441.002 53.82-48.765 97.447-108.907 97.447zm62.807-106.01c.887 16.063-5.529 30.978-16.796 42.019-11.461 11.248-27.815 18.313-46.103 18.313-18.28 0-34.637-7.065-46.102-18.313-11.262-11.041-17.665-25.954-16.783-42.006.864-15.603 8.475-29.376 19.939-39.128 11.273-9.589 26.41-15.439 42.945-15.439 16.537 0 31.67 5.852 42.944 15.439 11.47 9.752 19.083 23.515 19.956 39.115z"/></svg>;
 const UnrealIcon = ({ className }: { className?: string }) => <svg viewBox="0 0 210.4 210.4" className={className} fill="currentColor"><path d="M105.2 5c55.3 0 100.2 45 100.2 100.2s-45 100.2-100.2 100.2S5 160.5 5 105.2 50 5 105.2 5m0-5C47.1 0 0 47.1 0 105.2s47.1 105.2 105.2 105.2 105.2-47.1 105.2-105.2S163.4 0 105.2 0z"/><path d="M97.9 42.2s-23.7 6.7-45 29.3-24 38.7-24 50.7c4.7-8 33.7-52.1 40.5-31.1v50.2s-.4 6.8-10.8 4.1c3.1 5.8 19.1 20.1 48 23 6.6-6.6 15.2-16.1 15.2-16.1l14.4 12.2s25.9-16.8 36.1-41.2c-9.5 6.2-21 20.6-27 10.5V72.7s15.4-23.1 17.8-24.2c-6.1 1.1-27.6 8.2-38.9 22.8-3.2-3.5-12.1-3.6-12.1-3.6s7 5.8 7.1 11.1 0 49.5 0 54.6c-4.8 4.9-9.9 7.5-13.2 7.5-7.7 0-9.9-2.7-12-5.4V71.3s-3.8 3.2-6.8-2S84.1 54 97.9 42.2z"/></svg>;
@@ -35,6 +39,9 @@ const SubstanceIcon = ({ className }: { className?: string }) => <svg viewBox="7
 
 export default function ModesHub() {
   const t = useTranslations('Hub');
+  const tProfile = useTranslations('Profile');
+  const { nickname } = useSettingsStore();
+  const [isNicknameModalOpen, setIsNicknameModalOpen] = useState(false);
 
   return (
     <main className="min-h-screen bg-background text-foreground flex flex-col p-6 sm:p-12 md:p-24 pb-32">
@@ -45,12 +52,32 @@ export default function ModesHub() {
             <h1 className="sr-only">{t('title')}</h1>
             <NodleLogo className="w-64 sm:w-80 md:w-96 drop-shadow-sm" />
           </div>
-          <p className="text-zinc-600 dark:text-zinc-400 text-lg sm:text-xl max-w-2xl mx-auto mb-12 font-medium">
+          <p className="text-zinc-600 dark:text-zinc-400 text-lg sm:text-xl max-w-2xl mx-auto mb-6 font-medium">
             {t('description')}
           </p>
           <p className="text-sm text-zinc-950 dark:text-zinc-500 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
+
+          {/* Player Welcome / Nickname Pill */}
+          <div className="mt-6 flex items-center justify-center">
+            <button
+              onClick={() => setIsNicknameModalOpen(true)}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/70 hover:bg-zinc-200 dark:hover:bg-zinc-700/70 border border-zinc-200 dark:border-zinc-700/50 text-xs font-medium text-zinc-700 dark:text-zinc-300 transition-all group shadow-sm hover:scale-105"
+            >
+              <User className="w-3.5 h-3.5 text-amber-500" />
+              {nickname ? (
+                <span>
+                  {tProfile('welcome')}, <span className="font-bold text-zinc-900 dark:text-zinc-100">{nickname}</span>
+                </span>
+              ) : (
+                <span className="text-zinc-600 dark:text-zinc-400">
+                  {tProfile('set_nickname')}
+                </span>
+              )}
+              <Pencil className="w-3 h-3 text-zinc-400 group-hover:text-amber-500 transition-colors ml-0.5" />
+            </button>
+          </div>
         </div>
 
         <div className="flex flex-col gap-12">
@@ -197,6 +224,8 @@ export default function ModesHub() {
           </p>
         </footer>
       </div>
+
+      <NicknameModal isOpen={isNicknameModalOpen} onClose={() => setIsNicknameModalOpen(false)} />
     </main>
   );
 }

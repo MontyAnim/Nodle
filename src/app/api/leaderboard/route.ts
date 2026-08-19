@@ -14,8 +14,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid attempts count' }, { status: 400 });
     }
 
+    const nickname = typeof body.nickname === 'string' 
+      ? body.nickname.trim().slice(0, 20) 
+      : undefined;
+
     const success = await leaderboardClient.submitScore({
       userId: body.userId,
+      nickname,
       dayIndex: body.dayIndex,
       timeMs: body.timeMs,
       attempts: body.attempts,

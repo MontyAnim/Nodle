@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { X, Trophy, Loader2 } from "lucide-react";
+import { X, Trophy, Loader2, Pencil, Check } from "lucide-react";
 import { LeaderboardEntry } from "@/lib/leaderboard/interface";
+import { useSettingsStore } from "@/store/useSettingsStore";
 import { useTranslations } from 'next-intl';
 
 interface LeaderboardModalProps {
@@ -27,6 +28,10 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations('Leaderboard');
+
+  const { nickname, setNickname } = useSettingsStore();
+  const [isEditingNickname, setIsEditingNickname] = useState(false);
+  const [tempNickname, setTempNickname] = useState("");
 
   useEffect(() => {
     if (!isOpen) return;
@@ -58,6 +63,16 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
     };
   }, [isOpen, dayIndex]);
 
+  const handleStartEdit = () => {
+    setTempNickname(nickname || "");
+    setIsEditingNickname(true);
+  };
+
+  const handleSaveNickname = () => {
+    setNickname(tempNickname);
+    setIsEditingNickname(false);
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -71,7 +86,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
           </div>
           <button
             onClick={onClose}
-            className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+            className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -101,10 +116,11 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
                 <div className="col-span-2 text-right">{t('time')}</div>
               </div>
               
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 max-h-[320px] overflow-y-auto">
                 {scores.map((score, index) => {
                   const isCurrentPlayer = currentUserId && score.userId === currentUserId;
                   const rank = index + 1;
+                  const displayName = score.nickname || (isCurrentPlayer ? (nickname || t('you')) : score.userId.split('-')[0]);
                   
                   return (
                     <div 
@@ -127,8 +143,13 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
                         )}
                       </div>
                       
-                      <div className="col-span-6 truncate font-mono text-xs">
-                        {isCurrentPlayer ? t('you') : score.userId.split('-')[0]}
+                      <div className="col-span-6 truncate font-medium text-xs flex items-center gap-1.5">
+                        <span className="truncate">{displayName}</span>
+                        {isCurrentPlayer && (
+                          <span className="text-[10px] bg-violet-500/30 text-violet-300 px-1.5 py-0.5 rounded font-bold uppercase tracking-wider shrink-0">
+                            {t('you')}
+                          </span>
+                        )}
                       </div>
                       
                       <div className="col-span-2 text-center font-mono">
@@ -142,6 +163,54 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
                   );
                 })}
               </div>
+            </div>
+          )}
+        </div>
+
+        {/* Player Nickname Bar Footer */}
+        <div className="px-4 py-3 border-t border-zinc-200 dark:border-zinc-800/60 bg-zinc-50 dark:bg-zinc-900/40 flex items-center justify-between gap-2 text-xs">
+          <span className="text-zinc-500 font-medium shrink-0">{t('your_nickname')}</span>
+          {isEditingNickname ? (
+            <div className="flex items-center gap-1.5 flex-1 max-w-[240px]">
+              <input
+                type="text"
+                value={tempNickname}
+                onChange={(e) => setTempNickname(e.target.value)}
+                maxLength={20}
+                placeholder={t('nickname_placeholder')}
+                autoFocus
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') handleSaveNickname();
+                  if (e.key === 'Escape') setIsEditingNickname(false);
+                }}
+                className="flex-1 px-2.5 py-1 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-1 focus:ring-amber-500 text-xs"
+              />
+              <button
+                onClick={handleSaveNickname}
+                className="p-1 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold rounded-lg transition-colors"
+                title={t('save_nickname')}
+              >
+                <Check className="w-3.5 h-3.5" />
+              </button>
+              <button
+                onClick={() => setIsEditingNickname(false)}
+                className="p-1 text-zinc-400 hover:text-zinc-100 rounded-lg transition-colors"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-zinc-800 dark:text-zinc-200 truncate max-w-[140px]">
+                {nickname || <span className="text-zinc-400 italic">{t('anonymous')}</span>}
+              </span>
+              <button
+                onClick={handleStartEdit}
+                className="flex items-center gap-1 text-amber-500 hover:text-amber-400 font-medium transition-colors"
+              >
+                <Pencil className="w-3 h-3" />
+                <span>{t('edit_nickname')}</span>
+              </button>
             </div>
           )}
         </div>

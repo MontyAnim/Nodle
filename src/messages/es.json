@@ -104,7 +104,12 @@
     "attempts": "Intentos",
     "you": "TÚ",
     "empty": "Aún no hay registros para el día de hoy. ¡Sé el primero!",
-    "loading_scores": "Cargando puntajes..."
+    "loading_scores": "Cargando puntajes...",
+    "your_nickname": "Apodo:",
+    "edit_nickname": "Editar",
+    "save_nickname": "Guardar",
+    "nickname_placeholder": "Escribe tu apodo...",
+    "anonymous": "Anónimo"
   },
   "Kofi": {
     "support": "Apoyar el proyecto en Ko-fi",
@@ -128,5 +133,18 @@
     "success_message": "Tu feedback ha sido recibido. ¡Lo agradecemos muchísimo!",
     "error_message": "Algo salió mal. Por favor intenta de nuevo.",
     "close": "Cerrar"
+  },
+  "Profile": {
+    "title": "Perfil de Jugador",
+    "description": "Elige un apodo para representarte en los Leaderboards globales diarios.",
+    "nickname_label": "Apodo / Nickname",
+    "nickname_placeholder": "ej. MaestroDeNodos",
+    "set_nickname": "Elegir Apodo",
+    "change_nickname": "Cambiar",
+    "save": "Guardar Perfil",
+    "saved": "¡Guardado!",
+    "welcome": "Bienvenido",
+    "playing_as": "Nombre en el Leaderboard:",
+    "anonymous": "Anónimo"
   }
 }

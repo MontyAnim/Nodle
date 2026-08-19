@@ -1,5 +1,6 @@
 export interface LeaderboardEntry {
   userId: string;
+  nickname?: string;
   dayIndex: number;
   timeMs: number;
   attempts: number;

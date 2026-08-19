@@ -25,6 +25,7 @@ export class UpstashLeaderboardClient implements LeaderboardClient {
       
       const payload = JSON.stringify({
         userId: entry.userId,
+        nickname: entry.nickname || '',
         timeMs: entry.timeMs,
         attempts: entry.attempts,
         timestamp: Date.now()
@@ -75,19 +76,22 @@ export class UpstashLeaderboardClient implements LeaderboardClient {
       const results: string[] = data.result || [];
 
       // Parse JSON from the sorted set members
-      const entries: LeaderboardEntry[] = results.map(str => {
-        try {
-          const parsed = JSON.parse(str);
-          return {
-            userId: parsed.userId,
-            dayIndex: dayIndex,
-            timeMs: parsed.timeMs,
-            attempts: parsed.attempts
-          };
-        } catch {
-          return null;
-        }
-      }).filter((e): e is LeaderboardEntry => e !== null);
+      const entries: LeaderboardEntry[] = results
+        .map((str): LeaderboardEntry | null => {
+          try {
+            const parsed = JSON.parse(str);
+            return {
+              userId: parsed.userId,
+              nickname: parsed.nickname || undefined,
+              dayIndex: dayIndex,
+              timeMs: parsed.timeMs,
+              attempts: parsed.attempts
+            };
+          } catch {
+            return null;
+          }
+        })
+        .filter((e): e is LeaderboardEntry => e !== null);
 
       return entries;
     } catch (error) {
