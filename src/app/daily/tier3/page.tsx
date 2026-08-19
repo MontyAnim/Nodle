@@ -26,6 +26,7 @@ import { useSettingsStore } from "@/store/useSettingsStore";
 
 export default function Tier3Daily() {
   const nickname = useSettingsStore((state) => state.nickname);
+  const colorblindMode = useSettingsStore((state) => state.colorblindMode);
   const t = useTranslations('Game');
   const tHub = useTranslations('Hub');
   const tKofi = useTranslations('Kofi');
@@ -33,10 +34,6 @@ export default function Tier3Daily() {
   const lastPlayedTimestamp = useTier3Store((state) => state.lastPlayedTimestamp);
   const attempts = useTier3Store((state) => state.attempts);
   const addAttempt = useTier3Store((state) => state.addAttempt);
-  const hardMode = useTier3Store((state) => state.hardMode);
-  const toggleHardMode = useTier3Store((state) => state.toggleHardMode);
-  const colorblindMode = useTier3Store((state) => state.colorblindMode);
-  const toggleColorblindMode = useTier3Store((state) => state.toggleColorblindMode);
   const debugDayOverride = useTier3Store((state) => state.debugDayOverride);
   const gameStatus = useTier3Store((state) => state.gameStatus);
   const setGameStatus = useTier3Store((state) => state.setGameStatus);
@@ -184,18 +181,6 @@ export default function Tier3Daily() {
             className="flex items-center gap-2 px-4 py-2 bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 hover:border-rose-500/60 text-rose-400 rounded-full text-sm font-medium transition-all"
           >
             <Trophy className="w-4 h-4" /> {t('view_leaderboard')} </button>
-        </div>
-
-        <div className="flex items-center justify-center gap-4 mt-2">
-          <div className="flex items-center gap-3 bg-zinc-50 dark:bg-zinc-900 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800">
-            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">{t('colorblind_mode')}</span>
-            <button 
-              onClick={toggleColorblindMode}
-              className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${colorblindMode ? 'bg-[#0070B8]' : 'bg-zinc-700'}`}
-            >
-              <span className={`w-4 h-4 bg-white rounded-full absolute shadow transition-transform ${colorblindMode ? 'translate-x-5' : 'translate-x-1'}`} />
-            </button>
-          </div>
         </div>
         
         {isReady && (

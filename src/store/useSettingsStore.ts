@@ -6,6 +6,8 @@ interface SettingsState {
   setHasSeenTutorial: (value: boolean) => void;
   nickname: string;
   setNickname: (nickname: string) => void;
+  colorblindMode: boolean;
+  toggleColorblindMode: () => void;
 }
 
 export const useSettingsStore = create<SettingsState>()(
@@ -15,6 +17,8 @@ export const useSettingsStore = create<SettingsState>()(
       setHasSeenTutorial: (value: boolean) => set({ hasSeenTutorial: value }),
       nickname: "",
       setNickname: (nickname: string) => set({ nickname: nickname.trim().slice(0, 20) }),
+      colorblindMode: false,
+      toggleColorblindMode: () => set((state) => ({ colorblindMode: !state.colorblindMode })),
     }),
     {
       name: 'nodle-settings',

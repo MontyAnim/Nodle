@@ -27,14 +27,11 @@ import { useSettingsStore } from "@/store/useSettingsStore";
 
 export default function Home() {
   const nickname = useSettingsStore((state) => state.nickname);
+  const colorblindMode = useSettingsStore((state) => state.colorblindMode);
   const resetDailyGame = useClassicStore((state) => state.resetDailyGame);
   const lastPlayedTimestamp = useClassicStore((state) => state.lastPlayedTimestamp);
   const attempts = useClassicStore((state) => state.attempts);
   const addAttempt = useClassicStore((state) => state.addAttempt);
-  const hardMode = useClassicStore((state) => state.hardMode);
-  const toggleHardMode = useClassicStore((state) => state.toggleHardMode);
-  const colorblindMode = useClassicStore((state) => state.colorblindMode);
-  const toggleColorblindMode = useClassicStore((state) => state.toggleColorblindMode);
   const debugDayOverride = useClassicStore((state) => state.debugDayOverride);
   const gameStatus = useClassicStore((state) => state.gameStatus);
   const setGameStatus = useClassicStore((state) => state.setGameStatus);
@@ -185,18 +182,6 @@ export default function Home() {
             <Trophy className="w-4 h-4" />
             {t('view_leaderboard')}
           </button>
-        </div>
-
-        <div className="flex items-center justify-center gap-4 mt-2">
-          <div className="flex items-center gap-3 bg-zinc-50 dark:bg-zinc-900 px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800">
-            <span className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">{t('colorblind_mode')}</span>
-            <button 
-              onClick={toggleColorblindMode}
-              className={`w-10 h-5 rounded-full transition-colors relative flex items-center ${colorblindMode ? 'bg-[#0070B8]' : 'bg-zinc-700'}`}
-            >
-              <span className={`w-4 h-4 bg-white rounded-full absolute shadow transition-transform ${colorblindMode ? 'translate-x-5' : 'translate-x-1'}`} />
-            </button>
-          </div>
         </div>
         
         {isReady && (

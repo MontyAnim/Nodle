@@ -11,7 +11,7 @@ import { NodeData } from "@/types/node";
 import { SearchBar } from "@/components/SearchBar";
 import { GameBoard } from "@/components/GameBoard";
 import { PracticeConfig } from "@/components/PracticeConfig";
-import { useClassicStore } from "@/store/useGameStore";
+import { useSettingsStore } from "@/store/useSettingsStore";
 import { DebugConsole } from "@/components/DebugConsole";
 import { KofiButton } from "@/components/KofiButton";
 import { EthicalAd } from "@/components/EthicalAd";
@@ -24,7 +24,7 @@ export default function PracticePage() {
   const t = useTranslations('Game');
   const tKofi = useTranslations('Kofi');
   const tHub = useTranslations('Hub');
-  const colorblindMode = useClassicStore((state) => state.colorblindMode);
+  const colorblindMode = useSettingsStore((state) => state.colorblindMode);
 
   const [allNodes, setAllNodes] = useState<NodeData[]>([]);
   const [targetNode, setTargetNode] = useState<NodeData | null>(null);

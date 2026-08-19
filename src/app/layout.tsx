@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { NicknameToggle } from "@/components/NicknameToggle";
+import { ColorblindToggle } from "@/components/ColorblindToggle";
 import { TutorialModal } from "@/components/TutorialModal";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import "./globals.css";
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <TutorialModal />
               <div className="absolute top-6 right-6 flex items-center gap-2 z-50">
                 <NicknameToggle />
+                <ColorblindToggle />
                 <ThemeToggle />
                 <LanguageToggle />
               </div>
