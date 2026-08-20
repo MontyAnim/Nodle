@@ -46,13 +46,10 @@ export const createGameStore = (storageKey: string) => create<GameState>()(
       debugDayOverride: null,
 
       addAttempt: (nodeId: string) =>
-        set((state) => {
-          const isFirstAttempt = state.attempts.length === 0;
-          return {
-            attempts: [...state.attempts, nodeId],
-            dailyStartTime: isFirstAttempt ? Date.now() : state.dailyStartTime,
-          };
-        }),
+        set((state) => ({
+          attempts: [...state.attempts, nodeId],
+          dailyStartTime: state.dailyStartTime ?? Date.now(),
+        })),
 
       setGameStatus: (status: 'won' | 'lost') =>
         set((state) => {
@@ -85,14 +82,12 @@ export const createGameStore = (storageKey: string) => create<GameState>()(
         }),
 
       resetDailyGame: (dayIndex: number) =>
-        set((state) => {
-          return {
-            attempts: [],
-            gameStatus: 'playing',
-            lastPlayedTimestamp: dayIndex, // Now storing the dayIndex instead of ms
-            dailyStartTime: null,
-          };
-        }),
+        set(() => ({
+          attempts: [],
+          gameStatus: 'playing',
+          lastPlayedTimestamp: dayIndex,
+          dailyStartTime: Date.now(),
+        })),
       
       toggleHardMode: () =>
         set((state) => ({ hardMode: !state.hardMode })),

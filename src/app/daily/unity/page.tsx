@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useRef } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Box, ArrowLeft, Boxes, Share2, Check, Trophy } from "lucide-react";
@@ -47,6 +47,7 @@ export default function UnityDaily() {
   const [unityNodes, setunityNodes] = useState<NodeData[]>([]);
   const [dailyNode, setDailyNode] = useState<NodeData | null>(null);
   const [isReady, setIsReady] = useState(false);
+  const hasSubmittedRef = useRef(false); // Prevent double submission
   const [copiedImage, setCopiedImage] = useState(false);
   const [copiedText, setCopiedText] = useState(false);
   const [isLeaderboardOpen, setIsLeaderboardOpen] = useState(false);
@@ -75,8 +76,8 @@ export default function UnityDaily() {
     const lastAttemptId = attempts[attempts.length - 1];
     
     if (lastAttemptId === dailyNode.id) {
-      if (gameStatus !== 'won') {
-        console.log("[Leaderboard Unity] Victory detected! userId:", userId, "dailyStartTime:", dailyStartTime);
+      if (!hasSubmittedRef.current) {
+        hasSubmittedRef.current = true;
         setGameStatus('won');
         
         triggerVictoryConfetti();
@@ -91,7 +92,7 @@ export default function UnityDaily() {
         
         // Fallback en caso de estado obsoleto
         const safeUserId = userId || "anonymous-" + Math.floor(Math.random() * 10000);
-        const safeStartTime = dailyStartTime || (Date.now() - 30000); // Asumir 30 segundos si falta
+        const safeStartTime = dailyStartTime || (Date.now() - 30000);
         const timeMs = Date.now() - safeStartTime;
 
         fetch('/api/leaderboard', {
@@ -112,7 +113,8 @@ export default function UnityDaily() {
         });
       }
     } else if (attempts.length >= 6) {
-      if (gameStatus !== 'lost') {
+      if (!hasSubmittedRef.current && gameStatus !== 'lost') {
+        hasSubmittedRef.current = true;
         setGameStatus('lost');
         posthog?.capture("game_completed", {
           mode: "unity",

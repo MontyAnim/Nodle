@@ -1,7 +1,5 @@
 import { LeaderboardClient, LeaderboardEntry } from './interface';
 
-const MIN_TIME_MS = 1000; // Mínimo 1 segundo para considerar un score válido
-
 export class UpstashLeaderboardClient implements LeaderboardClient {
   private url: string;
   private token: string;
@@ -29,40 +27,35 @@ export class UpstashLeaderboardClient implements LeaderboardClient {
       return false;
     }
 
-    // Bug fix #3: reject impossibly fast scores
-    if (entry.timeMs < MIN_TIME_MS) {
-      console.warn(`[UpstashLeaderboardClient] Rejected score with timeMs=${entry.timeMs} (below minimum ${MIN_TIME_MS}ms)`);
-      return false;
-    }
-
     try {
-      // Score formula: (attempts * 100,000,000) + timeMs
-      // Lower is better — fewer attempts wins, tie-broken by time
-      const score = (entry.attempts * 100_000_000) + entry.timeMs;
+      const safeTimeMs = Math.max(1, Math.round(entry.timeMs));
+      const safeAttempts = Math.min(6, Math.max(1, entry.attempts));
 
-      // Bug fix #1: separate by mode → leaderboard:{mode}:day:{dayIndex}
+      // Score formula: (attempts * 100,000,000) + timeMs
+      // Lower score is better — fewer attempts wins, tie-broken by time
+      const score = (safeAttempts * 100_000_000) + safeTimeMs;
+
+      // Key separated by mode: leaderboard:{mode}:day:{dayIndex}
       const zsetKey = this.baseKey(entry.mode, entry.dayIndex);
 
-      // Bug fix #2: use userId as the sorted set member for automatic dedup.
-      // NX flag (only add, never update) ensures we keep the FIRST (best) score of the day.
-      // If a player somehow triggers this twice, we only keep their first win.
+      // NX flag (only add if not existing) ensures we keep the FIRST score of the day for this user
       const nxFlag = 'NX';
       const response = await fetch(
-        `${this.url}/zadd/${zsetKey}/${nxFlag}/${score}/${encodeURIComponent(entry.userId)}`,
+        `${this.url}/zadd/${encodeURIComponent(zsetKey)}/${nxFlag}/${score}/${encodeURIComponent(entry.userId)}`,
         { headers: { Authorization: `Bearer ${this.token}` } }
       );
 
       if (!response.ok) {
-        console.error('[UpstashLeaderboardClient] Failed to submit score:', await response.text());
+        console.error('[UpstashLeaderboardClient] Failed to submit score to zset:', await response.text());
         return false;
       }
 
-      // Store rich metadata in a hash keyed by userId, so the sorted set stays clean
+      // Store metadata (nickname, timestamp) keyed by userId
       const meta = JSON.stringify({
         userId: entry.userId,
         nickname: entry.nickname || '',
-        timeMs: entry.timeMs,
-        attempts: entry.attempts,
+        timeMs: safeTimeMs,
+        attempts: safeAttempts,
         timestamp: Date.now(),
       });
 
@@ -77,7 +70,7 @@ export class UpstashLeaderboardClient implements LeaderboardClient {
       }
 
       // Set TTL on the sorted set (7 days)
-      fetch(`${this.url}/expire/${zsetKey}/604800`, {
+      fetch(`${this.url}/expire/${encodeURIComponent(zsetKey)}/604800`, {
         headers: { Authorization: `Bearer ${this.token}` }
       }).catch(err => console.error('[UpstashLeaderboardClient] Failed to set TTL:', err));
 
@@ -94,9 +87,9 @@ export class UpstashLeaderboardClient implements LeaderboardClient {
     try {
       const zsetKey = this.baseKey(mode, dayIndex);
 
-      // ZRANGE key 0 limit-1 — returns userIds sorted by score (ascending = best first)
+      // ZRANGE key 0 limit-1 WITHSCORES — returns [userId, score, userId, score, ...]
       const response = await fetch(
-        `${this.url}/zrange/${zsetKey}/0/${limit - 1}`,
+        `${this.url}/zrange/${encodeURIComponent(zsetKey)}/0/${limit - 1}/WITHSCORES`,
         { headers: { Authorization: `Bearer ${this.token}` } }
       );
 
@@ -106,39 +99,54 @@ export class UpstashLeaderboardClient implements LeaderboardClient {
       }
 
       const data = await response.json();
-      const userIds: string[] = data.result || [];
+      const rawList: string[] = data.result || [];
 
-      if (userIds.length === 0) return [];
+      if (rawList.length === 0) return [];
 
-      // Batch-fetch metadata for all userIds in parallel
-      const metaPromises = userIds.map(async (userId): Promise<LeaderboardEntry | null> => {
-        try {
-          const metaKeyPath = this.metaKey(mode, dayIndex, userId);
-          const metaResp = await fetch(
-            `${this.url}/get/${encodeURIComponent(metaKeyPath)}`,
-            { headers: { Authorization: `Bearer ${this.token}` } }
-          );
-          if (!metaResp.ok) return null;
+      const items: { userId: string; score: number }[] = [];
+      for (let i = 0; i < rawList.length; i += 2) {
+        const userId = rawList[i];
+        const score = parseInt(rawList[i + 1], 10);
+        if (userId && !isNaN(score)) {
+          items.push({ userId, score });
+        }
+      }
 
-          const metaData = await metaResp.json();
-          if (!metaData.result) return null;
+      // Fetch metadata in parallel for nicknames
+      const entries = await Promise.all(
+        items.map(async (item): Promise<LeaderboardEntry> => {
+          const attempts = Math.floor(item.score / 100_000_000);
+          const timeMs = item.score % 100_000_000;
+          let nickname: string | undefined = undefined;
 
-          const parsed = JSON.parse(metaData.result);
+          try {
+            const metaKeyPath = this.metaKey(mode, dayIndex, item.userId);
+            const metaResp = await fetch(
+              `${this.url}/get/${encodeURIComponent(metaKeyPath)}`,
+              { headers: { Authorization: `Bearer ${this.token}` } }
+            );
+
+            if (metaResp.ok) {
+              const metaData = await metaResp.json();
+              if (metaData.result) {
+                const parsed = JSON.parse(metaData.result);
+                nickname = parsed.nickname || undefined;
+              }
+            }
+          } catch {
+            // Silently fallback without nickname
+          }
+
           return {
-            userId: parsed.userId || userId,
-            nickname: parsed.nickname || undefined,
+            userId: item.userId,
+            nickname,
             mode,
             dayIndex,
-            timeMs: parsed.timeMs,
-            attempts: parsed.attempts,
+            timeMs,
+            attempts,
           };
-        } catch {
-          return null;
-        }
-      });
-
-      const entries = (await Promise.all(metaPromises))
-        .filter((e): e is LeaderboardEntry => e !== null);
+        })
+      );
 
       return entries;
     } catch (error) {
