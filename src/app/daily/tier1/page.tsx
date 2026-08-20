@@ -101,6 +101,7 @@ export default function Tier1Daily() {
             userId: safeUserId,
             nickname: nickname || undefined,
             dayIndex: getUTCDayIndex(),
+            mode: 'tier1',
             timeMs,
             attempts: attempts.length
           })
@@ -255,7 +256,8 @@ export default function Tier1Daily() {
       <LeaderboardModal 
         isOpen={isLeaderboardOpen} 
         onClose={() => setIsLeaderboardOpen(false)} 
-        dayIndex={getUTCDayIndex()} 
+        dayIndex={getUTCDayIndex()}
+        mode="tier1" 
         currentUserId={userId || undefined}
       />
     </div>

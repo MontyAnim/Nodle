@@ -9,8 +9,8 @@ export class MockLeaderboardClient implements LeaderboardClient {
     return true;
   }
 
-  async getTopScores(dayIndex: number, limit: number = 10): Promise<LeaderboardEntry[]> {
-    console.log(`[MockLeaderboard] fetching top scores for day ${dayIndex}`);
+  async getTopScores(mode: string, dayIndex: number, limit: number = 10): Promise<LeaderboardEntry[]> {
+    console.log(`[MockLeaderboard] fetching top scores for mode=${mode} day=${dayIndex}`);
     return [];
   }
 }

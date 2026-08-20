@@ -101,6 +101,7 @@ export default function BlenderDaily() {
             userId: safeUserId,
             nickname: nickname || undefined,
             dayIndex: getUTCDayIndex(),
+            mode: 'blender',
             timeMs,
             attempts: attempts.length
           })
@@ -255,7 +256,8 @@ export default function BlenderDaily() {
       <LeaderboardModal 
         isOpen={isLeaderboardOpen} 
         onClose={() => setIsLeaderboardOpen(false)} 
-        dayIndex={getUTCDayIndex()} 
+        dayIndex={getUTCDayIndex()}
+        mode="blender" 
         currentUserId={userId || undefined}
       />
     </div>

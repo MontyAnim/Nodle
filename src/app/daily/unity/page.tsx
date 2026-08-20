@@ -101,6 +101,7 @@ export default function UnityDaily() {
             userId: safeUserId,
             nickname: nickname || undefined,
             dayIndex: getUTCDayIndex(),
+            mode: 'unity',
             timeMs,
             attempts: attempts.length
           })
@@ -255,7 +256,8 @@ export default function UnityDaily() {
       <LeaderboardModal 
         isOpen={isLeaderboardOpen} 
         onClose={() => setIsLeaderboardOpen(false)} 
-        dayIndex={getUTCDayIndex()} 
+        dayIndex={getUTCDayIndex()}
+        mode="unity" 
         currentUserId={userId || undefined}
       />
     </div>

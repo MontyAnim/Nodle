@@ -10,6 +10,7 @@ import { Tooltip } from "./Tooltip";
 interface LeaderboardModalProps {
   isOpen: boolean;
   onClose: () => void;
+  mode: string;
   dayIndex: number;
   currentUserId?: string;
 }
@@ -24,7 +25,7 @@ function formatTime(ms: number): string {
     .padStart(2, "0")}.${fraction}`;
 }
 
-export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: LeaderboardModalProps) {
+export function LeaderboardModal({ isOpen, onClose, mode, dayIndex, currentUserId }: LeaderboardModalProps) {
   const [scores, setScores] = useState<LeaderboardEntry[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -41,7 +42,7 @@ export function LeaderboardModal({ isOpen, onClose, dayIndex, currentUserId }: L
     setLoading(true);
     setError("");
 
-    fetch(`/api/leaderboard?dayIndex=${dayIndex}`)
+    fetch(`/api/leaderboard?dayIndex=${dayIndex}&mode=${mode}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch");
         return res.json();

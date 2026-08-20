@@ -98,6 +98,7 @@ export default function Home() {
             userId: safeUserId,
             nickname: nickname || undefined,
             dayIndex: getUTCDayIndex(),
+            mode: 'classic',
             timeMs,
             attempts: attempts.length
           })
@@ -256,7 +257,8 @@ export default function Home() {
       <LeaderboardModal 
         isOpen={isLeaderboardOpen} 
         onClose={() => setIsLeaderboardOpen(false)} 
-        dayIndex={getUTCDayIndex()} 
+        dayIndex={getUTCDayIndex()}
+        mode="classic" 
         currentUserId={userId || undefined}
       />
     </div>

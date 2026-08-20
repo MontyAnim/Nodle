@@ -101,6 +101,7 @@ export default function HoudiniDaily() {
             userId: safeUserId,
             nickname: nickname || undefined,
             dayIndex: getUTCDayIndex(),
+            mode: 'houdini',
             timeMs,
             attempts: attempts.length
           })
@@ -255,7 +256,8 @@ export default function HoudiniDaily() {
       <LeaderboardModal 
         isOpen={isLeaderboardOpen} 
         onClose={() => setIsLeaderboardOpen(false)} 
-        dayIndex={getUTCDayIndex()} 
+        dayIndex={getUTCDayIndex()}
+        mode="houdini" 
         currentUserId={userId || undefined}
       />
     </div>

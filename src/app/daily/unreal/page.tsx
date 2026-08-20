@@ -101,6 +101,7 @@ export default function UnrealDaily() {
             userId: safeUserId,
             nickname: nickname || undefined,
             dayIndex: getUTCDayIndex(),
+            mode: 'unreal',
             timeMs,
             attempts: attempts.length
           })
@@ -255,7 +256,8 @@ export default function UnrealDaily() {
       <LeaderboardModal 
         isOpen={isLeaderboardOpen} 
         onClose={() => setIsLeaderboardOpen(false)} 
-        dayIndex={getUTCDayIndex()} 
+        dayIndex={getUTCDayIndex()}
+        mode="unreal" 
         currentUserId={userId || undefined}
       />
     </div>

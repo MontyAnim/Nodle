@@ -101,6 +101,7 @@ export default function SubstanceDaily() {
             userId: safeUserId,
             nickname: nickname || undefined,
             dayIndex: getUTCDayIndex(),
+            mode: 'substance',
             timeMs,
             attempts: attempts.length
           })
@@ -255,7 +256,8 @@ export default function SubstanceDaily() {
       <LeaderboardModal 
         isOpen={isLeaderboardOpen} 
         onClose={() => setIsLeaderboardOpen(false)} 
-        dayIndex={getUTCDayIndex()} 
+        dayIndex={getUTCDayIndex()}
+        mode="substance" 
         currentUserId={userId || undefined}
       />
     </div>
